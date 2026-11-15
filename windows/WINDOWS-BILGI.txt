@@ -1,0 +1,40 @@
+MAKAMLAB 1.1.0 - WINDOWS x64
+============================
+
+Desteklenen sistemler:
+- Windows 10 22H2 64 bit
+- Windows 11 64 bit
+
+Paketin içinde Java 21 ve FFmpeg 9.0.2 bulunur. Ayrıca Java veya FFmpeg
+kurmanız gerekmez. WAV, AIFF, AU, MP3 ve M4A dosyaları desteklenir.
+
+KURULUM
+1. MakamLab-1.1.0-Windows-x64-Setup.exe dosyasını çalıştırın.
+2. Uygulama %LOCALAPPDATA%\Programs\MakamLab klasörüne kurulur.
+3. Başlat menüsüne “MakamLab” kısayolu eklenir.
+
+TAŞINABİLİR KULLANIM
+Portable ZIP'in tamamını bir klasöre çıkarın ve “MakamLab.exe” dosyasını
+çalıştırın. app, runtime ve resources klasörlerini taşımayın.
+
+KALDIRMA
+Windows Ayarlar > Uygulamalar > Yüklü uygulamalar bölümünde MakamLab'ı
+seçip “Kaldır” düğmesini kullanın. Kurulum, kullanıcıya ait Yüklü
+uygulamalar listesine kaydedilir.
+
+GÜVENLİ GÜNCELLEME
+Yeni paket önce geçici bir klasöre açılır ve zorunlu uygulama dosyaları
+doğrulanır. Mevcut sürüm ancak yeni paket hazır olduktan sonra değiştirilir;
+değiştirme başarısız olursa önceki kurulum korunur.
+
+İMZA / SMARTSCREEN
+Bu akademik test paketi Authenticode imzalı değildir. Windows SmartScreen
+“Bilinmeyen yayıncı” uyarısı gösterebilir. Bu, Windows 10/11 uyumsuzluğu
+anlamına gelmez. Dosya bütünlüğünü SHA256SUMS.txt ile doğrulayabilirsiniz.
+
+Windows ARM64 bilgisayarlarda uygulama yalnız x64 öykünmesiyle çalışabilir.
+
+Lisans ve üçüncü taraf bildirimleri paket içindeki LICENSE.txt,
+THIRD_PARTY_NOTICES.md ve licenses klasöründedir. Windows paketinde M4A/AAC
+desteği için kullanılan FFmpeg bu bildirimde ayrıca belirtilmiştir. Paket,
+yalnız bu bildirimde listelenen MakamLab bileşenlerini içerir.

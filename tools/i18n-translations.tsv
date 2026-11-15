@@ -1,0 +1,1759 @@
+locale	key	value
+en-US	app.title	MakamLab — Academic Musical Performance Analysis
+en-US	header.home	Home
+en-US	header.openAudio	Open audio file…
+en-US	header.waveEditor	Wave editor…
+en-US	header.analyze.single	Analyze pitch
+en-US	header.analyze.directional	Analyze direction
+en-US	header.analyze.augmented	Analyze interval
+en-US	header.analyze.glissando	Analyze glissando
+en-US	header.report	Create report…
+en-US	header.language	Language
+en-US	module.pitch	Pitch Analysis
+en-US	module.directional	Ascending–Descending Pitch Analysis
+en-US	module.augmented	Augmented Interval Analysis
+en-US	module.glissando	Glissando Analysis
+en-US	home.selectStudy	Select an analysis module
+en-US	home.pitch.description	Analyze one pitch or an open interval between two pitches.
+en-US	home.directional.description	Compare ascending, descending and sustained uses of the reference pitch.
+en-US	home.augmented.description	Measure the second and third degrees that form an augmented interval.
+en-US	home.glissando.description	Measure ascending and descending glissandi between two selected pitches.
+en-US	card.recording	1. Recording
+en-US	card.theoryTarget	2. Theory and target
+en-US	card.tonic	3. Tonic selection
+en-US	field.audioChannel	Audio channel
+en-US	field.makam	Makam
+en-US	field.analysisType	Analysis type
+en-US	field.targetPitch	Pitch to examine
+en-US	field.lowerBoundary	Lower boundary
+en-US	field.upperBoundary	Upper boundary
+en-US	field.lowerPitch	Lower pitch
+en-US	field.upperPitch	Upper pitch
+en-US	field.confirmedTonic	Confirmed tonic (Hz)
+en-US	transport.title	Playback
+en-US	transport.play	Play
+en-US	transport.pause	Pause
+en-US	transport.stop	Stop
+en-US	tonic.useFinal	Use the final sound as tonic
+en-US	tonic.useSelection	Use the selected region as tonic
+en-US	analysis.single	Single-pitch analysis
+en-US	analysis.between	Between-pitches analysis
+en-US	analysis.directional	Directional pitch analysis
+en-US	analysis.augmented	Augmented Interval Analysis
+en-US	analysis.glissando	Two-pitch glissando analysis
+en-US	status.ready	Ready
+en-US	status.selectStudy	Select an analysis module
+en-US	status.openAudio	Open an audio file to begin
+en-US	status.pitchReady	Pitch track ready
+en-US	status.analysisWaiting	Analysis result pending
+en-US	report.title	Academic Analysis Report
+en-US	report.sourceMethod	Source and method
+en-US	report.theoreticalTarget	Theoretical target and classification
+en-US	report.eventDistribution	Distribution of measurable events
+en-US	report.individualEvents	Individual measurable events
+en-US	report.directionGroups	Usage groups by melodic direction
+en-US	report.profileSimilarity	Tonic-aligned interval-profile similarity
+en-US	report.mean	Mean
+en-US	report.median	Median
+en-US	report.weightedMean	Duration-weighted mean
+en-US	report.standardDeviation	Standard deviation
+en-US	report.mad	Median absolute deviation (MAD)
+en-US	report.minimum	Lowest
+en-US	report.maximum	Highest
+en-US	report.deviation	Deviation
+en-US	report.duration	Duration
+en-US	report.confidence	Confidence
+en-US	report.frequency	Frequency
+en-US	report.cent	Cent (C)
+en-US	report.comma	Holderian comma (Hc)
+en-US	report.ascending	Ascending
+en-US	report.descending	Descending
+en-US	report.sustained	Sustained
+en-US	report.all	All
+en-US	report.result	Result
+en-US	report.method	Method
+en-US	report.source	Source
+en-US	report.interpretation	Interpretation
+en-US	report.sampleCount	Sample count
+en-US	report.rank	Rank
+en-US	report.profile	Profile
+en-US	report.similarity	Similarity
+en-US	report.coverage	Coverage
+en-US	report.evidence	Evidence
+en-US	report.conclusion	Conclusion
+en-US	report.theoreticalReference	Theoretical reference
+en-US	report.measuredValue	Measured value
+en-US	report.sharper	Sharper
+en-US	report.flatter	Flatter
+en-US	report.event	Event
+en-US	report.time	Time
+en-US	report.pitch	Pitch
+en-US	report.note.properNames	Makam and pitch names are proper names and are preserved exactly as supplied.
+en-US	report.readingGuide	How to read this report
+en-US	report.methodSummary	Method summary
+en-US	report.limitations	Limitations
+en-US	report.date	Date
+en-US	report.recording	Recording
+en-US	report.sampleRate	Sample rate
+en-US	report.channel	Channel
+en-US	report.tonic	Tonic
+en-US	report.tonicMethod	Tonic-selection method
+en-US	report.status	Status
+en-US	report.description	Description
+en-US	report.yes	Yes
+en-US	report.no	No
+en-US	report.audit	Audit
+en-US	report.primaryStatistics	Primary statistics
+en-US	report.glissandoSummary	Glissando summary
+en-US	report.glissandoEvents	Glissando events
+en-US	report.augmentedInterval	Augmented interval
+en-US	report.degree	Degree
+en-US	report.phrase	Phrase
+en-US	report.path	Path
+en-US	report.speed	Speed
+en-US	report.start	Start
+en-US	report.end	End
+en-US	report.span	Span
+en-US	report.intervalError	Interval error
+en-US	report.monotonicity	Monotonicity
+en-US	report.returnMovement	Reverse movement
+en-US	report.excluded	Excluded
+en-US	report.included	Included
+en-US	action.home	Home
+en-US	action.openAudio	Open audio file…
+en-US	action.waveEditor	Wave editor…
+en-US	action.analyze.single	Analyze pitch
+en-US	action.analyze.between	Analyze pitches
+en-US	action.analyze.directional	Analyze direction
+en-US	action.analyze.hicaz	Analyze interval
+en-US	action.analyze.glissando	Analyze glissando
+en-US	action.createReport	Create report…
+en-US	action.useLastTonic	Use the final sound as tonic
+en-US	action.useSelectedTonic	Use the selected region as tonic
+en-US	language.selector.tooltip	Change language
+en-US	menu.help	Help
+en-US	menu.about	About MakamLab
+en-US	about.title	About MakamLab
+en-US	about.version	Version {0} • {1}
+en-US	about.developer	Developed by {0}.
+en-US	about.contact	Contact: {0}
+en-US	about.makamboxAttribution	Built on Bilge Miraç ATICI’s MakamBox project.
+en-US	about.copyright	© {0} {1}
+en-US	about.component	Component
+en-US	about.license	Licence
+en-US	about.licenses	Licences
+en-US	about.componentsLicenses	The MakamLab package contains the full licence texts for its bundled components.
+en-US	about.licenseNotice	The MakamLab package contains the full licence texts for its bundled components.
+en-US	about.license.title	Components and licences
+en-US	about.license.description	MakamLab combines free and open-source components. Component and licence names are preserved exactly.
+en-US	about.license.viewFull	View full licence texts
+en-US	about.license.makamLab	MakamLab — GPL-3.0-or-later
+en-US	about.license.makamBox	MakamBox v1.0 — GPL-3.0-or-later
+en-US	about.license.jlayer	JLayer 1.0.1 — LGPL-2.1
+en-US	about.license.apacheStack	Apache POI / XMLBeans / Log4j / Apache Commons / SparseBitSet — Apache-2.0
+en-US	about.license.curvesapi	curvesapi — BSD-3-Clause (Crossing Apache-2.0)
+en-US	about.license.openjdk	OpenJDK / JetBrains Runtime 21 — GPL-2.0 with Classpath Exception
+en-US	about.close	Close
+en-US	common.close	Close
+en-US	audio.channel.auto	Automatic (melodic channel)
+en-US	audio.channel.mix	Channel mix
+en-US	audio.channel.left	Left channel
+en-US	audio.channel.right	Right channel
+en-US	audio.channel.mono	Mono
+en-US	direction.ascending	Ascending
+en-US	direction.descending	Descending
+en-US	direction.horizontal	Horizontal/Mixed
+en-US	event.prolongation	Prolongation
+en-US	event.transition	Transition
+en-US	event.shortContact	Short contact
+en-US	glissando.direction.ascending	Ascending
+en-US	glissando.direction.descending	Descending
+en-US	glissando.shape.direct	Direct
+en-US	glissando.shape.reverse	Reverse
+en-US	glissando.shape.mixed	Mixed
+en-US	glissando.status.primary	Primary
+en-US	glissando.status.audit	Audit
+en-US	glissando.status.rejected	Rejected
+en-US	common.yes	Yes
+en-US	common.no	No
+en-US	common.none	None
+en-US	common.average	Average
+en-US	common.median	Median
+en-US	common.duration	Duration
+en-US	common.confidence	Confidence
+en-US	common.status	Status
+en-US	common.auditNote	Audit note
+en-US	common.mainStatistics	Main statistics
+en-US	common.noMeasurableEvent	No measurable event was found.
+en-US	direction.level	Level/Mixed
+en-US	intonation.flat	Flatter than the theoretical reference
+en-US	intonation.sharp	Sharper than the theoretical reference
+en-US	intonation.theoreticalCenter	At the theoretical reference
+en-US	result.hicaz.tab.phrases	Phrases
+en-US	result.hicaz.tab.degreeEvents	Degree events
+en-US	result.hicaz.tab.directInterval	Direct interval events
+en-US	result.hicaz.summary.degree	Degree summary
+en-US	result.hicaz.summary.interval	Augmented-interval summary
+en-US	result.hicaz.column.direction	Direction
+en-US	result.hicaz.column.path	Path
+en-US	result.hicaz.column.time	Time
+en-US	result.hicaz.column.duration	Duration
+en-US	result.hicaz.column.confidence	Confidence
+en-US	result.hicaz.column.hasDirectInterval	Direct interval
+en-US	result.hicaz.column.status	Status
+en-US	result.hicaz.column.degree	Degree
+en-US	result.hicaz.column.hertz	Hz
+en-US	result.hicaz.column.observedCent	Observed C
+en-US	result.hicaz.column.observedHc	Observed Hc
+en-US	result.hicaz.column.theoreticalHc	Theoretical Hc
+en-US	result.hicaz.column.deviationCent	Deviation C
+en-US	result.hicaz.column.deviationHc	Deviation Hc
+en-US	result.hicaz.column.intonation	Intonation
+en-US	result.hicaz.column.phrase	Phrase
+en-US	result.hicaz.column.secondDegree	Second degree
+en-US	result.hicaz.column.thirdDegree	Third degree
+en-US	result.hicaz.column.observedIntervalCent	Observed interval C
+en-US	result.hicaz.column.observedIntervalHc	Observed interval Hc
+en-US	result.glissando.tab.primary	Primary glissandi
+en-US	result.glissando.tab.audit	Audit events
+en-US	result.glissando.summary.title	Glissando summary
+en-US	result.glissando.column.direction	Direction
+en-US	result.glissando.column.shape	Shape
+en-US	result.glissando.column.time	Time
+en-US	result.glissando.column.duration	Duration
+en-US	result.glissando.column.startHz	Start Hz
+en-US	result.glissando.column.endHz	End Hz
+en-US	result.glissando.column.startCent	Start C
+en-US	result.glissando.column.startHc	Start Hc
+en-US	result.glissando.column.endCent	End C
+en-US	result.glissando.column.endHc	End Hc
+en-US	result.glissando.column.startDeviation	Start deviation
+en-US	result.glissando.column.endDeviation	End deviation
+en-US	result.glissando.column.span	Span
+en-US	result.glissando.column.theoretical	Theoretical interval
+en-US	result.glissando.column.intervalError	Interval error
+en-US	result.glissando.column.speed	Speed
+en-US	result.glissando.column.reverseMovement	Reverse movement
+en-US	result.glissando.column.monotonicity	Monotonicity
+en-US	result.glissando.column.voicedCoverage	Voiced coverage
+en-US	result.glissando.column.confidence	Confidence
+en-US	result.glissando.column.endpoints	Endpoints
+en-US	result.glissando.column.status	Status
+en-US	result.glissando.endpoints.both	Both endpoints
+en-US	result.glissando.endpoints.originOnly	Origin only
+en-US	result.glissando.endpoints.destinationOnly	Destination only
+en-US	result.glissando.endpoints.neither	Neither endpoint
+en-US	home.explanation	Choose the analysis that matches your research question.
+en-US	module.active	Active module
+en-US	analysis.directional.explanation	Ascending, descending and sustained uses are evaluated separately.
+en-US	analysis.augmented.explanation	The second and third degrees and the direct 2↔3 interval are evaluated.
+en-US	result.hicaz.summary.degreeTitle	{0} • degree {1}
+en-US	result.hicaz.summary.intervalTitle	{0} • augmented interval 2↔3
+en-US	result.hicaz.column.number	#
+en-US	result.hicaz.column.intervalDeviationCent	Interval deviation C
+en-US	result.hicaz.column.intervalDeviationHc	Interval deviation Hc
+en-US	result.glissando.summary.directionTitle	{0} glissandi
+en-US	result.glissando.column.number	#
+en-US	table.number	#
+en-US	table.pitch	Pitch
+en-US	table.time	Time
+en-US	table.duration	Duration
+en-US	table.hertz	Hz
+en-US	table.relativeCent	Relative C
+en-US	table.relativeHc	Relative Hc
+en-US	table.deviationCent	Deviation C
+en-US	table.deviationHc	Deviation Hc
+en-US	table.direction	Direction
+en-US	table.type	Type
+en-US	table.confidence	Confidence
+en-US	table.comment	Comment
+en-US	table.usage	Usage
+en-US	table.path	Path
+en-US	table.observedCent	Observed C
+en-US	table.observedHc	Observed Hc
+en-US	table.referenceDeviationCent	Reference deviation C
+en-US	table.referenceDeviationHc	Reference deviation Hc
+en-US	table.localCent	Local C
+en-US	table.localHc	Local Hc
+en-US	table.intonation	Intonation
+en-US	table.f0Confidence	F0 confidence
+en-US	table.classConfidence	Class confidence
+en-US	table.status	Status
+en-US	table.nearestCenter	Nearest centre
+en-US	table.included	Included
+en-US	common.minimum	Minimum
+en-US	common.maximum	Maximum
+en-US	common.observed	Observed
+en-US	common.theoreticalDeviation	Theoretical deviation
+en-US	common.withinOneHc	Within ±1 Hc
+en-US	common.seconds	seconds
+en-US	common.notAvailable	Not available
+en-US	common.unspecified	Not specified
+en-US	status.loadingAudio	Loading audio…
+en-US	status.trackingPitch	Tracking pitch…
+en-US	status.pitchReadyCached	Pitch track ready (cached)
+en-US	status.tonicConfirmed	Tonic confirmed
+en-US	status.analysis.inProgress	Analysis in progress…
+en-US	validation.openAudio	Open an audio file first.
+en-US	validation.waitForPitch	Wait until pitch tracking is complete.
+en-US	validation.selectTonic	Select and confirm the tonic.
+en-US	validation.selectTarget	Select a target pitch.
+en-US	validation.distinctBoundaries	The lower and upper boundaries must be different.
+en-US	validation.distinctGlissandoPitches	Select two different pitches for glissando analysis.
+en-US	dialog.openAudio.title	Open audio file
+en-US	dialog.error.audioDecode	The audio file could not be decoded.
+en-US	dialog.error.analysis	The analysis could not be completed.
+en-US	dialog.error.playback	Playback could not be started.
+en-US	dialog.error.report	The report could not be created.
+en-US	status.processingReport	Creating report…
+en-US	transport.playSelection	Play selection
+en-US	transport.resume	Resume
+en-US	tonic.evidence.noAudio	Open an audio file first.
+en-US	tonic.evidence.selectRegion	Drag over the waveform to select a stable sound region.
+en-US	tonic.evidence.insufficient	The selected region does not contain enough stable pitch evidence.
+en-US	result.waiting	Analysis result pending
+en-US	source.none	No audio file selected
+en-US	source.details	{0} s • {1} kHz • {2}
+en-US	tonic.evidence.finalCandidate	Final stable-sound candidate: {0} Hz • confidence {1}
+en-US	tonic.evidence.selection	Selection {0}–{1} s: {2} Hz{3} • confidence {4} • {5} frames
+en-US	tonic.method.unspecified	Not specified
+en-US	tonic.method.finalCandidate	Final stable-sound candidate
+en-US	tonic.method.selectionMedian	Median of the selected region
+en-US	event.hold	Hold
+en-US	usage.ascendingPhrase	Ascending phrase
+en-US	usage.descendingPhrase	Descending phrase
+en-US	usage.directHold	Direct hold
+en-US	usage.other	Other
+en-US	field.makam.searchHint	Type to search for a Makam
+en-US	result.hicaz.degree.label	{0}. degree
+en-US	result.hicaz.audit.lowConfidence	Low confidence
+en-US	result.hicaz.audit.shortContact	Short contact
+en-US	result.hicaz.audit.lowConfidenceInterval	Low-confidence interval
+en-US	result.hicaz.audit.lowConfidencePhrase	Low-confidence phrase
+en-US	result.glissando.summary.medianDuration	Median duration
+en-US	result.glissando.summary.medianSpan	Median span
+en-US	result.glissando.summary.intervalError	Interval error
+en-US	result.glissando.summary.medianSpeed	Median speed
+en-US	result.glissando.summary.meanReverse	Mean reverse movement
+en-US	result.glissando.audit.short	Too short
+en-US	result.glissando.audit.long	Too long
+en-US	result.glissando.audit.narrow	Movement is too narrow
+en-US	result.glissando.audit.lowMonotonicity	Low monotonicity
+en-US	result.glissando.audit.lowMovement	Insufficient movement
+en-US	result.glissando.audit.jump	Abrupt jump
+en-US	result.glissando.audit.gap	Voicing gap
+en-US	result.glissando.audit.lowCoverage	Low voiced coverage
+en-US	result.glissando.audit.intermediateHold	Intermediate hold
+en-US	result.glissando.audit.origin	Origin endpoint not reached
+en-US	result.glissando.audit.destination	Destination endpoint not reached
+en-US	status.loadingEditedAudio	Loading edited audio…
+en-US	status.result.single	Single-pitch analysis complete
+en-US	status.result.between	Between-pitches analysis complete
+en-US	status.result.directional	Directional analysis complete
+en-US	status.result.hicaz	Augmented-interval analysis complete
+en-US	status.result.glissando	Glissando analysis complete
+en-US	validation.reportHandler	The report service is not available.
+en-US	validation.analysisInProgress	Wait until the current analysis is complete.
+en-US	action.home.tooltip	Return to the analysis-module selection screen
+en-US	canvas.empty	Open an audio file or load the example melody
+en-US	canvas.tonicPick	Tonic selection: click the pitch trace that you accept as the tonic
+en-US	canvas.boundaryExcluded	boundaries excluded
+en-US	canvas.navigationHint	Two fingers ↕: move through pitches • ↔: move through time • pinch: horizontal zoom • Option+↕: vertical zoom
+en-US	canvas.waveformBuilding	Preparing the waveform in the background…
+en-US	theory.target.empty	Theoretical target: —
+en-US	theory.augmented.reference	{0} tetrachord reference: 0–5–17–22 Hc • augmented interval 2↔3
+en-US	theory.glissando.distinct	Select two different pitches for glissando analysis
+en-US	theory.glissando.span	{0} ↔ {1} • theoretical span {2} C / {3} Hc
+en-US	theory.directional.reference	"{0} reference: {3} C / {4} Hc{5}
+Candidate range: {1} < F0 < {2} (boundaries excluded)"
+en-US	theory.boundaries.distinct	Select two different boundary pitches
+en-US	theory.openInterval	"Open interval • boundaries excluded
+{0}: {1} C{2}
+{3}: {4} C{5}"
+en-US	theory.target	Theoretical target: {0} C / {1} Hc{2}
+en-US	result.summary.directional	{0} reference: {3} Hc / {4} C / {5} Hz • {1} < F0 < {2} • {6} candidates, {7} in primary statistics
+en-US	result.summary.augmented	{0} tetrachord 0–5–17–22 Hc • theoretical augmented interval 12 Hc / {1} C • {2} ascending and {3} descending phrases • {4} direct 2↔3 measurements
+en-US	result.summary.glissando	{0}–{1} • theoretical {2} C / {3} Hc • {4} ascending and {5} descending glissandi • {6} audit candidates
+en-US	result.summary.between	Open interval {0}–{1} • boundaries excluded • {2} contacts, {3} measurable, {4} stable • {5} s{6}
+en-US	result.summary.single	Theoretical {0} Hc / {1} C • {2} contacts, {3} measurable, {4} stable • median {5} C ({6} Hc) • stable median {7} C • flat/sharp {8}/{9}
+en-US	progress.preparing	Preparing…
+en-US	progress.complete	{0} • {1}
+en-US	progress.running	{0} • elapsed {1} • remaining ~{2}
+en-US	waveEditor.windowTitle	MakamLab — Wave Editor
+en-US	waveEditor.title	Wave Editor
+en-US	waveEditor.selectionHint	Click a point or drag to select a range
+en-US	waveEditor.instantPitch.empty	Instant pitch: —
+en-US	waveEditor.preview	Listen for 2 s
+en-US	waveEditor.cut	Cut
+en-US	waveEditor.split	Split
+en-US	waveEditor.delete	Delete
+en-US	waveEditor.trim	Trim to selection
+en-US	waveEditor.paste	Paste
+en-US	waveEditor.undo	Undo
+en-US	waveEditor.apply	Save and transfer to the home screen
+en-US	waveEditor.timeline.tooltip	Move left or right through the time window
+en-US	waveEditor.fit	Show all
+en-US	waveEditor.zoomOut.tooltip	Zoom out on the time axis
+en-US	waveEditor.zoomIn.tooltip	Zoom in on the time axis
+en-US	waveEditor.cancel	Cancel
+en-US	waveEditor.apply.tooltip	Saves the edited WAV, loads it on the MakamLab home screen and recalculates the pitch track
+en-US	waveEditor.cut.tooltip	Removes the selection and places it on the editor clipboard
+en-US	waveEditor.split.tooltip	Creates a section boundary at the cursor; double-click to select the section
+en-US	waveEditor.delete.tooltip	Deletes the selection without placing it on the clipboard
+en-US	waveEditor.trim.tooltip	Keeps only the selected range
+en-US	waveEditor.paste.tooltip	Pastes the cut audio at the cursor position
+en-US	waveEditor.selection	Selection: {0}–{1} • {2} s
+en-US	waveEditor.cursor	Cursor: {0} • drag to select a range
+en-US	waveEditor.pitch.unreliable	Instant pitch: no reliable F0
+en-US	waveEditor.pitch.value	{0}: {1} Hz{2} • confidence {3}
+en-US	waveEditor.selectionMedian	Selection median
+en-US	waveEditor.instantPitch	Instant pitch
+en-US	waveEditor.save.title	Save edited WAV file
+en-US	waveEditor.fileSuffix	-edited
+en-US	waveEditor.saving	Saving edited WAV • {0}
+en-US	waveEditor.save.error	Could not save the edited audio
+en-US	waveEditor.save.tooLarge	The edited recording exceeds the WAV size limit
+en-US	report.academicPerformanceAnalysis	Academic Performance Analysis
+en-US	report.analysisInterval	Analysis interval
+en-US	report.analysisType.directionalSegah	Ascending–descending Segâh analysis
+en-US	report.analysisType.interval	Between-pitches analysis
+en-US	report.anchor	anchor
+en-US	report.appendixAllContacts	Appendix A. All canonical target-pitch contacts
+en-US	report.appendixContactsDescription	This appendix contains all canonical target-pitch events, including brief and transitional contacts. Brief contacts are shown to audit boundary crossings and possible false positives.
+en-US	report.application	Application
+en-US	report.ascendingEvidence	Ascending evidence
+en-US	report.automaticCandidate	Automatic candidate
+en-US	report.automaticTonicAnchor	Tonic anchor (automatic candidate)
+en-US	report.boundariesExcluded	both boundaries excluded
+en-US	report.byNetDirection	By net melodic direction
+en-US	report.bySegahContext	By Segâh usage context
+en-US	report.candidateArea	Candidate region
+en-US	report.candidateSuffix	 / candidate
+en-US	report.chart.briefContact	Brief contact
+en-US	report.chart.degreeDeviations	degree deviations
+en-US	report.chart.deviationByDirection	Deviation by net melodic direction
+en-US	report.chart.deviationDistribution	Deviation distribution of measurable events
+en-US	report.chart.deviationFromTheoryC	Deviation from theoretical centre (C)
+en-US	report.chart.directionalCandidateNote	The shaded area is the open Dügâh–Bûselik candidate region; each point is one merged usage.
+en-US	report.chart.directionalSegahPositions	{0} Segâh positions in {1}
+en-US	report.chart.excludedAudit	Excluded/audit
+en-US	report.chart.excludedEventLegend	Audit event excluded from statistics (n={0})
+en-US	report.chart.includedEventLegend	Measurable performance event in the table (n={0})
+en-US	report.chart.intervalBandNote	The shaded area is the open analysis interval; the turquoise line shows the selected makam's expected reference.
+en-US	report.chart.lowerExcludedSuffix	 - lower boundary (excluded)
+en-US	report.chart.measurableEventDistribution	Distribution of {0} measurable events
+en-US	report.chart.medianC	Median {0} C
+en-US	report.chart.musicalUsageLegend	{0} musical usage (n={1})
+en-US	report.chart.noAcceptedUsage	There is no accepted musical usage in this group.
+en-US	report.chart.noAcceptedUsageContext	There is no accepted musical usage in this context.
+en-US	report.chart.noDirectionGroup	No direction group is available.
+en-US	report.chart.noDirectionalGeometry	No directional Segâh decision geometry is available in the report data.
+en-US	report.chart.noMeasurableEvent	No measurable target-pitch event was found.
+en-US	report.chart.noProfileComparison	No scale / çeşni-group comparison was made.
+en-US	report.chart.noReportableEvent	No reportable measurable event was found.
+en-US	report.chart.noTargetContact	No target-pitch contact was found.
+en-US	report.chart.noTheoryCenters	No theoretical pitch centres are available in the report data.
+en-US	report.chart.noTonicTrace	No tonic trace is available in the report data.
+en-US	report.chart.openInterval	Open analysis interval in {0}
+en-US	report.chart.overallDeviations	Overall degree deviations
+en-US	report.chart.positionAxis	Position relative to the tonic (Hc) - 1 Hc = 1200/53 C
+en-US	report.chart.profileSimilarity	Tonic-aligned scale / çeşni-group similarity
+en-US	report.chart.profileSimilarityNote	The score uses only degrees 2-4 relative to the confirmed tonic; it is not a makam diagnosis by itself.
+en-US	report.chart.recordingTimeMinutes	Recording time (minutes)
+en-US	report.chart.recordingTimeSeconds	Recording time (s)
+en-US	report.chart.redLine	Each red line shows the measured start and end positions of one event.
+en-US	report.chart.segahAscendingPositions	Segâh pitch positions in ascending phrases
+en-US	report.chart.segahBandNote	The shaded area is the Dügâh–Bûselik candidate region; the turquoise line is the theoretical Segâh reference.
+en-US	report.chart.segahCandidateArea	Segâh candidate area and reference in {0}
+en-US	report.chart.segahContextPositions	Segâh pitch positions in {0} context
+en-US	report.chart.segahDescendingPositions	Segâh pitch positions in descending phrases
+en-US	report.chart.segahOpenCandidateNote	The shaded area is the open Dügâh–Bûselik candidate region; the turquoise line is the theoretical Segâh reference.
+en-US	report.chart.segahSustainPositions	Pitch positions in direct Segâh sustains
+en-US	report.chart.segahTheoryReference	Theoretical Segâh reference
+en-US	report.chart.stableEvent	Stable event (x)
+en-US	report.chart.targetBandNote	The shaded area is the target classification region; the turquoise line is the theoretical target reference.
+en-US	report.chart.targetDeviationTimeline	Deviation of {0} contacts over time
+en-US	report.chart.theoreticalPositionAxis	Theoretical position relative to the tonic (Hc) - 1 Hc = 1200/53 C
+en-US	report.chart.theoreticalPositionHc	Theoretical position relative to the tonic (Hc)
+en-US	report.chart.theoreticalReferenceSuffix	 - theoretical reference
+en-US	report.chart.theoreticalTargetPosition	Theoretical position of the target pitch in {0}
+en-US	report.chart.tonicEvidence	Tonic audit in the final tonal region
+en-US	report.chart.tonicHz	Tonic {0} Hz
+en-US	report.chart.upperExcludedSuffix	 - upper boundary (excluded)
+en-US	report.chart.zeroExplanation	The zero line is the theoretical centre; above is sharper and below is flatter.
+en-US	report.chartInsertFailed	The report chart could not be inserted
+en-US	report.class	Class
+en-US	report.classConfidence	Class confidence
+en-US	report.closestFirstFourGroup	Closest first-four-pitch group: {0}
+en-US	report.closestFirstFourProfile	Closest first-four-pitch profile: {0}
+en-US	report.confirmedSuffix	 / confirmed
+en-US	report.coverInterpretation	Negative deviation indicates a flatter use relative to the theoretical target; positive deviation indicates a sharper use. In polyphonic sources the result represents the dominant melodic F0 track in the selected channel rather than one performer.
+en-US	report.coverSubtitle	Tonic: {0} — {1}: {2} — 53-Hc theory
+en-US	report.createdMessage	"Detailed Word report created:
+{0}"
+en-US	report.dataRequired	Report data is required
+en-US	report.degreeFour	Degree 4
+en-US	report.degreeOneTonic	Degree 1 (tonic)
+en-US	report.degreePath	Degree path
+en-US	report.degreeThree	Degree 3
+en-US	report.degreeTwo	Degree 2
+en-US	report.degreeTwoToFourSimilarity	2nd–4th degree similarity
+en-US	report.descendingEvidence	Descending evidence
+en-US	report.deviationC	Deviation C
+en-US	report.deviationCHc	Deviation C/Hc
+en-US	report.deviationCent	Deviation C
+en-US	report.deviationCentHc	Deviation C/Hc
+en-US	report.deviationFrom12Hc	Deviation from 12 Hc
+en-US	report.deviationHc	Deviation Hc
+en-US	report.direction	Direction
+en-US	report.directionGroup	Direction group
+en-US	report.directionalTarget	Directional target
+en-US	report.distribution	Distribution
+en-US	report.documentDescription	53-Hc pitch-performance, direction and makam-profile analysis
+en-US	report.endpointDeviations	Endpoint deviations C/Hc
+en-US	report.engine	Analysis engine
+en-US	report.entryCent	Entry C
+en-US	report.entrySettledExit	Entry / settled / exit
+en-US	report.error.glissandoNotComplete	The glissando analysis is not complete yet
+en-US	report.error.hicazNotComplete	The augmented-interval analysis is not complete yet
+en-US	report.error.intervalBoundaries	Pitch-interval boundaries were not specified
+en-US	report.error.makamNotFound	The makam was not found in the theory catalogue
+en-US	report.error.positiveTonic	The tonic frequency must be positive
+en-US	report.eventBodyValues	Entry, settled and exit values of the event body
+en-US	report.eventCount	Event count
+en-US	report.eventDurationEvidence	{0} events / {1} {2}
+en-US	report.eventMeasurementConfidence	Event measurement and confidence details
+en-US	report.events	events
+en-US	report.excludedSuffix	 - excluded
+en-US	report.excludedWithReason	Excluded: {0}
+en-US	report.exitCent	Exit C
+en-US	report.expectedMakamReference	Expected makam reference within the interval
+en-US	report.f0Confidence	F0 confidence
+en-US	report.f0Coverage	F0 coverage
+en-US	report.fileSha256	File SHA-256
+en-US	report.firstFourEvidenceCount	1 tonic anchor + {0}/{1} observed
+en-US	report.firstFourSimilarity	Scale / çeşni similarity of the first four pitches from the tonic
+en-US	report.flat	Flat
+en-US	report.flatSharp	Flat / sharp
+en-US	report.function	Function
+en-US	report.generatedAt	Report generated
+en-US	report.glissando.countSummary	Primary statistics contain {0} events; the audit layer contains {1} candidates.
+en-US	report.glissando.directionSummary	Glissando summary by direction
+en-US	report.glissando.individualEvents	Individual glissando events
+en-US	report.glissando.limit.endpoints	When endpoint contact is required, movements without sufficiently stable contact at both selected pitches are excluded from the primary statistics.
+en-US	report.glissando.limit.monophonic	Glissando analysis assumes one continuous dominant melodic F0; simultaneous sounds may disturb the F0 track.
+en-US	report.glissando.limit.speed	Speed in C/s and Hc/s describes the slope of pitch movement; it does not directly measure the performer's physical movement speed.
+en-US	report.glissando.method.continuous	Each event was sought as a continuous F0 movement between the selected lower and upper pitches.
+en-US	report.glissando.method.directions	Ascending and descending events were calculated separately. A brief reverse movement does not remove the event; its shape is additionally labelled as returning or mixed.
+en-US	report.glissando.method.endpoints	Start and end values are reported in C and Hc relative to the tonic, and also as deviations from the theoretical endpoints.
+en-US	report.glissando.noneForDirection	No {0} glissando meets the primary statistical criteria.
+en-US	report.glissando.pairReference	Selected pitch pair and theoretical reference
+en-US	report.glissando.paths	glissando paths
+en-US	report.glissando.purpose	Start, end, span, duration, speed and reversal characteristics of ascending and descending slides between the two selected pitches
+en-US	report.glissando.spanScope	Theoretical span: {0}. Scan mode: {1}.
+en-US	report.glissandos	glissandos
+en-US	report.glossary.arithmeticMean	Arithmetic mean
+en-US	report.glossary.arithmeticMeanDefinition	The overall centre obtained by dividing the sum of all values by the number of events.
+en-US	report.glossary.boxPlot	Box plot
+en-US	report.glossary.boxPlotDefinition	The middle line shows the median, the box the middle half of events, and points individual events.
+en-US	report.glossary.cent	A small interval unit obtained by dividing an octave into 1,200 equal parts.
+en-US	report.glossary.confidenceDefinition	A 0–100 ratio indicating how strongly audio evidence supports the F0 measurement.
+en-US	report.glossary.deviation	Calculation: observed position - theoretical target. Example: if the target is 90 C and the measurement is 86 C, deviation is -4 C, meaning 4 C flat. A 94 C measurement would be +4 C, or 4 C sharp.
+en-US	report.glossary.deviationDefinition	Calculation: observed position - theoretical target. Example: if the target is 90 C and the measurement is 86 C, deviation is -4 C, meaning 4 C flat. A 94 C measurement would be +4 C, or 4 C sharp.
+en-US	report.glossary.f0	The fundamental vibration frequency that determines pitch height.
+en-US	report.glossary.hc	An interval unit obtained by dividing an octave into 53 equal parts; 1 Hc is approximately 22.64 C.
+en-US	report.glossary.hz	The number of vibrations per second; the physical unit of frequency.
+en-US	report.glossary.measurableEvent	Measurable event
+en-US	report.glossary.measurableEventDefinition	An event that meets minimum duration and confidence conditions and can enter the numerical summary.
+en-US	report.glossary.medianDefinition	The typical middle value after sorting. Example: the median of -12, -5, -4, +2 and +9 C is -4 C, meaning the typical performance is about 4 C flat of the target.
+en-US	report.glossary.negativeFlat	Negative / flat
+en-US	report.glossary.negativeFlatDefinition	The observed sound is lower than the theoretical centre.
+en-US	report.glossary.oneHcDefinition	A proximity band of approximately ±22.64 C around the theoretical centre.
+en-US	report.glossary.plainExplanation	Plain explanation
+en-US	report.glossary.positiveSharp	Positive / sharp
+en-US	report.glossary.positiveSharpDefinition	The observed sound is higher than the theoretical centre.
+en-US	report.glossary.stableEvent	Stable event
+en-US	report.glossary.stableEventDefinition	An event whose pitch fluctuation within its body remains inside the predefined limit.
+en-US	report.glossary.standardDeviation	Standard deviation / spread
+en-US	report.glossary.standardDeviationDefinition	This is not one sound's difference from the target; it shows how close all performances are to one another. Small values indicate similarity, larger values greater variability.
+en-US	report.glossary.term	Term
+en-US	report.glossary.theoryTarget	Theoretical target / centre
+en-US	report.glossary.theoryTargetDefinition	The expected C, Hc and Hz position of a pitch according to makam theory.
+en-US	report.glossary.weightedMeanDefinition	A mean that gives longer events more weight than brief contacts.
+en-US	report.guide.deviation	Deviation is the difference between the measured performance and the theoretical reference. A negative value is flatter than the reference; a positive value is sharper.
+en-US	report.guide.mad	MAD describes how far events spread around the median. A smaller MAD means more consistent events; a larger MAD means more variable performance.
+en-US	report.guide.meanMedian	The mean describes the overall tendency of all events. The median is the typical middle event after the values are ordered and is less affected by a single extreme value.
+en-US	report.guide.units	C (cent) divides an octave into 1,200 equal parts. Hc is the Holderian comma, which divides the same octave into 53 parts; 1 Hc is approximately 22.64 C.
+en-US	report.hcConversion	53-Hc conversion
+en-US	report.hicaz.degreeDeviations	Hicaz degree deviations
+en-US	report.hicaz.detectedPhrases	Detected directional phrases
+en-US	report.hicaz.direct23	Direct 2↔3 measurement
+en-US	report.hicaz.directMeasurements	Direct augmented-interval measurements
+en-US	report.hicaz.individualDegrees	Individual degree events
+en-US	report.hicaz.method.interval	The augmented interval was measured only in an actual 2→3 or 3→2 transition. Leaps such as 1→3 do not substitute for an augmented-interval measurement.
+en-US	report.hicaz.method.paths	Ascending and descending phrases were built only from degree paths that are ordered in time and move in one direction. Short same-degree splits do not break a path; their event count, duration and confidence weight remain in the evidence. A genuine reversal starts a new phrase, and short subpaths within a longer phrase are not counted separately.
+en-US	report.hicaz.method.reference	The Hicaz tetrachord is represented in the 53-Hc system by the tonic, +5 Hc, +17 Hc and +22 Hc centres.
+en-US	report.hicaz.overallChart	Overall Hicaz degree deviations
+en-US	report.hicaz.overallDegrees	Overall degree summary
+en-US	report.hicaz.overallExplanation	This table is the overall summary in which every event from reliable ascending and descending phrases is used once.
+en-US	report.hicaz.purpose	Directional analysis of the augmented interval between degrees 2 and 3 of the Hicaz tetrachord and the intonation deviations of degrees 2, 3 and 4
+en-US	report.hicaz.referenceExplanation	The tonic is degree 1. The reference sequence is 0–5–17–22 Hc. The augmented interval between degrees 2 and 3 is therefore 12 Hc, or {0} C.
+en-US	report.hicaz.theoreticalAugmented	Theoretical augmented interval
+en-US	report.hicaz.theory	Theoretical Hicaz tetrachord
+en-US	report.horizontalMixed	Horizontal/Mixed
+en-US	report.includedReason	Included / reason
+en-US	report.indicator	Indicator
+en-US	report.indistinguishableWithVerdict	Indistinguishable: {0}
+en-US	report.insufficientFirstFourEvidence	There was insufficient stable interval evidence to compare the first four degrees.
+en-US	report.interpretation.chartReading	Negative values show flatter and positive values sharper usage; boxes contain the middle half of events and points represent individual events. These directional differences are descriptive evidence and must not be interpreted alone as a definitive makam rule or diagnosis.
+en-US	report.interpretation.groupEvidence	{0} n={1}, median {2} C
+en-US	report.interpretation.noMeasurableEvents	Academic interpretation: No measurable event met the report criteria, so no central-tendency interpretation could be made for the distribution or direction groups.
+en-US	report.interpretation.opening	Academic interpretation: The median (the typical middle deviation after sorting) of the {0} measurable events in the report is {1} C; the central tendency {2}.
+en-US	report.interpretation.outsideBand	There are {0} events outside the ±1 Hc ({1} C) band around the theoretical centre
+en-US	report.interpretation.smallSample	Small-sample warning: {0} have fewer than five observations; uncertainty is high.
+en-US	report.interpretation.strongest	The group with the greatest absolute median distance from the theoretical centre is {0} ({1} C).
+en-US	report.intervalName	{0}–{1} interval (boundaries excluded)
+en-US	report.intervalPitchMeans	Mean performance values of pitches in the interval
+en-US	report.limit.boundaries	Because boundary pitches are intentionally excluded, this report does not describe their own performance deviations.
+en-US	report.limit.briefContacts	Brief contacts are excluded from the main mean; all canonical contacts are retained in the audit appendix.
+en-US	report.limit.context	A positive or negative deviation does not by itself indicate an incorrect performance; it must be evaluated together with style, melodic development and context.
+en-US	report.limit.directionalContext	This classification describes only the Segâh usage context heard in the recording; it is not by itself a makam or style diagnosis.
+en-US	report.limit.dominantF0	Results describe the dominant melodic F0 track in the selected channel and must not be interpreted as the independent result of one performer in a polyphonic recording.
+en-US	report.limit.lowConfidence	Brief and low-confidence contacts are retained for audit but excluded from the primary statistical summaries.
+en-US	report.limit.polyphonic	In polyphonic choir or instrumental textures, the result represents the dominant melodic F0 track in the selected channel and cannot be attributed directly to one performer.
+en-US	report.limit.profileNotDiagnosis	Interval-profile similarity does not by itself verify makam identity; interpret it together with musicological context and melodic-course evidence.
+en-US	report.limit.profileNotDiagnosisDetailed	Tonic-aligned interval-profile similarity is not automatic makam diagnosis; evaluate it together with melodic course, dominant, çeşni, modulation and cadence evidence.
+en-US	report.limit.profileNotDiagnosisShort	Tonic-aligned interval-profile similarity is not automatic makam diagnosis; melodic course and çeşni must also be evaluated.
+en-US	report.limit.smallSample	When a group contains fewer than five reliable events, the result is descriptive and should not be generalized to a wider performance population.
+en-US	report.localDugahCentHc	Relative to local Dügâh C/Hc
+en-US	report.lowerBoundary	lower boundary
+en-US	report.lowerBoundaryExcluded	Lower boundary (excluded)
+en-US	report.lowerPitch	Lower pitch
+en-US	report.makam	Makam
+en-US	report.meanCentHc	Mean C/Hc
+en-US	report.meanDeviation	Mean deviation
+en-US	report.meanDuration	Mean duration
+en-US	report.meanEnd	Mean end C/Hc
+en-US	report.meanHertz	Mean Hz
+en-US	report.meanObservedPosition	Mean observed position
+en-US	report.meanSpan	Mean span C/Hc
+en-US	report.meanSpeed	Mean speed C/s / Hc/s
+en-US	report.meanStart	Mean start C/Hc
+en-US	report.measurableEvents	Measurable events
+en-US	report.measure	Measure
+en-US	report.medianAbsoluteError	Median absolute error
+en-US	report.medianCentHc	Median C/Hc
+en-US	report.medianDeviation	Median deviation
+en-US	report.medianDuration	Median duration
+en-US	report.method.auditConfidence	Candidates in the 35–65 percent confidence range were retained in the audit table but excluded from the primary means and medians.
+en-US	report.method.auditEvents	Candidates that do not meet the primary statistical criteria but remain worthy of inspection are retained in the audit-events section.
+en-US	report.method.boundariesExcluded	Events assigned to the lower and upper boundary pitches are excluded regardless of performance deviation.
+en-US	report.method.canonicalAssignment	Canonical pitch events were assigned to mutually exclusive 53-Hc theoretical centres.
+en-US	report.method.confidenceAudit	Candidates with 35–65% confidence were retained in the visual audit layer but excluded from the primary descriptive statistics.
+en-US	report.method.directional.audit	Candidates with 35–65% confidence or only transitional character are retained in the audit table but excluded from the main mean.
+en-US	report.method.directional.averages	Ascending, descending and sustain means are computed from their own events. The All row is not a mean of group means; it uses every accepted event once.
+en-US	report.method.directional.candidate	Candidates are selected among pitches between Dügâh and Bûselik; the two boundary pitches themselves are excluded.
+en-US	report.method.directional.deviation	Each candidate's measured frequency is compared with the theoretical Segâh centre. Negative deviation means a flatter Segâh; positive deviation means a sharper performance.
+en-US	report.method.directional.path	A reliable Dügâh-to-Segâh motion is classified as ascending, and a Segâh-to-Dügâh motion as descending. Following Çargâh and Nevâ in the same direction strengthens, but is not required for, phrase evidence.
+en-US	report.method.directional.sustain	Long, stable Segâh sounds without a clear ascending or descending path are evaluated separately as Segâh sustains.
+en-US	report.method.f0Windows	F0 was estimated with 40 ms analysis windows and steps of approximately 20 ms.
+en-US	report.method.intervalOpen	The study set is defined by the open-interval condition lower boundary < observed F0 < upper boundary.
+en-US	report.method.nearest53Hc	For each event in the open interval, the nearest canonical 53-Hc pitch centre is determined and its signed C/Hc distance is calculated.
+en-US	report.method.robustMedian	To reduce transition effects, each event's representative value was computed from the robust median of its middle body; entry, settled and exit values are also reported.
+en-US	report.method.unnamedIncluded	Intermediate sonorities beyond the naming threshold are retained as Unnamed and reported with their distance to the nearest theoretical pitch.
+en-US	report.method.workingCopy	The recording was analyzed from an anti-alias-filtered 22.05 kHz working copy.
+en-US	report.minimumMaximum	Lowest / highest
+en-US	report.minimumMaximumCentHc	Lowest / highest C/Hc
+en-US	report.nearestPitchDistance	Nearest {0}: {1}
+en-US	report.netDirection	Net direction
+en-US	report.next	Next
+en-US	report.noEvidence	No evidence
+en-US	report.noExpectedReference	No theoretical degree in the selected makam profile falls within this open interval.
+en-US	report.noFirstFourMatchEvidence	No sufficient matching evidence could be produced for the first four degrees.
+en-US	report.noMeasurableTargetEvent	No measurable target-pitch event was found.
+en-US	report.noProfileEvidence	No comparison was produced because there was insufficient scale / çeşni-group evidence.
+en-US	report.noWithReason	No — {0}
+en-US	report.notFoundWithinOneHc	Not found within ±1 Hc
+en-US	report.notIncludedInScore	Not included in score
+en-US	report.note	Note
+en-US	report.observedInterval	Observed interval C/Hc
+en-US	report.observedMean	Observed mean
+en-US	report.observedMedian	Observed median
+en-US	report.observedPath	Observed path
+en-US	report.observedPositionCentHc	Observed position C/Hc
+en-US	report.openIntervalRule	Open-interval rule
+en-US	report.overallDeviationCentHc	Overall deviation C/Hc
+en-US	report.overallMeanAllEvents	Overall mean (all events)
+en-US	report.p90Error	P90 error
+en-US	report.page	Page
+en-US	report.pathRequired	A DOCX path is required
+en-US	report.phrases	phrases
+en-US	report.positionC	Position C
+en-US	report.positionCent	Position C
+en-US	report.positionHc	Position Hc
+en-US	report.previous	Previous
+en-US	report.primaryCandidate	Primary-statistics candidate
+en-US	report.profileGroupVerdict	{0} group — best-matching representative: {1}; members evaluated together: {2}
+en-US	report.profileSameFullProfile	; same complete interval profile as the representative: {0}
+en-US	report.profileUserSelectedGroup	. The makam selected by the user belongs to this group.
+en-US	report.prose.allRow	The All row is not the simple mean of the three group means. It is recalculated by using every accepted event once, so a group with more events contributes its natural weight to the overall result.
+en-US	report.prose.closestFirstFourGroup	Makam profiles evaluated together within the {0} group: {1}. These profiles have the same first four theoretical degrees and cannot be distinguished from one another by this evidence alone.
+en-US	report.prose.directionalCharts	The three charts are independent: the first shows only ascending phrases, the second only descending phrases, and the third only direct Segâh sustains. The shaded region is the same candidate-search area in each chart; the entire region is not automatically treated as Segâh. The turquoise line marks the theoretical Segâh centre, and coloured points mark the accepted merged musical usages in the relevant group.
+en-US	report.prose.directionalEvents	Each row shows one Segâh usage included in the primary statistics. The Observed path column explains the pitch sequence on which the directional decision is based. Stable F0 segments split by the engine within the same musical usage are not counted again; they are retained separately in Appendix A for audit.
+en-US	report.prose.directionalGroupStats	The mean shows the overall tendency of all events; the median is the typical middle event after sorting; and the duration-weighted mean gives more weight to longer Segâh performances. Smaller standard deviation and MAD indicate more similar performances, while larger values indicate greater variability.
+en-US	report.prose.directionalTheory	This analysis uses Segâh as the measurement centre. It first finds candidate sounds between Dügâh and Bûselik, excluding the boundary pitches themselves. It then checks each candidate's proximity to Segâh and whether a motion toward Dügâh occurs before or after it.
+en-US	report.prose.eventsIntro	An asterisk (*) marks events that do not meet the predefined stability criterion. Rows meeting exclusion criteria are retained for traceability but are not included in the primary descriptive statistics.
+en-US	report.prose.firstFourComparison	The first degree is the user-confirmed tonic anchor and is not scored again. The percentage is calculated only from the proximity of the discriminating second, third and fourth theoretical degrees to one common tonic-aligned F0 evidence set inside the fixed first-four-pitch domain. Enabling an optional profile changes only the rows displayed; it does not change this evidence set or an existing score. Unnamed intermediate sounds remain in the evidence, while pitches above the first-four domain are excluded. Duration, repetition, confidence and stability are weighted; unexplained clusters and incomplete degree coverage reduce the score. The result is not automatic makam diagnosis.
+en-US	report.prose.intervalChart	The shaded region represents the open analysis interval with both boundaries excluded, so events belonging to the boundary pitches are not included in the study set. Each reliable measurable event in the interval is shown as a small burgundy point; these are the same performances listed individually in Section 5. The turquoise vertical line and large marker show the theoretical reference pitch expected in this interval for the selected makam. Each F0 event is evaluated against the nearest theoretical 53-Hc pitch centre. Intermediate sonorities beyond the naming threshold are not deleted; they remain in the report as unnamed observations with their C/Hc distance to the nearest centre. This classification is not a makam diagnosis by itself; it quantifies which theoretical centres the performances in the selected interval approach.
+en-US	report.prose.intervalMeans	The first table shows, for each pitch, the mean frequency heard in the recording and its mean C/Hc position relative to the tonic. The theoretical position is the expected place in the makam scale; the mean observed position is the measured performance. The second table summarizes the difference between the two, namely deviation. The overall-mean row is the arithmetic centre of all events and must not be interpreted as a new pitch name by itself.
+en-US	report.prose.intervalPlainExplanation	What does this show? The measured fundamental frequency (F0) is the main frequency value that determines perceived pitch height. Only F0 values strictly between the lower and upper boundaries are studied; the boundary pitches themselves are excluded. Relative to the tonic, negative values indicate a lower position and positive values a higher position.
+en-US	report.prose.intervalTheory	The selected interval is positioned from the user-confirmed tonic frequency in 53 equal Holder commas (Hc). Hc divides an octave into 53 equal steps, while cents (C) divide an octave into 1,200 equal parts. The values below show the lower and upper theoretical boundaries and their frequency equivalents.
+en-US	report.prose.profileComparison	This comparison is not automatic makam diagnosis. It shows which theoretical scale or çeşni group the stable tonic-relative intervals most closely approach. Makam profiles in the same group are merged into one row, whose numerical values come from the complete profile with the highest similarity score in that group. A high percentage indicates proximity of interval centres to the relevant theoretical structure; it does not prove makam identity by itself. Results must be evaluated together with melodic course, dominant, çeşni, modulation and cadence patterns.
+en-US	report.prose.readingGuide	The explanations below help readers understand the measurements in tables and charts without requiring expertise in music theory or audio analysis. C and Hc positions are stated relative to the tonic; deviations are stated relative to the relevant theoretical pitch centre.
+en-US	report.prose.resultsIntro	This section presents event count, mean, median, duration-weighted mean and distribution width. The median is the central value with half the events below it and half above it. In the duration-weighted mean, longer sounds carry more weight than brief contacts. These measures are descriptive and explain only the tendency observed in the recording. Without considering sample size, they must not be interpreted as proof of a general performance rule or statistical significance.
+en-US	report.prose.singleClassification	The shaded area is not a general tolerance window chosen by the user. It is the mutually exclusive classification region formed by the midpoints between the target pitch and its lower and upper neighbouring theoretical pitch centres. Thus, the same F0 frame cannot be assigned to two pitches. Deviation is calculated by subtracting the theoretical target position from the observed tonic-relative position; negative values indicate flatter and positive values sharper performance. This classification measures how the pitch centre is realized in performance and does not determine makam identity by itself.
+en-US	report.prose.singlePlainExplanation	What does this show? Starting from the tonic frequency, the formula calculates the theoretical frequency in Hz of the studied pitch. Relative to the tonic, negative Hc/C values indicate a lower position and positive values a higher position. Subsequent performance measurements are compared with this theoretical target.
+en-US	report.prose.singleTheory	The target pitch's position relative to the tonic is calculated in the 53-equal Holder-comma (Hc) system. Hc divides an octave into 53 equal steps, while cents (C) divide it into 1,200 equal parts. The approved tonic frequency is used to obtain the theoretical target frequency in hertz (Hz).
+en-US	report.prose.smallDirectionalSample	Sample-size warning: fewer than five reliable events are available in {0}. These rows describe the recording and must not be interpreted as a general performance rule.
+en-US	report.prose.sourceMethod	The recording was filtered to avoid artificial frequencies introduced during analysis and converted to a 22.05 kHz working copy. Pitch height was determined from the fundamental frequency, or F0. F0 expresses the basic vibration frequency of the heard sound in hertz. Reliable F0 measurements were assigned to mutually exclusive 53-Hc theoretical pitch centres in the selected makam; statistical evaluation used only canonical events that met the study criteria. Wide analysis regions were not accepted as proof of pitch identity by themselves.
+en-US	report.prose.tonicDetermination	The tonic frequency is determined from all reliable measurements in the selected time region, not from a single point on the pitch trace. The robust median used in this calculation is less affected by brief jumps and unusual measurements. Confidence, spread and possible octave errors are evaluated together to limit the effect of transient frequency changes on the tonic estimate.
+en-US	report.readyTitle	MakamLab report is ready
+en-US	report.reference	reference
+en-US	report.referenceSystem	Reference system
+en-US	report.relativeCHc	Relative to tonic C/Hc
+en-US	report.relativeCent	Relative to tonic (C)
+en-US	report.relativeHc	Relative to tonic (Hc)
+en-US	report.relativeToTonic	Relative to tonic
+en-US	report.reproducibility	Reproducibility
+en-US	report.reverseMovement	Reverse movement
+en-US	report.robustSpread	Robust spread
+en-US	report.robustSpreadCent	Robust spread C
+en-US	report.sameIntervalProfile	Same interval profile: {0}
+en-US	report.saveDialog	Save detailed Makam Word report
+en-US	report.scaleCesniGroup	Scale / çeşni group
+en-US	report.scope.endpointContactRequired	Endpoint contacts required
+en-US	report.scope.openInterval	Selected open interval
+en-US	report.sdMad	SD / MAD
+en-US	report.segahAscendingEvidence	Dügâh→Segâh is sufficient; confidence rises when Çargâh and Nevâ continue in the same direction
+en-US	report.segahAscendingPositions	Segâh positions in ascending phrases
+en-US	report.segahDescendingEvidence	Segâh→Dügâh is sufficient; confidence rises when Çargâh and Nevâ precede it
+en-US	report.segahDescendingPositions	Segâh positions in descending phrases
+en-US	report.segahReference	Segâh reference
+en-US	report.segahSignMeaning	Negative deviation = flatter than the Segâh reference; positive deviation = sharper
+en-US	report.segahSustainDefinition	A long and stable Segâh without a clear directional path
+en-US	report.segahSustainedPositions	Positions of direct Segâh sustains
+en-US	report.segahUsageGroups	Segâh usage groups
+en-US	report.selectionRange	Selection range
+en-US	report.settledCent	Settled C
+en-US	report.shape	Shape
+en-US	report.shape.direct	Direct
+en-US	report.shape.mixed	Mixed
+en-US	report.shape.reversal	With reversal
+en-US	report.sharp	Sharp
+en-US	report.shortConclusion	Brief conclusion
+en-US	report.shortConclusion.directional	For {0} reliable Segâh events, the overall mean deviation was {1} C ({2} Hc) and the median deviation was {3} C ({4} Hc).
+en-US	report.shortConclusion.standard	The median deviation of {0} measurable events was {1} C ({2} Hc); the median of {3} stable events was {4} C ({5} Hc).
+en-US	report.signMeaning	Meaning of the sign
+en-US	report.sourcePath	Source path
+en-US	report.stableSubset	Stable subset
+en-US	report.startEndHz	Start→end Hz
+en-US	report.summary.eventDetail	{0} flatter - {1} sharper - total {2} {3}
+en-US	report.summary.intervalCentre	THEORETICAL INTERVAL CENTRE
+en-US	report.summary.mainMedianDeviation	MAIN MEDIAN DEVIATION
+en-US	report.summary.measurableEvent	MEASURABLE EVENT
+en-US	report.summary.reliableSegahEvent	RELIABLE SEGÂH EVENT
+en-US	report.summary.segahReference	THEORETICAL SEGÂH REFERENCE
+en-US	report.summary.theoreticalTarget	THEORETICAL TARGET
+en-US	report.summary.tonicFrequency	TONIC FREQUENCY
+en-US	report.sustain	Sustain
+en-US	report.target	target
+en-US	report.targetPitch	Target pitch
+en-US	report.tendency.balanced	is balanced around the theoretical target
+en-US	report.tendency.flat	is on the flat side of the theoretical target
+en-US	report.tendency.sharp	is on the sharp side of the theoretical target
+en-US	report.theoreticalCentre	Theoretical centre
+en-US	report.theoreticalDegreeName	Theoretical degree {0}
+en-US	report.theoreticalFrequency	Theoretical frequency
+en-US	report.theoreticalPosition	Theoretical position
+en-US	report.title.directionalDocument	MakamLab — Ascending–Descending Segâh Pitch Analysis
+en-US	report.title.directionalSegah	"{0} Makam
+Ascending–Descending Segâh Usage Analysis"
+en-US	report.title.interval	"{0} Makam
+{1} Analysis"
+en-US	report.title.intervalDocument	MakamLab — Between-Pitches Analysis
+en-US	report.title.singlePitch	"{0} Makam
+{1} Usage Analysis"
+en-US	report.title.singlePitchDocument	MakamLab — Academic Single-Pitch Performance Analysis
+en-US	report.tonicAlignedIntervalSimilarity	Tonic-aligned interval similarity
+en-US	report.tonicLower	tonic
+en-US	report.tonicMethod.automaticConfirmed	Automatic suggestion from the final stable sound, confirmed by the user
+en-US	report.tonicMethod.graphMedianConfirmed	Robust median of the region selected on the graph, confirmed by the user
+en-US	report.unspecifiedProfile	Unspecified profile
+en-US	report.reason.missingOrConflictingDugahAnchor	The Dügâh direction anchor is missing or conflicts in both directions
+en-US	report.reason.pitchBodyTooVariable	The pitch body is too variable for the primary statistics
+en-US	report.reason.studyCriteriaNotMet	The study criteria were not met
+en-US	report.reason.contactTooShortForPrimary	Contact duration is too short for the primary statistics
+en-US	report.reason.closestProfilesNotDistinct	The difference between the closest profiles is small; the interval profile alone is not distinctive.
+en-US	report.path.upperAnchorsNotConfirmed	 (upper anchors not confirmed)
+en-US	report.tonicSelection	Tonic selection
+en-US	report.totalDuration	Total duration
+en-US	report.type	Type
+en-US	report.unnamed	Unnamed
+en-US	report.unnamedNearest	Unnamed (nearest: {0})
+en-US	report.upperBoundary	upper boundary
+en-US	report.upperBoundaryExcluded	Upper boundary (excluded)
+en-US	report.upperPitch	Upper pitch
+en-US	report.usage	Usage
+en-US	report.userConfirmed	Confirmed by the user
+en-US	report.userConfirmedTonicAnchor	User-confirmed tonic anchor
+en-US	report.userSelectedProfile	Makam profile selected by the user
+en-US	report.value	Value
+en-US	report.voicedFrames	Voiced frames
+en-US	report.weightedMeanShort	Duration-wtd. mean
+en-US	report.withinOneHc	Within ±1 Hc
+en-US	result.glissando.title	Glissando Analysis
+en-US	result.hicaz.title	Augmented Interval Analysis
+en-US	unit.centPerSecond	C/s
+en-US	unit.hcPerSecond	Hc/s
+en-US	unit.secondsShort	s
+en-US	audio.channel.autoMelodic	Automatic (melodic channel)
+en-US	format.percentValue	{0}%
+en-US	report.academicInterpretationLimits	Academic interpretation and limitations
+en-US	report.ascendingPhrase	Ascending phrase
+en-US	report.descendingPhrase	Descending phrase
+en-US	report.directSegahSustain	Direct Segâh sustain
+en-US	report.eventType.cadentialHold	Cadential hold
+en-US	report.eventType.shortContact	Brief contact
+en-US	report.eventType.sustained	Sustained
+en-US	report.eventType.transition	Transition
+en-US	report.insufficientContext	Insufficient context
+en-US	report.interpretation.byDirection	By net melodic direction, {0} was observed.
+en-US	report.interpretation.bySegahContext	By Segâh usage context, {0} was observed.
+en-US	report.measurable	Measurable
+en-US	report.numericResultsCharts	Numerical results and charts
+en-US	report.reason.abruptPitchJump	Abrupt pitch jump
+en-US	report.reason.auditF0Confidence	F0 confidence between 35–65%; audit candidate
+en-US	report.reason.durationTooLong	Duration too long
+en-US	report.reason.durationTooShort	Duration too short
+en-US	report.reason.insufficientContinuousMotion	Insufficient evidence of continuous motion
+en-US	report.reason.insufficientProfileEvidence	Insufficient evidence to distinguish makam profiles: {0}.
+en-US	report.reason.insufficientSpan	Insufficient span
+en-US	report.reason.intermediateStableHold	Intermediate stable hold detected
+en-US	report.reason.longF0Gap	Long F0 gap
+en-US	report.reason.lowConfidenceAugmentedInterval	Low-confidence direct augmented interval; audit candidate
+en-US	report.reason.lowConfidenceDegree	Low-confidence degree; audit phrase
+en-US	report.reason.lowF0Confidence65	F0 confidence below 65%; audit evidence
+en-US	report.reason.lowMonotonicity	Low monotonicity
+en-US	report.reason.lowPhraseConfidence	Insufficient phrase-classification confidence
+en-US	report.reason.lowReliableF0Coverage	Low reliable-F0 coverage
+en-US	report.reason.moreStableEvidence	more stable evidence
+en-US	report.reason.noSettledSegah	No settled Segâh body; glissando/transition candidate
+en-US	report.reason.noStableDestinationContact	No stable contact at the destination pitch
+en-US	report.reason.noStableOriginContact	No stable contact at the origin pitch
+en-US	report.reason.outsideSegahBand	Inside the open Dügâh–Bûselik interval but outside the Segâh functional band
+en-US	report.reason.profileNeedsDuration	at least 5 seconds of stable evidence
+en-US	report.reason.profileNeedsEvents	at least 10 stable events
+en-US	report.reason.profileNeedsEventsAndDuration	at least 10 stable events and at least 5 seconds of stable evidence
+en-US	report.reason.shortContact	Brief contact; excluded from the primary mean
+en-US	report.segahReferenceArea	Segâh reference and candidate region
+en-US	report.theoreticalIntervalClassification	Theoretical analysis interval and classification
+en-US	report.tonicDetermination	Determining the tonic
+en-US	report.tonicSource.automaticFinal	Automatic from the final stable sound
+en-US	report.tonicSource.graphRegion	Region selected on the graph
+en-US	report.tonicSource.manualHertz	Manually entered frequency
+en-US	report.uncertainOther	Uncertain/other
+tr-TR	app.title	MakamLab — Akademik İcra Analizi
+tr-TR	header.home	Ana menü
+tr-TR	header.openAudio	Ses dosyası aç…
+tr-TR	header.waveEditor	Dalga düzenleyici…
+tr-TR	header.analyze.single	Perdeyi analiz et
+tr-TR	header.analyze.directional	İnici-çıkıcı kullanımları analiz et
+tr-TR	header.analyze.augmented	Artık aralığı analiz et
+tr-TR	header.analyze.glissando	Glisendoları analiz et
+tr-TR	header.report	Rapor oluştur…
+tr-TR	header.language	Dil
+tr-TR	module.pitch	Perde Analizi
+tr-TR	module.directional	İnici-Çıkıcı Perde Analizi
+tr-TR	module.augmented	Artık Aralık Analizi
+tr-TR	module.glissando	Glisendo Analizi
+tr-TR	home.selectStudy	Bir analiz modülü seç
+tr-TR	home.pitch.description	Bir perdeyi veya iki perde arasındaki açık aralığı analiz edin.
+tr-TR	home.directional.description	Referans perdenin çıkıcı, inici ve sürdürülen kullanımını karşılaştırın.
+tr-TR	home.augmented.description	Artık bir aralık oluşturan ikinci ve üçüncü dereceleri ölçün.
+tr-TR	home.glissando.description	İki seçilmiş perde arasında yukarı ve aşağı glisendolar ölçün.
+tr-TR	card.recording	1. Kayıt
+tr-TR	card.theoryTarget	2. Teori ve hedef
+tr-TR	card.tonic	3. Karar seçimi
+tr-TR	field.audioChannel	Ses kanalı
+tr-TR	field.makam	Makam
+tr-TR	field.analysisType	Analiz türü
+tr-TR	field.targetPitch	İncelenecek perde
+tr-TR	field.lowerBoundary	Alt sınır
+tr-TR	field.upperBoundary	Üst sınır
+tr-TR	field.lowerPitch	Alt perde
+tr-TR	field.upperPitch	Üst perde
+tr-TR	field.confirmedTonic	Onaylı karar (Hz)
+tr-TR	transport.title	Oynatma
+tr-TR	transport.play	Çal
+tr-TR	transport.pause	Duraklat
+tr-TR	transport.stop	Durdur
+tr-TR	tonic.useFinal	Son sesi karar olarak kullan
+tr-TR	tonic.useSelection	Seçili bölgeyi karar olarak kullan
+tr-TR	analysis.single	Tek Perde Analizi
+tr-TR	analysis.between	Perdeler Arası Analiz
+tr-TR	analysis.directional	İnici-Çıkıcı Perde Analizi
+tr-TR	analysis.augmented	Artık Aralık Analizi
+tr-TR	analysis.glissando	İki Perde Arası Glisendo Analizi
+tr-TR	status.ready	Hazır
+tr-TR	status.selectStudy	Bir analiz modülü seçin
+tr-TR	status.openAudio	Başlamak için bir ses dosyası açın
+tr-TR	status.pitchReady	Perde izi hazır
+tr-TR	status.analysisWaiting	Analiz sonucu beklemede
+tr-TR	report.title	Akademik Analiz Raporu
+tr-TR	report.sourceMethod	Kaynak ve yöntem
+tr-TR	report.theoreticalTarget	Kuramsal hedef ve sınıflandırma
+tr-TR	report.eventDistribution	Ölçülebilir olayların dağılımı
+tr-TR	report.individualEvents	Bireysel ölçülebilir olaylar
+tr-TR	report.directionGroups	Melodik yönüne göre kullanım grupları
+tr-TR	report.profileSimilarity	Karar hizalı interval-profil benzerliği
+tr-TR	report.mean	Ortalama
+tr-TR	report.median	Medyan
+tr-TR	report.weightedMean	Süre ağırlıklı ortalama
+tr-TR	report.standardDeviation	Standart sapma
+tr-TR	report.mad	Medyan mutlak sapma (MAD)
+tr-TR	report.minimum	En düşük
+tr-TR	report.maximum	En yüksek
+tr-TR	report.deviation	Sapma
+tr-TR	report.duration	Süre
+tr-TR	report.confidence	Güven
+tr-TR	report.frequency	Frekans
+tr-TR	report.cent	Cent (C)
+tr-TR	report.comma	Holderian koma (Hc)
+tr-TR	report.ascending	Çıkıcı
+tr-TR	report.descending	İnici
+tr-TR	report.sustained	Süreklilik
+tr-TR	report.all	Hepsi
+tr-TR	report.result	Sonuç
+tr-TR	report.method	Yöntem
+tr-TR	report.source	Kaynak
+tr-TR	report.interpretation	Yorum
+tr-TR	report.sampleCount	Örnek sayısı
+tr-TR	report.rank	Sıra
+tr-TR	report.profile	Profil
+tr-TR	report.similarity	Benzerlik
+tr-TR	report.coverage	Kapsama
+tr-TR	report.evidence	Delil
+tr-TR	report.conclusion	Sonuç
+tr-TR	report.theoreticalReference	Kuramsal referans
+tr-TR	report.measuredValue	Ölçülen değer
+tr-TR	report.sharper	Daha keskin
+tr-TR	report.flatter	Daha düz
+tr-TR	report.event	Olay
+tr-TR	report.time	Zaman
+tr-TR	report.pitch	Perd
+tr-TR	report.note.properNames	Makam ve perde isimleri özel isimdir ve sağlandığı gibi aynen korunur.
+tr-TR	report.readingGuide	Bu rapor nasıl okunur?
+tr-TR	report.methodSummary	Yöntem özeti
+tr-TR	report.limitations	Sınırlamalar
+tr-TR	report.date	Tarih
+tr-TR	report.recording	Kayıt
+tr-TR	report.sampleRate	Örnekleme hızı
+tr-TR	report.channel	Kanal
+tr-TR	report.tonic	Karar
+tr-TR	report.tonicMethod	Karar seçim yöntemi
+tr-TR	report.status	Durum
+tr-TR	report.description	Açıklama
+tr-TR	report.yes	Evet
+tr-TR	report.no	Hayır
+tr-TR	report.audit	Denetim
+tr-TR	report.primaryStatistics	Temel istatistikler
+tr-TR	report.glissandoSummary	Glisendo özeti
+tr-TR	report.glissandoEvents	Glisendo olayları
+tr-TR	report.augmentedInterval	Artık aralık
+tr-TR	report.degree	Derece
+tr-TR	report.phrase	İfade
+tr-TR	report.path	Yol
+tr-TR	report.speed	Hız
+tr-TR	report.start	Başlangıç
+tr-TR	report.end	Bitiş
+tr-TR	report.span	Aralık
+tr-TR	report.intervalError	Aralık hatası
+tr-TR	report.monotonicity	Tekdüzelik
+tr-TR	report.returnMovement	Ters hareket
+tr-TR	report.excluded	Hariç tutulan
+tr-TR	report.included	Dahil
+tr-TR	action.home	‹ Ana menü
+tr-TR	action.openAudio	Ses dosyasını aç…
+tr-TR	action.waveEditor	Dalga düzenleyici…
+tr-TR	action.analyze.single	Tek perdeyi analiz et
+tr-TR	action.analyze.between	Perdeler arasını analiz et
+tr-TR	action.analyze.directional	İnici-çıkıcı kullanımları analiz et
+tr-TR	action.analyze.hicaz	Artık aralığı analiz et
+tr-TR	action.analyze.glissando	Glisendoları analiz et
+tr-TR	action.createReport	Rapor oluştur…
+tr-TR	action.useLastTonic	Son sesi karar olarak kullan
+tr-TR	action.useSelectedTonic	Seçili bölgeyi karar olarak kullan
+tr-TR	language.selector.tooltip	Dili değiştir
+tr-TR	menu.help	Yardım
+tr-TR	menu.about	MakamLab hakkında
+tr-TR	about.title	MakamLab hakkında
+tr-TR	about.version	Sürüm {0} • {1}
+tr-TR	about.developer	Geliştiren: {0}.
+tr-TR	about.contact	İletişim: {0}
+tr-TR	about.makamboxAttribution	Bilge Miraç ATICI’nın MakamBox projesi üzerine oluşturuldu.
+tr-TR	about.copyright	© {0} {1}
+tr-TR	about.component	Bileşen
+tr-TR	about.license	Lisans
+tr-TR	about.licenses	Lisanslar
+tr-TR	about.componentsLicenses	MakamLab paketi, paketlenen bileşenlerinin tam lisans metinlerini içerir.
+tr-TR	about.licenseNotice	MakamLab paketi, paketlenen bileşenlerinin tam lisans metinlerini içerir.
+tr-TR	about.license.title	Bileşenler ve lisanslar
+tr-TR	about.license.description	MakamLab, ücretsiz ve açık kaynaklı bileşenleri birleştirir. Bileşen ve lisans isimleri tam olarak korunur.
+tr-TR	about.license.viewFull	Tam lisans metinlerini görüntüle
+tr-TR	about.license.makamLab	MakamLab — GPL-3.0-or-later
+tr-TR	about.license.makamBox	MakamBox v1.0 — GPL-3.0-or-later
+tr-TR	about.license.jlayer	JLayer 1.0.1 — LGPL-2.1
+tr-TR	about.license.apacheStack	Apache POI / XMLBeans / Log4j / Apache Commons / SparseBitSet — Apache-2.0
+tr-TR	about.license.curvesapi	curvesapi — BSD-3-Clause (Crossing Apache-2.0)
+tr-TR	about.license.openjdk	OpenJDK / JetBrains Runtime 21 — GPL-2.0 with Classpath Exception
+tr-TR	about.close	Kapat
+tr-TR	common.close	Kapat
+tr-TR	audio.channel.auto	Otomatik (melodik kanal)
+tr-TR	audio.channel.mix	Kanal karışımı
+tr-TR	audio.channel.left	Sol kanal
+tr-TR	audio.channel.right	Sağ kanal
+tr-TR	audio.channel.mono	Mono
+tr-TR	direction.ascending	Çıkıcı
+tr-TR	direction.descending	İnici
+tr-TR	direction.horizontal	Yatay/Karışık
+tr-TR	event.prolongation	Uzatma
+tr-TR	event.transition	Geçiş
+tr-TR	event.shortContact	Kısa temas
+tr-TR	glissando.direction.ascending	Çıkıcı
+tr-TR	glissando.direction.descending	İnici
+tr-TR	glissando.shape.direct	Doğrudan
+tr-TR	glissando.shape.reverse	Ters
+tr-TR	glissando.shape.mixed	Karışık
+tr-TR	glissando.status.primary	Birincil
+tr-TR	glissando.status.audit	Denetim
+tr-TR	glissando.status.rejected	Reddedildi
+tr-TR	common.yes	Evet
+tr-TR	common.no	Hayır
+tr-TR	common.none	Yok
+tr-TR	common.average	Ortalama
+tr-TR	common.median	Medyan
+tr-TR	common.duration	Süre
+tr-TR	common.confidence	Güven
+tr-TR	common.status	Durum
+tr-TR	common.auditNote	Denetim notu
+tr-TR	common.mainStatistics	Ana istatistikler
+tr-TR	common.noMeasurableEvent	Ölçülebilir bir olay bulunamadı.
+tr-TR	direction.level	Seviye/Karışık
+tr-TR	intonation.flat	Kuramsal referanstan daha düz
+tr-TR	intonation.sharp	Kuramsal referanstan daha keskin
+tr-TR	intonation.theoreticalCenter	Kuramsal referansta
+tr-TR	result.hicaz.tab.phrases	İfadeler
+tr-TR	result.hicaz.tab.degreeEvents	Derece olayları
+tr-TR	result.hicaz.tab.directInterval	Doğrudan aralık olayları
+tr-TR	result.hicaz.summary.degree	Derece özeti
+tr-TR	result.hicaz.summary.interval	Artık aralık özeti
+tr-TR	result.hicaz.column.direction	Yön
+tr-TR	result.hicaz.column.path	Yol
+tr-TR	result.hicaz.column.time	Zaman
+tr-TR	result.hicaz.column.duration	Süre
+tr-TR	result.hicaz.column.confidence	Güven
+tr-TR	result.hicaz.column.hasDirectInterval	Doğrudan aralık
+tr-TR	result.hicaz.column.status	Durum
+tr-TR	result.hicaz.column.degree	Derece
+tr-TR	result.hicaz.column.hertz	Hz
+tr-TR	result.hicaz.column.observedCent	Gözlemlenen C
+tr-TR	result.hicaz.column.observedHc	Gözlemlenen Hc
+tr-TR	result.hicaz.column.theoreticalHc	Kuramsal Hc
+tr-TR	result.hicaz.column.deviationCent	Sapma C
+tr-TR	result.hicaz.column.deviationHc	Sapma Hc
+tr-TR	result.hicaz.column.intonation	Tonlama
+tr-TR	result.hicaz.column.phrase	İfade
+tr-TR	result.hicaz.column.secondDegree	İkinci derece
+tr-TR	result.hicaz.column.thirdDegree	Üçüncü derece
+tr-TR	result.hicaz.column.observedIntervalCent	Gözlemlenen aralık C
+tr-TR	result.hicaz.column.observedIntervalHc	Gözlemlenen aralık Hc
+tr-TR	result.glissando.tab.primary	Birincil glisendolar
+tr-TR	result.glissando.tab.audit	Denetim olayları
+tr-TR	result.glissando.summary.title	Glisendo özeti
+tr-TR	result.glissando.column.direction	Yön
+tr-TR	result.glissando.column.shape	Şekil
+tr-TR	result.glissando.column.time	Zaman
+tr-TR	result.glissando.column.duration	Süre
+tr-TR	result.glissando.column.startHz	Başlangıç Hz
+tr-TR	result.glissando.column.endHz	Bitiş Hz
+tr-TR	result.glissando.column.startCent	Başlangıç C
+tr-TR	result.glissando.column.startHc	Başlangıç Hc
+tr-TR	result.glissando.column.endCent	Bitiş C
+tr-TR	result.glissando.column.endHc	Bitiş Hc
+tr-TR	result.glissando.column.startDeviation	Başlangıç sapması
+tr-TR	result.glissando.column.endDeviation	Bitiş sapması
+tr-TR	result.glissando.column.span	Aralık
+tr-TR	result.glissando.column.theoretical	Kuramsal aralık
+tr-TR	result.glissando.column.intervalError	Aralık hatası
+tr-TR	result.glissando.column.speed	Hız
+tr-TR	result.glissando.column.reverseMovement	Ters hareket
+tr-TR	result.glissando.column.monotonicity	Tekdüzelik
+tr-TR	result.glissando.column.voicedCoverage	Sesli kapsama
+tr-TR	result.glissando.column.confidence	Güven
+tr-TR	result.glissando.column.endpoints	Uç noktalar
+tr-TR	result.glissando.column.status	Durum
+tr-TR	result.glissando.endpoints.both	Her iki uç nokta
+tr-TR	result.glissando.endpoints.originOnly	Sadece köken
+tr-TR	result.glissando.endpoints.destinationOnly	Sadece hedef
+tr-TR	result.glissando.endpoints.neither	Hiçbir uç nokta
+tr-TR	home.explanation	Araştırma sorunuza uygun analizi seçin.
+tr-TR	module.active	Aktif modül
+tr-TR	analysis.directional.explanation	Çıkıcı, inici ve sürekli kullanımlar ayrı ayrı değerlendirilir.
+tr-TR	analysis.augmented.explanation	İkinci ve üçüncü dereceler ve doğrudan 2↔3 aralığı değerlendirilir.
+tr-TR	result.hicaz.summary.degreeTitle	{0} • derece {1}
+tr-TR	result.hicaz.summary.intervalTitle	{0} • artık aralık 2↔3
+tr-TR	result.hicaz.column.number	#
+tr-TR	result.hicaz.column.intervalDeviationCent	Aralık sapması C
+tr-TR	result.hicaz.column.intervalDeviationHc	Aralık sapması Hc
+tr-TR	result.glissando.summary.directionTitle	{0} glisendo
+tr-TR	result.glissando.column.number	#
+tr-TR	table.number	#
+tr-TR	table.pitch	Perdeler
+tr-TR	table.time	Zaman
+tr-TR	table.duration	Süre
+tr-TR	table.hertz	Hz
+tr-TR	table.relativeCent	Göreceli C
+tr-TR	table.relativeHc	Göreceli Hc
+tr-TR	table.deviationCent	Sapma C
+tr-TR	table.deviationHc	Sapma Hc
+tr-TR	table.direction	Yön
+tr-TR	table.type	Tür
+tr-TR	table.confidence	Güven
+tr-TR	table.comment	Yorum
+tr-TR	table.usage	Kullanım
+tr-TR	table.path	Yol
+tr-TR	table.observedCent	Gözlemlenen C
+tr-TR	table.observedHc	Gözlemlenen Hc
+tr-TR	table.referenceDeviationCent	Referans sapması C
+tr-TR	table.referenceDeviationHc	Referans sapması Hc
+tr-TR	table.localCent	Yerel C
+tr-TR	table.localHc	Yerel Hc
+tr-TR	table.intonation	Tonlama
+tr-TR	table.f0Confidence	F0 güveni
+tr-TR	table.classConfidence	Sınıf güveni
+tr-TR	table.status	Durum
+tr-TR	table.nearestCenter	En yakın merkez
+tr-TR	table.included	Dahil
+tr-TR	common.minimum	Minimum
+tr-TR	common.maximum	Maksimum
+tr-TR	common.observed	Gözlemlenen
+tr-TR	common.theoreticalDeviation	Kuramsal sapma
+tr-TR	common.withinOneHc	±1 Hc içinde
+tr-TR	common.seconds	saniye
+tr-TR	common.notAvailable	Mevcut değil
+tr-TR	common.unspecified	Belirtilmemiş
+tr-TR	status.loadingAudio	Ses yükleniyor…
+tr-TR	status.trackingPitch	Perde izleniyor…
+tr-TR	status.pitchReadyCached	Perde izi hazır (önbellek)
+tr-TR	status.tonicConfirmed	Karar doğrulandı
+tr-TR	status.analysis.inProgress	Analiz devam ediyor…
+tr-TR	validation.openAudio	Önce bir ses dosyası açın.
+tr-TR	validation.waitForPitch	Perde izleme tamamlanana kadar bekleyin.
+tr-TR	validation.selectTonic	Karar sesini seçip onaylayın.
+tr-TR	validation.selectTarget	İncelenecek perdeyi seçin.
+tr-TR	validation.distinctBoundaries	Alt ve üst sınırlar farklı olmalıdır.
+tr-TR	validation.distinctGlissandoPitches	Glisendo analizi için iki farklı perde seçin.
+tr-TR	dialog.openAudio.title	Ses dosyasını aç
+tr-TR	dialog.error.audioDecode	Ses dosyası çözülemedi.
+tr-TR	dialog.error.analysis	Analiz tamamlanamadı.
+tr-TR	dialog.error.playback	Oynatma başlatılamadı.
+tr-TR	dialog.error.report	Rapor oluşturulamadı.
+tr-TR	status.processingReport	Rapor oluşturuluyor…
+tr-TR	transport.playSelection	Seçimi oynat
+tr-TR	transport.resume	Devam et
+tr-TR	tonic.evidence.noAudio	Önce bir ses dosyası açın.
+tr-TR	tonic.evidence.selectRegion	Kararlı bir ses bölgesini seçmek için dalga formu üzerinde sürükleyin.
+tr-TR	tonic.evidence.insufficient	Seçilen bölge yeterli kararlı perde kanıtı içermiyor.
+tr-TR	result.waiting	Analiz sonucu beklemede
+tr-TR	source.none	Hiçbir ses dosyası seçilmedi
+tr-TR	source.details	{0} s • {1} kHz • {2}
+tr-TR	tonic.evidence.finalCandidate	Son kararlı ses adayı: {0} Hz • güven %{1}
+tr-TR	tonic.evidence.selection	Seçim {0}–{1} sn: {2} Hz{3} • güven %{4} • {5} çerçeve
+tr-TR	tonic.method.unspecified	Belirtilmedi
+tr-TR	tonic.method.finalCandidate	Son kararlı ses adayı
+tr-TR	tonic.method.selectionMedian	Seçili bölgenin medyanı
+tr-TR	event.hold	Tut
+tr-TR	usage.ascendingPhrase	Çıkıcı ifade
+tr-TR	usage.descendingPhrase	İnici ifade
+tr-TR	usage.directHold	Doğrudan tutma
+tr-TR	usage.other	Diğer
+tr-TR	field.makam.searchHint	Makam adını yazıp Enter’a basın veya listeden seçin
+tr-TR	result.hicaz.degree.label	{0}. derece
+tr-TR	result.hicaz.audit.lowConfidence	Düşük güven
+tr-TR	result.hicaz.audit.shortContact	Kısa temas
+tr-TR	result.hicaz.audit.lowConfidenceInterval	Düşük güven aralığı
+tr-TR	result.hicaz.audit.lowConfidencePhrase	Düşük güven ifadesi
+tr-TR	result.glissando.summary.medianDuration	Ortanca süre
+tr-TR	result.glissando.summary.medianSpan	Ortanca aralık
+tr-TR	result.glissando.summary.intervalError	Aralık hatası
+tr-TR	result.glissando.summary.medianSpeed	Ortanca hız
+tr-TR	result.glissando.summary.meanReverse	Ortalama ters hareket
+tr-TR	result.glissando.audit.short	Çok kısa
+tr-TR	result.glissando.audit.long	Çok uzun
+tr-TR	result.glissando.audit.narrow	Hareket çok dar
+tr-TR	result.glissando.audit.lowMonotonicity	Düşük monotonluk
+tr-TR	result.glissando.audit.lowMovement	Yetersiz hareket
+tr-TR	result.glissando.audit.jump	Ani sıçrama
+tr-TR	result.glissando.audit.gap	Ses boşluğu
+tr-TR	result.glissando.audit.lowCoverage	Düşük sesli kapsam
+tr-TR	result.glissando.audit.intermediateHold	Ara tutuş
+tr-TR	result.glissando.audit.origin	Başlangıç noktası ulaşılamadı
+tr-TR	result.glissando.audit.destination	Hedef nokta ulaşılamadı
+tr-TR	status.loadingEditedAudio	Düzenlenen ses yükleniyor…
+tr-TR	status.result.single	Tek perdeli analiz tamamlandı
+tr-TR	status.result.between	Perdeler arası analiz tamamlandı
+tr-TR	status.result.directional	İnici-çıkıcı perde analizi tamamlandı
+tr-TR	status.result.hicaz	Artık aralık analizi tamamlandı
+tr-TR	status.result.glissando	Glisendo analizi tamamlandı
+tr-TR	validation.reportHandler	Rapor servisi kullanılamıyor.
+tr-TR	validation.analysisInProgress	Mevcut analiz tamamlanana kadar bekleyin.
+tr-TR	action.home.tooltip	Analiz türü seçim ekranına dön
+tr-TR	canvas.empty	Bir ses dosyası açın veya örnek melodiyi yükleyin
+tr-TR	canvas.tonicPick	Karar seçimi: karar kabul edeceğiniz perde izine tıklayın
+tr-TR	canvas.boundaryExcluded	sınırlar hariç
+tr-TR	canvas.navigationHint	İki parmak ↕: perdeler arasında hareket • ↔: zaman içinde hareket • sıkıştırma: yatay yakınlaştırma • Option+↕: dikey yakınlaştırma
+tr-TR	canvas.waveformBuilding	Arka planda dalga formu hazırlanıyor…
+tr-TR	theory.target.empty	Kuramsal hedef: —
+tr-TR	theory.augmented.reference	{0} dörtlü referansı: 0–5–17–22 Hc • artık aralık 2↔3
+tr-TR	theory.glissando.distinct	Glisendo analizi için iki farklı perde seçin
+tr-TR	theory.glissando.span	{0} ↔ {1} • kuramsal aralık {2} C / {3} Hc
+tr-TR	theory.directional.reference	"{0} referans: {3} C / {4} Hc{5}
+ Aday aralığı: {1} < F0 < {2} (sınırlar dahil değil)"
+tr-TR	theory.boundaries.distinct	İki farklı sınır perdesi seçin
+tr-TR	theory.openInterval	"Açık aralık • sınırlar dahil değil
+ {0}: {1} C{2}
+ {3}: {4} C{5}"
+tr-TR	theory.target	Kuramsal hedef: {0} C / {1} Hc{2}
+tr-TR	result.summary.directional	{0} referansı: {3} Hc / {4} C / {5} Hz • {1} < F0 < {2} • {6} aday, {7} ana istatistikte
+tr-TR	result.summary.augmented	{0} dörtlüsü 0–5–17–22 Hc • kuramsal artık aralık 12 Hc / {1} C • {2} çıkıcı ve {3} inici cümle • {4} doğrudan 2↔3 ölçümü
+tr-TR	result.summary.glissando	{0}–{1} • kuramsal {2} C / {3} Hc • {4} çıkıcı ve {5} inici glisendo • {6} denetim adayı
+tr-TR	result.summary.between	{0}–{1} açık aralığı • sınırlar hariç • {2} temas, {3} ölçülebilir, {4} kararlı • {5} sn{6}
+tr-TR	result.summary.single	Kuramsal {0} Hc / {1} C • {2} temas, {3} ölçülebilir, {4} kararlı • medyan {5} C ({6} Hc) • kararlı medyan {7} C • pest/dik {8}/{9}
+tr-TR	progress.preparing	Hazırlanıyor…
+tr-TR	progress.complete	{0} • {1}
+tr-TR	progress.running	{0} • geçen {1} • kalan ~{2}
+tr-TR	waveEditor.windowTitle	MakamLab — Dalga Düzenleyici
+tr-TR	waveEditor.title	Dalga Düzenleyici
+tr-TR	waveEditor.selectionHint	Bir noktaya tıklayın veya bir aralık seçmek için sürükleyin
+tr-TR	waveEditor.instantPitch.empty	Anlık perde: —
+tr-TR	waveEditor.preview	2 sn dinle
+tr-TR	waveEditor.cut	Kes
+tr-TR	waveEditor.split	Böl
+tr-TR	waveEditor.delete	Sil
+tr-TR	waveEditor.trim	Seçime göre kırp
+tr-TR	waveEditor.paste	Yapıştır
+tr-TR	waveEditor.undo	Geri al
+tr-TR	waveEditor.apply	Kaydet ve ana sayfaya aktar
+tr-TR	waveEditor.timeline.tooltip	Zaman penceresinde sola veya sağa hareket edin
+tr-TR	waveEditor.fit	Tümünü göster
+tr-TR	waveEditor.zoomOut.tooltip	Zaman düzleminde uzaklaştır
+tr-TR	waveEditor.zoomIn.tooltip	Zaman düzleminde yakınlaştır
+tr-TR	waveEditor.cancel	Vazgeç
+tr-TR	waveEditor.apply.tooltip	Düzenlenmiş WAV dosyasını kaydeder, MakamLab ana sayfasına yükler ve perde izini yeniden çıkarır
+tr-TR	waveEditor.cut.tooltip	Seçimi çıkarır ve düzenleyici panosuna alır
+tr-TR	waveEditor.split.tooltip	İmleçte bir bölüm sınırı oluşturur; bölümü seçmek için çift tıklayın
+tr-TR	waveEditor.delete.tooltip	Seçimi panoya yerleştirmeden siler
+tr-TR	waveEditor.trim.tooltip	Yalnızca seçilen aralığı korur
+tr-TR	waveEditor.paste.tooltip	Kesilen sesi imleç konumuna yapıştırır
+tr-TR	waveEditor.selection	Seçim: {0}–{1} • {2} sn
+tr-TR	waveEditor.cursor	İmleç: {0} • bir aralık seçmek için sürükleyin
+tr-TR	waveEditor.pitch.unreliable	Anlık perde: güvenilir F0 yok
+tr-TR	waveEditor.pitch.value	{0}: {1} Hz{2} • güven {3}
+tr-TR	waveEditor.selectionMedian	Seçim medyanı
+tr-TR	waveEditor.instantPitch	Anlık perde
+tr-TR	waveEditor.save.title	Düzenlenen WAV dosyasını kaydet
+tr-TR	waveEditor.fileSuffix	-duzenlenmis
+tr-TR	waveEditor.saving	Düzenlenen WAV kaydediliyor • {0}
+tr-TR	waveEditor.save.error	Düzenlenen ses kaydedilemedi
+tr-TR	waveEditor.save.tooLarge	Düzenlenen kayıt WAV boyut sınırını aşıyor
+tr-TR	report.academicPerformanceAnalysis	Akademik Performans Analizi
+tr-TR	report.analysisInterval	Analiz aralığı
+tr-TR	report.analysisType.directionalSegah	İnici-çıkıcı Segâh analizi
+tr-TR	report.analysisType.interval	Perdeler arası analiz
+tr-TR	report.anchor	çapa
+tr-TR	report.appendixAllContacts	Ek A. Tüm kanonik hedef nota temasları
+tr-TR	report.appendixContactsDescription	Bu ek, kısa ve geçiş kontakları da dahil olmak üzere tüm kanonik hedef perde olaylarını içerir. Kısa temaslar, sınır geçişlerini ve olası yanlış pozitifleri denetlemek için gösterilmiştir.
+tr-TR	report.application	Uygulama
+tr-TR	report.ascendingEvidence	Artan kanıt
+tr-TR	report.automaticCandidate	Otomatik aday
+tr-TR	report.automaticTonicAnchor	Tonik çapa (otomatik aday)
+tr-TR	report.boundariesExcluded	her iki sınır da hariç
+tr-TR	report.byNetDirection	Net melodik yönüne göre
+tr-TR	report.bySegahContext	Segâh kullanım bağlamına göre
+tr-TR	report.candidateArea	Aday bölge
+tr-TR	report.candidateSuffix	/ aday
+tr-TR	report.chart.briefContact	Kısa temas
+tr-TR	report.chart.degreeDeviations	derece sapmaları
+tr-TR	report.chart.deviationByDirection	Net melodik yön ile sapma
+tr-TR	report.chart.deviationDistribution	Ölçülebilir olayların sapma dağılımı
+tr-TR	report.chart.deviationFromTheoryC	Kuramsal merkezden sapma (C)
+tr-TR	report.chart.directionalCandidateNote	Gölgelendirilmiş alan, açık Dügâh–Bûselik aday bölgesidir; her nokta birleştirilmiş kullanımı temsil eder.
+tr-TR	report.chart.directionalSegahPositions	{0} {1} konumlarında Segâh
+tr-TR	report.chart.excludedAudit	Dışlanan/denetim
+tr-TR	report.chart.excludedEventLegend	İstatistiklerden hariç tutulan denetim olayı (n={0})
+tr-TR	report.chart.includedEventLegend	Tablodaki ölçülebilir icra olayı (n={0})
+tr-TR	report.chart.intervalBandNote	Gölgelendirilmiş alan açık analiz aralığını temsil eder; turkuaz çizgi seçilen makamın beklenen referansını gösterir.
+tr-TR	report.chart.lowerExcludedSuffix	- alt sınır (hariç)
+tr-TR	report.chart.measurableEventDistribution	{0} ölçülebilir olayların dağılımı
+tr-TR	report.chart.medianC	Medyan {0} C
+tr-TR	report.chart.musicalUsageLegend	{0} icra olayı (n={1})
+tr-TR	report.chart.noAcceptedUsage	Bu grupta kabul edilmiş icra olayı yoktur.
+tr-TR	report.chart.noAcceptedUsageContext	Bu bağlamda kabul edilmiş icra olayı yoktur.
+tr-TR	report.chart.noDirectionGroup	Hiçbir yön grubu mevcut değil.
+tr-TR	report.chart.noDirectionalGeometry	Rapor verilerinde yönsel Segâh karar geometrisi mevcut değildir.
+tr-TR	report.chart.noMeasurableEvent	Ölçülebilir hedef ton olayı bulunamadı.
+tr-TR	report.chart.noProfileComparison	Dizi/çeşni grubu karşılaştırması yapılmadı.
+tr-TR	report.chart.noReportableEvent	Raporlanabilir ölçülebilir olay bulunamadı.
+tr-TR	report.chart.noTargetContact	Hedef perde teması bulunamadı.
+tr-TR	report.chart.noTheoryCenters	Rapor verilerinde kuramsal nota merkezleri mevcut değil.
+tr-TR	report.chart.noTonicTrace	Rapor verilerinde karar izi yok.
+tr-TR	report.chart.openInterval	{0} içindeki açık analiz aralığı
+tr-TR	report.chart.overallDeviations	Genel derece sapmaları
+tr-TR	report.chart.positionAxis	Karar (Hc) göre konum - 1 Hc = 1200/53 C
+tr-TR	report.chart.profileSimilarity	Karara hizalı dizi / çeşni grubu benzerliği
+tr-TR	report.chart.profileSimilarityNote	Puan yalnız onaylı karara göre 2.-4. dereceleri kullanır; tek başına makam teşhisi değildir.
+tr-TR	report.chart.recordingTimeMinutes	Kayıt süresi (dakika)
+tr-TR	report.chart.recordingTimeSeconds	Kayıt süresi (s)
+tr-TR	report.chart.redLine	Her kırmızı çizgi, bir olayın ölçülen başlangıç ve bitiş pozisyonlarını gösterir.
+tr-TR	report.chart.segahAscendingPositions	Segâh çıkıcı cümlelerdeki perde pozisyonları
+tr-TR	report.chart.segahBandNote	Gölgelendirilmiş alan Dügâh–Bûselik aday bölgesidir; turkuaz çizgi kuramsal Segâh referansını gösterir.
+tr-TR	report.chart.segahCandidateArea	Segâh aday alanı ve {0} içindeki referans
+tr-TR	report.chart.segahContextPositions	Segâh {0} bağlamındaki perde pozisyonları
+tr-TR	report.chart.segahDescendingPositions	Segâh inici cümlelerdeki perde pozisyonları
+tr-TR	report.chart.segahOpenCandidateNote	Gölgelendirilmiş alan, açık Dügâh–Bûselik aday bölgesidir; turkuaz çizgi kuramsal Segâh referansını gösterir.
+tr-TR	report.chart.segahSustainPositions	Doğrudan Segâh uzatmalardaki perde pozisyonları
+tr-TR	report.chart.segahTheoryReference	Kuramsal Segâh referansı
+tr-TR	report.chart.stableEvent	Kararlı olay (x)
+tr-TR	report.chart.targetBandNote	Gölgeli alan hedef sınıflandırma bölgesidir; turkuaz çizgi kuramsal hedef referanstır.
+tr-TR	report.chart.targetDeviationTimeline	Zaman içerisindeki {0} temasın sapması
+tr-TR	report.chart.theoreticalPositionAxis	Karar perdesine göre kuramsal konum (Hc) - 1 Hc = 1200/53 C
+tr-TR	report.chart.theoreticalPositionHc	Karar ile göreceli kuramsal pozisyon (Hc)
+tr-TR	report.chart.theoreticalReferenceSuffix	- kuramsal referans
+tr-TR	report.chart.theoreticalTargetPosition	{0} içindeki hedef notanın kuramsal konumu
+tr-TR	report.chart.tonicEvidence	Son ses bölgesinde karar kanıtı
+tr-TR	report.chart.tonicHz	Karar {0} Hz
+tr-TR	report.chart.upperExcludedSuffix	- üst sınır (hariç)
+tr-TR	report.chart.zeroExplanation	Sıfır çizgisi kuramsal merkezdir; yukarı keskin, aşağı ise daha basık.
+tr-TR	report.chartInsertFailed	Rapor grafiği eklenemedi
+tr-TR	report.class	Sınıf
+tr-TR	report.classConfidence	Sınıf güveni
+tr-TR	report.closestFirstFourGroup	En yakın ilk dört adımlı grup: {0}
+tr-TR	report.closestFirstFourProfile	En yakın ilk dört adımlı profil: {0}
+tr-TR	report.confirmedSuffix	/ doğrulandı
+tr-TR	report.coverInterpretation	Negatif sapma, kuramsal hedefe göre daha düz bir kullanım olduğunu gösterir; pozitif sapma, daha keskin bir kullanım olduğunu gösterir. Polifonik kaynaklarda sonuç, tek bir yorumcuya değil, seçilen kanaldaki baskın melodik F0 parçasını temsil eder.
+tr-TR	report.coverSubtitle	Karar: {0} — {1}: {2} — 53-Hc teorisi
+tr-TR	report.createdMessage	"Detaylı Word raporu oluşturuldu:
+ {0}"
+tr-TR	report.dataRequired	Rapor verileri gerekli
+tr-TR	report.degreeFour	4. derece
+tr-TR	report.degreeOneTonic	1. derece (karar)
+tr-TR	report.degreePath	Derece yolu
+tr-TR	report.degreeThree	3. derece
+tr-TR	report.degreeTwo	2. derece
+tr-TR	report.degreeTwoToFourSimilarity	2. – 4. derece benzerlik
+tr-TR	report.descendingEvidence	Azalan kanıt
+tr-TR	report.deviationC	Sapma C
+tr-TR	report.deviationCHc	Sapma C/Hc
+tr-TR	report.deviationCent	Sapma C
+tr-TR	report.deviationCentHc	Sapma C/Hc
+tr-TR	report.deviationFrom12Hc	12 Hc'den sapma
+tr-TR	report.deviationHc	Sapma Hc
+tr-TR	report.direction	Yön
+tr-TR	report.directionGroup	Yön grubu
+tr-TR	report.directionalTarget	Yönsel hedef
+tr-TR	report.distribution	Dağılım
+tr-TR	report.documentDescription	53-Hc perde-performans, yön ve makam profili analizi
+tr-TR	report.endpointDeviations	Uç nokta sapmaları C/Hc
+tr-TR	report.engine	Analiz motoru
+tr-TR	report.entryCent	Giriş C
+tr-TR	report.entrySettledExit	Giriş / yerleşmiş / çıkış
+tr-TR	report.error.glissandoNotComplete	Glisendo analizi henüz tamamlanmadı
+tr-TR	report.error.hicazNotComplete	Artık aralık analizi henüz tamamlanmadı
+tr-TR	report.error.intervalBoundaries	Ses aralığı sınırları belirtilmedi
+tr-TR	report.error.makamNotFound	Makam teori kataloğunda bulunamadı
+tr-TR	report.error.positiveTonic	Karar frekansı sıfırdan büyük olmalıdır
+tr-TR	report.eventBodyValues	Olay gövdesinin giriş, yerleşmiş ve çıkış değerleri
+tr-TR	report.eventCount	Olay sayısı
+tr-TR	report.eventDurationEvidence	{0} etkinlik / {1} {2}
+tr-TR	report.eventMeasurementConfidence	Olay ölçümü ve güven ayrıntıları
+tr-TR	report.events	olaylar
+tr-TR	report.excludedSuffix	- hariç tutuldu
+tr-TR	report.excludedWithReason	Hariç tutuldu: {0}
+tr-TR	report.exitCent	C'den çık
+tr-TR	report.expectedMakamReference	beklenen makam referansı
+tr-TR	report.f0Confidence	F0 güveni
+tr-TR	report.f0Coverage	F0 kapsaması
+tr-TR	report.fileSha256	Dosya SHA-256
+tr-TR	report.firstFourEvidenceCount	1 tonik çapa + {0}/{1} gözlemlendi
+tr-TR	report.firstFourSimilarity	Karardan başlayan ilk dört sesin dizi / çeşni benzerliği
+tr-TR	report.flat	Pes
+tr-TR	report.flatSharp	Düz / keskin
+tr-TR	report.function	Fonksiyon
+tr-TR	report.generatedAt	Rapor oluşturuldu
+tr-TR	report.glissando.countSummary	Birincil istatistikler {0} olayı içerir; denetim katmanı {1} aday içerir.
+tr-TR	report.glissando.directionSummary	Yöne göre glisendo özeti
+tr-TR	report.glissando.individualEvents	Bireysel glisendo olayları
+tr-TR	report.glissando.limit.endpoints	Uç nokta teması gerektiğinde, her iki seçilen perdede de yeterince stabil temas olmadan yapılan hareketler, birincil istatistiklerden dışlanır.
+tr-TR	report.glissando.limit.monophonic	Glisendo analizi, sürekli bir baskın melodik F0 varsayar; aynı anda çıkan sesler F0 izini bozabilir.
+tr-TR	report.glissando.limit.speed	C/s ve Hc/s cinsinden hız, perde hareketinin eğimini tanımlar; bu, icracının fiziksel hareket hızını doğrudan ölçmez.
+tr-TR	report.glissando.method.continuous	Her bir etkinlik, seçilen alt ve üst notalar arasında sürekli bir F0 hareketi olarak araştırıldı.
+tr-TR	report.glissando.method.directions	Çıkıcı ve inici olaylar ayrı ayrı hesaplandı. Kısa bir ters hareket olayı ortadan kaldırmaz; şekli ayrıca geri dönen veya karışık olarak etiketlenir.
+tr-TR	report.glissando.method.endpoints	Başlangıç ve bitiş değerleri, karar ile ilgili olarak C ve Hc cinsinden ve ayrıca kuramsal uç noktalardan sapmalar olarak rapor edilir.
+tr-TR	report.glissando.noneForDirection	Hiçbir {0} glisendo birincil istatistik kriterlerini karşılamıyor.
+tr-TR	report.glissando.pairReference	Seçilen perde çifti ve kuramsal referans
+tr-TR	report.glissando.paths	glisendo yolları
+tr-TR	report.glissando.purpose	İki seçilen nota arasındaki çıkıcı ve inici kaydırmaların başlangıç, bitiş, kapsam, süre, hız ve tersine dönüş özellikleri
+tr-TR	report.glissando.spanScope	Kuramsal aralık: {0}. Tarama modu: {1}.
+tr-TR	report.glissandos	glisendolar
+tr-TR	report.glossary.arithmeticMean	Aritmetik ortalama
+tr-TR	report.glossary.arithmeticMeanDefinition	Tüm değerlerin toplamı, olay sayısına bölünerek elde edilen genel merkez.
+tr-TR	report.glossary.boxPlot	Kutu grafiği
+tr-TR	report.glossary.boxPlotDefinition	Orta çizgi medyanı, kutu olayların ortanca yarısını ve noktalar bireysel olayları gösterir.
+tr-TR	report.glossary.cent	Bir oktavın 1.200 eşit parçaya bölünmesiyle elde edilen küçük bir aralık birimi.
+tr-TR	report.glossary.confidenceDefinition	Ses kanıtlarının F0 ölçümünü ne kadar güçlü desteklediğini gösteren 0–100 oranı.
+tr-TR	report.glossary.deviation	Hesaplama: gözlemlenen pozisyon - kuramsal hedef. Örnek: hedef 90 C ise ve ölçüm 86 C ise, sapma -4 C olur, bu 4 C flat anlamına gelir. Bir 94 C ölçümü +4 C olur, yani 4 C sharp.
+tr-TR	report.glossary.deviationDefinition	Hesaplama: gözlemlenen konum - teorik hedef. Örnek: Hedef 90 C ve ölçüm 86 C ise sapma -4 C, yani 4 C düzdür. 94 C'lik bir ölçüm +4 C veya keskin 4 C olacaktır.
+tr-TR	report.glossary.f0	Perde yüksekliğini belirleyen temel titreşim frekansı.
+tr-TR	report.glossary.hc	Bir oktavın 53 eşit parçaya bölünmesiyle elde edilen aralık birimi; 1 Hc yaklaşık olarak 22,64 C'dir.
+tr-TR	report.glossary.hz	Saniyedeki titreşim sayısı; frekansın fiziksel birimi.
+tr-TR	report.glossary.measurableEvent	Ölçülebilir olay
+tr-TR	report.glossary.measurableEventDefinition	Minimum süre ve güven koşullarını karşılayan ve sayısal özete girebilen bir olay.
+tr-TR	report.glossary.medianDefinition	Sıralama sonrası tipik orta değer. Örnek: -12, -5, -4, +2 ve +9 C değerlerinin medyanı -4 C'dir, bu da tipik performansın hedefin yaklaşık 4 C altında olduğu anlamına gelir.
+tr-TR	report.glossary.negativeFlat	Negatif / flat
+tr-TR	report.glossary.negativeFlatDefinition	Gözlemlenen ses, kuramsal merkezin altındadır.
+tr-TR	report.glossary.oneHcDefinition	Kuramsal merkez etrafında yaklaşık ±22,64 C’lik bir yakınlık bandı.
+tr-TR	report.glossary.plainExplanation	Basit açıklama
+tr-TR	report.glossary.positiveSharp	Pozitif / sharp
+tr-TR	report.glossary.positiveSharpDefinition	Gözlemlenen ses, kuramsal merkezin üstündedir.
+tr-TR	report.glossary.stableEvent	Sabit olay
+tr-TR	report.glossary.stableEventDefinition	Vücut içindeki perde dalgalanması önceden belirlenmiş sınırlar içinde kalan bir olay.
+tr-TR	report.glossary.standardDeviation	Standart sapma / dağılım
+tr-TR	report.glossary.standardDeviationDefinition	Bu, bir sesin hedeften farkı değildir; tüm performansların birbirine ne kadar yakın olduğunu gösterir. Küçük değerler benzerliği, büyük değerler daha fazla değişkenliği gösterir.
+tr-TR	report.glossary.term	Terim
+tr-TR	report.glossary.theoryTarget	Kuramsal hedef / merkez
+tr-TR	report.glossary.theoryTargetDefinition	Makam teorisine göre bir perdenin beklenen C, Hc ve Hz pozisyonu.
+tr-TR	report.glossary.weightedMeanDefinition	Daha uzun süreli olaylara kısa temaslardan daha fazla ağırlık veren ortalama.
+tr-TR	report.guide.deviation	Sapma, ölçülen performans ile kuramsal referans arasındaki farktır. Negatif bir değer referanstan daha yassıdır; pozitif bir değer daha sivridir.
+tr-TR	report.guide.mad	MAD, olayların medyan etrafında ne kadar yayıldığını tanımlar. Daha küçük bir MAD, daha tutarlı olaylar anlamına gelir; daha büyük bir MAD, daha değişken bir performans anlamına gelir.
+tr-TR	report.guide.meanMedian	Ortalama, tüm olayların genel eğilimini tanımlar. Medyan, değerler sıralandıktan sonra tipik ortadaki olaydır ve tek bir aşırı değerden daha az etkilenir.
+tr-TR	report.guide.units	C (cent), bir oktavı 1.200 eşit parçaya böler. Hc, aynı oktavı 53 parçaya bölen Holder koma'sıdır; 1 Hc yaklaşık olarak 22,64 C'dir.
+tr-TR	report.hcConversion	53-Hc dönüşümü
+tr-TR	report.hicaz.degreeDeviations	Hicaz derece sapmaları
+tr-TR	report.hicaz.detectedPhrases	Tespit edilen yönsel ifadeler
+tr-TR	report.hicaz.direct23	Doğrudan 2↔3 ölçümü
+tr-TR	report.hicaz.directMeasurements	Doğrudan arttırılmış aralık ölçümleri
+tr-TR	report.hicaz.individualDegrees	Bireysel derece olayları
+tr-TR	report.hicaz.method.interval	Artık aralık yalnızca gerçek bir 2→3 veya 3→2 geçişinde ölçülmüştür. 1→3 gibi sıçramalar artık aralık ölçümünün yerine geçmez.
+tr-TR	report.hicaz.method.paths	Çıkıcı ve inici cümleler yalnız zaman içinde sıralanmış ve tek yönde ilerleyen derece yollarından kurulmuştur. Aynı derecedeki kısa bölünmeler yolu bozmaz; olay sayısı, süre ve güven ağırlığı kanıtta korunur. Gerçek yön değişimi yeni bir cümle başlatır ve uzun bir cümle içindeki kısa alt yollar ayrıca sayılmaz.
+tr-TR	report.hicaz.method.reference	Hicaz dörtlüu, 53-Hc sisteminde karar, +5 Hc, +17 Hc ve +22 Hc merkezleri ile temsil edilir.
+tr-TR	report.hicaz.overallChart	Genel Hicaz derece sapmaları
+tr-TR	report.hicaz.overallDegrees	Genel derece özeti
+tr-TR	report.hicaz.overallExplanation	Bu tablo, güvenilir çıkıcı ve inici ifadelerden elde edilen her olayın bir kez kullanıldığı genel özet tablodur.
+tr-TR	report.hicaz.purpose	Hicaz dörtlüunun 2. ve 3. dereceleri arasındaki artık aralığın yönsel analizi ve 2., 3. ve 4. derecelerin intonasyon sapmaları
+tr-TR	report.hicaz.referenceExplanation	Karar sesi 1. derece kabul edilmiştir. Referans dizilim 0–5–17–22 Hc olarak tanımlanmıştır. Buna göre 2. ve 3. dereceler arasındaki artık aralık 12 Hc, yani {0} C olarak hesaplanır.
+tr-TR	report.hicaz.theoreticalAugmented	Kuramsal artık aralık
+tr-TR	report.hicaz.theory	Kuramsal Hicaz dörtlü
+tr-TR	report.horizontalMixed	Yatay/Karma
+tr-TR	report.includedReason	Dahil / sebep
+tr-TR	report.indicator	Gösterge
+tr-TR	report.indistinguishableWithVerdict	Ayırt edilemez: {0}
+tr-TR	report.insufficientFirstFourEvidence	İlk dört dereceyi karşılaştırmak için yeterli stabil aralık kanıtı yoktu.
+tr-TR	report.interpretation.chartReading	Negatif değerler daha düz, pozitif değerler ise daha keskin kullanım gösterir; kutular olayların ortanca yarısını içerir ve noktalar bireysel olayları temsil eder. Bu yönsel farklar tanımlayıcı kanıttır ve tek başına kesin bir makam kuralı veya tanısı olarak yorumlanmamalıdır.
+tr-TR	report.interpretation.groupEvidence	{0} n={1}, medyan {2} C
+tr-TR	report.interpretation.noMeasurableEvents	Akademik yorum: Rapor ölçütlerini karşılayan ölçülebilir bir olay bulunmadığından dağılım veya yön grupları için merkezî eğilim yorumu yapılamamıştır.
+tr-TR	report.interpretation.opening	Akademik yorum: Rapor içindeki {0} ölçülebilir olayın medyanı (sıralandıktan sonra tipik orta sapma) {1} C; merkezi eğilim {2}.
+tr-TR	report.interpretation.outsideBand	Kuramsal merkez etrafındaki ±1 Hc ({1} C) bandının dışında {0} olay bulunmaktadır.
+tr-TR	report.interpretation.smallSample	Küçük örnek uyarısı: {0} beşten az gözleme sahiptir; belirsizlik yüksektir.
+tr-TR	report.interpretation.strongest	Kuramsal merkezden en büyük mutlak medyan mesafeye sahip grup {0} ({1} C).
+tr-TR	report.intervalName	{0}–{1} aralığı (sınırlar hariç)
+tr-TR	report.intervalPitchMeans	Aralıktaki perdelerin ortalama performans değerleri
+tr-TR	report.limit.boundaries	Sınır perdeler kasıtlı olarak dahil edilmediği için, bu rapor kendi performans sapmalarını açıklamaz.
+tr-TR	report.limit.briefContacts	Kısa süreli temaslar ana ortalamadan çıkarılır; tüm kanonik temaslar denetim ekinde korunur.
+tr-TR	report.limit.context	Pozitif ya da negatif sapma tek başına yanlış bir performansı göstermez; stil, melodik gelişim ve bağlam ile birlikte değerlendirilmelidir.
+tr-TR	report.limit.directionalContext	Bu sınıflandırma yalnızca kayıtta duyulan Segâh kullanım bağlamını açıklar; kendi başına bir makam veya stil teşhisi değildir.
+tr-TR	report.limit.dominantF0	Sonuçlar seçilen kanaldaki baskın melodik F0 yolunu tanımlar ve çok sesli bir kayıttaki tek bir icracının bağımsız sonucu olarak yorumlanmamalıdır.
+tr-TR	report.limit.lowConfidence	Kısa ve düşük güvenlikli temaslar denetim için saklanır, ancak birincil istatistiksel özetlerden hariç tutulur.
+tr-TR	report.limit.polyphonic	Polifonik koro veya enstrümantal dokularda, sonuç seçilen kanaldaki baskın melodik F0 parçasını temsil eder ve doğrudan tek bir yorumcuya atfedilemez.
+tr-TR	report.limit.profileNotDiagnosis	Aralık profili benzerliği tek başına makam kimliğini doğrulamaz; bunu müzikolojik bağlam ve melodik akış kanıtıyla birlikte yorumlayın.
+tr-TR	report.limit.profileNotDiagnosisDetailed	Karara hizalı aralık profili benzerliği otomatik makam teşhisi değildir; sonuç seyir, güçlü, çeşni, geçki ve kalış kanıtlarıyla birlikte değerlendirilmelidir.
+tr-TR	report.limit.profileNotDiagnosisShort	Karara hizalı aralık profili benzerliği otomatik makam tanısı değildir; seyir ve çeşni de değerlendirilmelidir.
+tr-TR	report.limit.smallSample	Az sayıda etkinliği olan yön grupları betimleyicidir ve daha geniş bir performans geleneğine genellenmemelidir.
+tr-TR	report.localDugahCentHc	Yerel Dügâh C/Hc'ye göre
+tr-TR	report.lowerBoundary	alt sınır
+tr-TR	report.lowerBoundaryExcluded	Alt sınır (hariç)
+tr-TR	report.lowerPitch	Alt perde
+tr-TR	report.makam	Makam
+tr-TR	report.meanCentHc	Ortalama C/Hc
+tr-TR	report.meanDeviation	Ortalama sapma
+tr-TR	report.meanDuration	Ortalama süre
+tr-TR	report.meanEnd	Ortalama bitiş C/Hc
+tr-TR	report.meanHertz	Ortalama Hz
+tr-TR	report.meanObservedPosition	Ortalama gözlemlenen konum
+tr-TR	report.meanSpan	Ortalama aralık C/Hc
+tr-TR	report.meanSpeed	Ortalama hız C/s / Hc/s
+tr-TR	report.meanStart	Ortalama başlangıç C/Hc
+tr-TR	report.measurableEvents	Ölçülebilir olaylar
+tr-TR	report.measure	Ölçü
+tr-TR	report.medianAbsoluteError	Medyan mutlak hata
+tr-TR	report.medianCentHc	Medyan C/Hc
+tr-TR	report.medianDeviation	Medyan sapma
+tr-TR	report.medianDuration	Medyan süre
+tr-TR	report.method.auditConfidence	%35–65 güven aralığındaki adaylar denetim tablosunda tutulmuş, ancak ana ortalamalar ve medyanlardan çıkarılmıştır.
+tr-TR	report.method.auditEvents	Birincil istatistiksel kriterleri karşılamayan ancak incelenmeye değer kalan adaylar denetim-olaylar bölümünde tutulur.
+tr-TR	report.method.boundariesExcluded	Alt ve üst sınır perdelerine atanan olaylar, performans sapmasından bağımsız olarak hariç tutulur.
+tr-TR	report.method.canonicalAssignment	Perde olayları, birbiriyle çakışmayan kuramsal 53-Hc merkezlerine atanmıştır.
+tr-TR	report.method.confidenceAudit	%35–65 güven aralığındaki adaylar görsel denetim katmanında tutulmuş ancak birincil tanımlayıcı istatistiklerden hariç tutulmuştur.
+tr-TR	report.method.directional.audit	%35–65 güven aralığına sahip adaylar veya sadece geçiş karakterine sahip olanlar denetim tablosunda tutulur ancak ana ortalamadan çıkarılır.
+tr-TR	report.method.directional.averages	Çıkıcı, inici ve kalış ortalamaları kendi olaylarından hesaplanır. Tümü satırı grup ortalamalarının ortalaması değildir; kabul edilen her olayı bir kez içerir.
+tr-TR	report.method.directional.candidate	Adaylar Dügâh ile Bûselik arasındaki seslerden seçilir; iki sınır perdesi de kapsam dışı bırakılır.
+tr-TR	report.method.directional.deviation	Her adayın ölçülen frekansı kuramsal Segâh merkeziyle karşılaştırılır. Negatif sapma daha pes, pozitif sapma daha tiz bir Segâh icrasını gösterir.
+tr-TR	report.method.directional.path	Güvenilir bir Dügâh→Segâh hareketi çıkıcı, Segâh→Dügâh hareketi ise inici olarak sınıflandırılır. Aynı yönde Çargâh ve Nevâ'nın izlenmesi cümle kanıtını güçlendirir; ancak zorunlu değildir.
+tr-TR	report.method.directional.sustain	Belirgin bir çıkıcı veya inici yolu bulunmayan uzun ve kararlı Segâh sesleri, Segâh kalışı olarak ayrıca değerlendirilir.
+tr-TR	report.method.f0Windows	F0, 40 ms analiz pencereleri ve yaklaşık 20 ms adımlarla tahmin edilmiştir.
+tr-TR	report.method.intervalOpen	Çalışma seti, açık aralık koşulu ile tanımlanır: alt sınır < gözlemlenen F0 < üst sınır.
+tr-TR	report.method.nearest53Hc	Açık aralıktaki her olay için en yakın kuramsal 53-Hc perde merkezi belirlenir ve bu merkeze işaretli C/Hc uzaklığı hesaplanır.
+tr-TR	report.method.robustMedian	Geçiş etkisini azaltmak için her olayın temsilî değeri orta bölümün sağlam medyanından hesaplanmıştır; giriş, yerleşik ve çıkış değerleri ayrıca raporlanmıştır.
+tr-TR	report.method.unnamedIncluded	Adlandırma eşiğini aşan ara seslendirmeler silinmez; 'Adlandırılamayan' olarak tutulur ve en yakın kuramsal perdeye uzaklığıyla raporlanır.
+tr-TR	report.method.workingCopy	Kayıt, anti-alias filtrelenmiş 22.05 kHz çalışma kopyasından analiz edilmiştir.
+tr-TR	report.minimumMaximum	En dar / en geniş
+tr-TR	report.minimumMaximumCentHc	En düşük / en yüksek C/Hc
+tr-TR	report.nearestPitchDistance	En yakın {0}: {1}
+tr-TR	report.netDirection	Net yön
+tr-TR	report.next	Sonraki
+tr-TR	report.noEvidence	Kanıt yok
+tr-TR	report.noExpectedReference	Seçilen makam profilinde hiçbir kuramsal derece bu açık aralık içinde yer almıyor.
+tr-TR	report.noFirstFourMatchEvidence	İlk dört derece için yeterli eşleşen kanıt üretilemedi.
+tr-TR	report.noMeasurableTargetEvent	Ölçülebilir bir hedef perde olayı bulunamadı.
+tr-TR	report.noProfileEvidence	Yeterli ölçek/çeşni-grup kanıtı bulunmadığından karşılaştırma yapılmadı.
+tr-TR	report.noWithReason	Hayır — {0}
+tr-TR	report.notFoundWithinOneHc	±1 Hc içinde bulunamadı
+tr-TR	report.notIncludedInScore	Puana dahil değil
+tr-TR	report.note	Nota
+tr-TR	report.observedInterval	Gözlemlenen aralık C/Hc
+tr-TR	report.observedMean	Gözlenen ortalama
+tr-TR	report.observedMedian	Gözlenen medyan
+tr-TR	report.observedPath	Gözlemlenen yol
+tr-TR	report.observedPositionCentHc	Gözlemlenen konum C/Hc
+tr-TR	report.openIntervalRule	Açık aralık kuralı
+tr-TR	report.overallDeviationCentHc	Genel sapma C/Hc
+tr-TR	report.overallMeanAllEvents	Genel ortalama (tüm olaylar)
+tr-TR	report.p90Error	P90 hatası
+tr-TR	report.page	Sayfa
+tr-TR	report.pathRequired	Bir DOCX yolu gereklidir
+tr-TR	report.phrases	ifadeler
+tr-TR	report.positionC	Konum C
+tr-TR	report.positionCent	Pozisyon C
+tr-TR	report.positionHc	Konum Hc
+tr-TR	report.previous	Öncesi
+tr-TR	report.primaryCandidate	Birincil istatistik adayı
+tr-TR	report.profileGroupVerdict	{0} grubu — en iyi eşleşen temsilci: {1}; üyeler birlikte değerlendirildi: {2}
+tr-TR	report.profileSameFullProfile	; temsilciyle aynı tam aralık profili: {0}
+tr-TR	report.profileUserSelectedGroup	. Kullanıcının seçtiği makam bu gruba aittir.
+tr-TR	report.prose.allRow	Tümü satırı, üç grup ortalamasının basit ortalaması değildir. Kabul edilen her olay bir kez kullanılarak yeniden hesaplanır, böylece daha fazla etkinliğe sahip bir grup genel sonuca kendi doğal ağırlığıyla katkıda bulunur.
+tr-TR	report.prose.closestFirstFourGroup	{0} grubu içinde birlikte değerlendirilen makam profilleri: {1}. Bu profiller aynı ilk dört teorik dereceye sahiptir ve birbirlerinden yalnızca bu kanıtlarla ayırt edilemezler.
+tr-TR	report.prose.directionalCharts	Üç grafik bağımsızdır: ilki sadece çıkıcı ifadeleri, ikincisi sadece düşen ifadeleri ve üçüncüsü sadece doğrudan Segâh uzatmalarını gösterir. Gölgelendirilmiş alan her grafikte aynı aday-arama alanıdır; tüm alan otomatik olarak Segâh olarak değerlendirilmez. Turkuaz çizgi kuramsal Segâh merkezini, renkli noktalar ise ilgili grupta kabul edilen birleşik müzik kullanımlarını işaret eder.
+tr-TR	report.prose.directionalEvents	Her satır, birincil istatistiklere dahil edilen bir Segâh kullanımı gösterir. Gözlemlenen yol sütunu, yön kararının dayandığı adım sırasını açıklar. Aynı müzik kullanımında motor tarafından bölünen kararlı F0 bölümleri yeniden sayılmaz; denetim için Ek A'da ayrı olarak saklanırlar.
+tr-TR	report.prose.directionalGroupStats	Ortalama, tüm olayların genel eğilimini gösterir; medyan, sıralandıktan sonra tipik orta olayı gösterir; ve süre ağırlıklı ortalama, daha uzun Segâh performanslarına daha fazla ağırlık verir. Daha küçük standart sapma ve MAD, daha benzer performansları gösterirken, daha büyük değerler daha yüksek değişkenliği gösterir.
+tr-TR	report.prose.directionalTheory	Bu analizde ölçüm merkezi olarak Segâh kullanılır. Öncelikle Dügâh ile Bûselik arasındaki aday sesleri, sınır tonlarını kendisi hariç tutarak bulur. Daha sonra her adayın Segâh'ye yaklaşımını ve Dügâh'a doğru bir hareketin ondan önce mi yoksa sonra mı gerçekleştiğini kontrol eder.
+tr-TR	report.prose.eventsIntro	Bir yıldız işareti (*) önceden tanımlanmış istikrar kriterini karşılamayan olayları işaret eder. Hariç tutulma kriterlerini karşılayan satırlar izlenebilirlik için saklanır, fakat ana tanımlayıcı istatistiklere dahil edilmez.
+tr-TR	report.prose.firstFourComparison	Birinci derece, kullanıcı tarafından onaylanan karar ankrajıdır ve yeniden puanlanmaz. Yüzde yalnız sabit ilk-dört-ses alanı içindeki tek bir ortak, karara hizalı F0 kanıt kümesinin ayırt edici 2., 3. ve 4. kuramsal derecelere yakınlığından hesaplanır. İsteğe bağlı bir profilin açılması yalnız gösterilen satırları değiştirir; ortak kanıtı veya mevcut bir puanı değiştirmez. Adlandırılamayan ara sesler kanıtta korunur; ilk-dört-ses alanının üzerindeki perdeler dışarıda bırakılır. Süre, tekrar, güven ve kararlılık ağırlıklandırılır; açıklanamayan kümeler ile eksik derece kapsamı puanı düşürür. Sonuç otomatik makam teşhisi değildir.
+tr-TR	report.prose.intervalChart	Gölgelendirilmiş bölge, her iki sınırın da dışlandığı açık analiz aralığını temsil eder, bu nedenle sınır perdelerine ait olaylar çalışma setine dahil edilmez. Aralıktaki her güvenilir ölçülebilir olay küçük bordo nokta olarak gösterilmiştir; bunlar Bölüm 5'te ayrı ayrı listelenen aynı performanslardır. Turkuaz dikey çizgi ve büyük işaret, seçilen makama ait bu aralıkta beklenen kuramsal referans perdesini gösterir. Her F0 olayı en yakın kuramsal 53-Hc perde merkezine göre değerlendirilir. Adlandırma eşik değerini aşan ara sesler silinmez; en yakın merkeze olan C/Hc mesafeleri ile adlandırılmamış gözlem olarak raporda kalırlar. Bu sınıflandırma tek başına bir makam tanısı değildir; seçilen aralıktaki performansların hangi kuramsal merkezlere yaklaştığını nicelendirir.
+tr-TR	report.prose.intervalMeans	İlk tablo, her perde için kayıtta duyulan ortalama frekansı ve toniğe göre ortalama C/Hc konumunu gösterir. Teorik konum makam dizisinde beklenen yerdedir; ortalama gözlemlenen konum ölçülen performanstır. İkinci tablo ikisi arasındaki farkı, yani sapmayı özetlemektedir. Genel ortalama satırı, tüm etkinliklerin aritmetik merkezidir ve tek başına yeni bir saha adı olarak yorumlanmamalıdır.
+tr-TR	report.prose.intervalPlainExplanation	Bu neyi gösteriyor? Ölçülen temel frekans (F0), algılanan perdede yükseklik belirleyen ana frekans değeridir. Sadece alt ve üst sınırlar arasında kesin olarak yer alan F0 değerleri incelenir; sınır perdeleri kendileri dahil edilmez. Karar ile karşılaştırıldığında, negatif değerler daha düşük bir konumu, pozitif değerler ise daha yüksek bir konumu belirtir.
+tr-TR	report.prose.intervalTheory	Seçilen aralık, kullanıcı tarafından onaylanmış tonal frekanstan 53 eşit Holder koması (Hc) cinsinden konumlandırılmıştır. Hc, bir oktavı 53 eşit adıma bölerken, centler (C) bir oktavı 1.200 eşit parçaya böler. Aşağıdaki değerler, kuramsal alt ve üst sınırları ve bunların frekans karşılıklarını göstermektedir.
+tr-TR	report.prose.profileComparison	Bu karşılaştırma otomatik makam teşhisi değildir. Kararlı karar-ilişkili aralıkların hangi kuramsal skalaya veya çeşni grubuna en yakın olduğunu gösterir. Makam aynı gruptaki profiller tek bir satırda birleştirilir ve sayısal değerler, o gruptaki en yüksek benzerlik skoruna sahip tam profilden gelir. Yüksek bir yüzde, aralık merkezlerinin ilgili kuramsal yapıya olan yakınlığını gösterir; tek başına makam kimliğini kanıtlamaz. Sonuçlar, melodik seyir, dominant, çeşni, modulasyon ve kadans desenleri ile birlikte değerlendirilmelidir.
+tr-TR	report.prose.readingGuide	Aşağıdaki açıklamalar, okuyucuların müzik teorisi veya ses analizinde uzmanlık gerektirmeden tablolar ve grafiklerdeki ölçümleri anlamalarına yardımcı olur. C ve Hc pozisyonları karar ile ilişkili olarak belirtilmiştir; sapmalar ilgili kuramsal perde merkezine göre belirtilmiştir.
+tr-TR	report.prose.resultsIntro	Bu bölüm, olay sayısını, ortalamayı, medyanı, süre ağırlıklı ortalamayı ve dağılım genişliğini sunar. Medyan, altında yarısı diğer yarısı üstünde olacak şekilde olayların ortasında yer alan değerdir. Süre ağırlıklı ortalamada, daha uzun sesler kısa temaslardan daha fazla ağırlık taşır. Bu ölçümler tanımlayıcıdır ve yalnızca kayıt sırasında gözlemlenen eğilimi açıklar. Örneklem büyüklüğü dikkate alınmadan, genel bir performans kuralı veya istatistiksel anlamlılık kanıtı olarak yorumlanmamalıdır.
+tr-TR	report.prose.singleClassification	Gölgelendirilmiş alan, kullanıcı tarafından seçilen genel bir tolerans penceresi değildir. Bu, hedef perde ile alt ve üst komşu kuramsal perde merkezleri arasındaki ortalamalar tarafından oluşan birbirini dışlayan sınıflandırma bölgesidir. Bu nedenle, aynı F0 karesi iki perdeye atanamaz. Sapma, kuramsal hedef konumdan gözlemlenen karar-ile göreceli konumun çıkarılmasıyla hesaplanır; negatif değerler daha düz, pozitif değerler ise daha tiz performansı gösterir. Bu sınıflandırma, perde merkezinin performansta nasıl gerçekleştirildiğini ölçer ve kendi başına makam kimliğini belirlemez.
+tr-TR	report.prose.singlePlainExplanation	Bu neyi gösteriyor? Karara frekansından başlayarak, formül incelenen perdenin kuramsal frekansını Hz cinsinden hesaplar. Kararaya göre, negatif Hc/C değerleri daha düşük bir konumu, pozitif değerler ise daha yüksek bir konumu gösterir. Sonraki performans ölçümleri bu kuramsal hedefle karşılaştırılır.
+tr-TR	report.prose.singleTheory	Hedef perdelerin karara ile olan konumu 53-eşit Holder-virgül (Hc) sistemine göre hesaplanır. Hc, bir oktavı 53 eşit adıma bölerken, cent (C) onu 1.200 eşit parçaya böler. Kuramsal hedef frekansı Hertz (Hz) cinsinden elde etmek için onaylanmış karara frekansı kullanılır.
+tr-TR	report.prose.smallDirectionalSample	Örnek boyutu uyarısı: {0}'da beşten az güvenilir olay mevcut. Bu satırlar kaydı açıklar ve genel bir performans kuralı olarak yorumlanmamalıdır.
+tr-TR	report.prose.sourceMethod	Kayıt, analiz sırasında ortaya çıkan yapay frekansları önlemek için filtrelendi ve 22,05 kHz çalışma kopyasına dönüştürüldü. Perde yüksekliği, temel frekanstan veya F0'tan belirlendi. F0, duyulan sesin temel titreşim frekansını Hertz cinsinden ifade eder. Güvenilir F0 ölçümleri, seçilen makam içindeki birbirini dışlayan 53-Hc kuramsal perde merkezine atandı; istatistiksel değerlendirme yalnızca çalışma kriterlerini karşılayan kanonik olayları kullandı. Geniş analiz bölgeleri, tek başına perde kimliğinin kanıtı olarak kabul edilmedi.
+tr-TR	report.prose.tonicDetermination	Karar frekans, seçilen zaman bölgesindeki tüm güvenilir ölçümlerden belirlenir, ton çizgisindeki tek bir noktadan değil. Bu hesaplamada kullanılan sağlam medyan, kısa süreli sıçramalar ve olağan dışı ölçümlerden daha az etkilenir. Güven, dağılım ve olası oktav hataları birlikte değerlendirilir, böylece geçici frekans değişimlerinin karar tahmin üzerindeki etkisi sınırlandırılır.
+tr-TR	report.readyTitle	MakamLab raporu hazır
+tr-TR	report.reference	referans
+tr-TR	report.referenceSystem	Referans sistemi
+tr-TR	report.relativeCHc	Karar C/Hc'ye göre
+tr-TR	report.relativeCent	Karar ile göreli (C)
+tr-TR	report.relativeHc	Karar ile göreli (Hc)
+tr-TR	report.relativeToTonic	Karar'e göre
+tr-TR	report.reproducibility	Tekrarlanabilirlik
+tr-TR	report.reverseMovement	Ters hareket C/Hc
+tr-TR	report.robustSpread	Dayanıklı yayılım
+tr-TR	report.robustSpreadCent	Sağlam yayılma C
+tr-TR	report.sameIntervalProfile	Aynı aralık profili: {0}
+tr-TR	report.saveDialog	Detaylı Makam Word raporunu kaydet
+tr-TR	report.scaleCesniGroup	Ölçek / çeşni grubu
+tr-TR	report.scope.endpointContactRequired	Başlangıç ve bitiş perdesi temasları zorunludur
+tr-TR	report.scope.openInterval	Seçilen açık aralık
+tr-TR	report.sdMad	SD / MAD
+tr-TR	report.segahAscendingEvidence	Dügâh→Segâh yeterlidir; Çargâh ve Nevâ aynı yönde devam ettiğinde güven artar
+tr-TR	report.segahAscendingPositions	Segâh artan cümlelerdeki pozisyonları
+tr-TR	report.segahDescendingEvidence	Segâh→Dügâh yeterlidir; Çargâh ve Nevâ ondan önce geldiğinde güven artar
+tr-TR	report.segahDescendingPositions	Segâh azalan cümlelerdeki pozisyonları
+tr-TR	report.segahReference	Segâh referans
+tr-TR	report.segahSignMeaning	Negatif sapma = Segâh referansından daha düz; pozitif sapma = daha keskin
+tr-TR	report.segahSustainDefinition	Açık bir yön yolu olmayan uzun ve sabit bir Segâh
+tr-TR	report.segahSustainedPositions	Doğrudan Segâh uzatmalarının pozisyonları
+tr-TR	report.segahUsageGroups	Segâh kullanım grubu
+tr-TR	report.selectionRange	Seçim aralığı
+tr-TR	report.settledCent	Yerleşik C
+tr-TR	report.shape	Şekil
+tr-TR	report.shape.direct	Doğrudan
+tr-TR	report.shape.mixed	Karışık
+tr-TR	report.shape.reversal	Tersle
+tr-TR	report.sharp	Tiz
+tr-TR	report.shortConclusion	Kısa sonuç
+tr-TR	report.shortConclusion.directional	{0} güvenilir Segâh olayı için genel ortalama sapma {1} C ({2} Hc), medyan sapma ise {3} C ({4} Hc) olarak hesaplanmıştır.
+tr-TR	report.shortConclusion.standard	{0} ölçülebilir olayın medyan sapması {1} C ({2} Hc); {3} kararlı olayın medyanı ise {4} C ({5} Hc) olarak hesaplanmıştır.
+tr-TR	report.signMeaning	İşaretin anlamı
+tr-TR	report.sourcePath	Kaynak yolu
+tr-TR	report.stableSubset	Kararlı alt küme
+tr-TR	report.startEndHz	Başlangıç→bitiş Hz
+tr-TR	report.summary.eventDetail	{0} daha düz - {1} daha keskin - toplam {2} {3}
+tr-TR	report.summary.intervalCentre	TEORİK ARALIK MERKEZİ
+tr-TR	report.summary.mainMedianDeviation	ANA MEDYAN SAPMA
+tr-TR	report.summary.measurableEvent	ÖLÇÜLEBİLİR OLAY
+tr-TR	report.summary.reliableSegahEvent	GÜVENİLİR SEGÂH ETKİNLİĞİ
+tr-TR	report.summary.segahReference	TEORİK SEGÂH REFERANSI
+tr-TR	report.summary.theoreticalTarget	TEORİK HEDEF
+tr-TR	report.summary.tonicFrequency	TONİK FREKANS
+tr-TR	report.sustain	Güç vermek
+tr-TR	report.target	hedef
+tr-TR	report.targetPitch	Hedef perde
+tr-TR	report.tendency.balanced	kuramsal hedef etrafında dengeli
+tr-TR	report.tendency.flat	kuramsal hedefin düz tarafındadır
+tr-TR	report.tendency.sharp	kuramsal hedefin tiz tarafında
+tr-TR	report.theoreticalCentre	Kuramsal merkez
+tr-TR	report.theoreticalDegreeName	Kuramsal {0}. derece
+tr-TR	report.theoreticalFrequency	Kuramsal frekans
+tr-TR	report.theoreticalPosition	Teorik konum
+tr-TR	report.title.directionalDocument	MakamLab — İnici-Çıkıcı Segâh Perdesi Analizi
+tr-TR	report.title.directionalSegah	"{0} Makam
+ Çıkıcı–İnici Segâh Kullanım Analizi"
+tr-TR	report.title.interval	"{0} Makam
+ {1} Analiz"
+tr-TR	report.title.intervalDocument	MakamLab — Perdeler Arası Analiz
+tr-TR	report.title.singlePitch	"{0} Makam
+ {1} Kullanım Analizi"
+tr-TR	report.title.singlePitchDocument	MakamLab — Akademik Tek Perde İcra Analizi
+tr-TR	report.tonicAlignedIntervalSimilarity	Karara hizalı aralık benzerliği
+tr-TR	report.tonicLower	karar
+tr-TR	report.tonicMethod.automaticConfirmed	Son kararlı sesin otomatik önerisi; kullanıcı tarafından onaylandı
+tr-TR	report.tonicMethod.graphMedianConfirmed	Grafikte seçilen bölgenin sağlam medyanı; kullanıcı tarafından onaylandı
+tr-TR	report.unspecifiedProfile	Belirtilmemiş profil
+tr-TR	report.reason.missingOrConflictingDugahAnchor	Dügâh yön dayanağı eksiktir veya iki yönde birbiriyle çelişmektedir
+tr-TR	report.reason.pitchBodyTooVariable	Perde gövdesi birincil istatistiklere alınamayacak kadar değişkendir
+tr-TR	report.reason.studyCriteriaNotMet	Araştırma ölçütleri karşılanmamıştır
+tr-TR	report.reason.contactTooShortForPrimary	Temas süresi birincil istatistiklere alınamayacak kadar kısadır
+tr-TR	report.reason.closestProfilesNotDistinct	En yakın profiller arasındaki fark küçüktür; aralık profili tek başına ayırt edici değildir.
+tr-TR	report.path.upperAnchorsNotConfirmed	 (üst perde dayanakları doğrulanmadı)
+tr-TR	report.tonicSelection	Karar seçimi
+tr-TR	report.totalDuration	Toplam süre
+tr-TR	report.type	Tür
+tr-TR	report.unnamed	İsimsiz
+tr-TR	report.unnamedNearest	Adlandırılamayan (en yakın: {0})
+tr-TR	report.upperBoundary	üst sınır
+tr-TR	report.upperBoundaryExcluded	Üst sınır (hariç)
+tr-TR	report.upperPitch	Üst perde
+tr-TR	report.usage	Kullanım
+tr-TR	report.userConfirmed	Kullanıcı tarafından onaylandı
+tr-TR	report.userConfirmedTonicAnchor	Kullanıcı onaylı tonik çapa
+tr-TR	report.userSelectedProfile	Kullanıcı tarafından seçilen makam profili
+tr-TR	report.value	Değer
+tr-TR	report.voicedFrames	Sesli çerçeveler
+tr-TR	report.weightedMeanShort	Süre-ağırlıkça Anlam
+tr-TR	report.withinOneHc	±1 Hc içinde
+tr-TR	result.glissando.title	Glisendo Analizi
+tr-TR	result.hicaz.title	Artık Aralık Analizi
+tr-TR	unit.centPerSecond	C/sn
+tr-TR	unit.hcPerSecond	Hc/sn
+tr-TR	unit.secondsShort	s
+tr-TR	audio.channel.autoMelodic	Otomatik (melodik kanal)
+tr-TR	format.percentValue	{0}%
+tr-TR	report.academicInterpretationLimits	Akademik yorum ve sınırlamalar
+tr-TR	report.ascendingPhrase	Çıkıcı cümle
+tr-TR	report.descendingPhrase	İnici cümle
+tr-TR	report.directSegahSustain	Doğrudan Segâh kalışı
+tr-TR	report.eventType.cadentialHold	Kalış
+tr-TR	report.eventType.shortContact	Kısa temas
+tr-TR	report.eventType.sustained	Uzatma
+tr-TR	report.eventType.transition	Geçiş
+tr-TR	report.insufficientContext	Yetersiz bağlam
+tr-TR	report.interpretation.byDirection	Net ezgi yönüne göre {0} gözlemlenmiştir.
+tr-TR	report.interpretation.bySegahContext	Segâh kullanım bağlamına göre {0} gözlemlenmiştir.
+tr-TR	report.measurable	Ölçülebilir
+tr-TR	report.numericResultsCharts	Sayısal sonuçlar ve grafikler
+tr-TR	report.reason.abruptPitchJump	Ani perde sıçraması
+tr-TR	report.reason.auditF0Confidence	%35-65 arasında F0 güvenirliği; denetim adayı
+tr-TR	report.reason.durationTooLong	Süre çok uzun
+tr-TR	report.reason.durationTooShort	Süre çok kısa
+tr-TR	report.reason.insufficientContinuousMotion	Kesintisiz hareket kanıtı yetersiz
+tr-TR	report.reason.insufficientProfileEvidence	Makam profillerini ayırt etmek için yeterli kanıt yok: {0}.
+tr-TR	report.reason.insufficientSpan	Perde hareketinin genişliği yetersiz
+tr-TR	report.reason.intermediateStableHold	Ara bölgede kararlı kalış tespit edildi
+tr-TR	report.reason.longF0Gap	Uzun F0 kesintisi
+tr-TR	report.reason.lowConfidenceAugmentedInterval	Doğrudan artık aralığın güveni düşük; denetim adayı
+tr-TR	report.reason.lowConfidenceDegree	Perde derecesinin güveni düşük; denetim cümlesi
+tr-TR	report.reason.lowF0Confidence65	F0 güveni %65'in altında; denetim kanıtı
+tr-TR	report.reason.lowMonotonicity	Tek yönlülük düşük
+tr-TR	report.reason.lowPhraseConfidence	Cümle sınıflandırma güveni yetersiz
+tr-TR	report.reason.lowReliableF0Coverage	Düşük güvenilir-F0 kapsamı
+tr-TR	report.reason.moreStableEvidence	daha kararlı kanıt
+tr-TR	report.reason.noSettledSegah	Yerleşik Segâh gövdesi yok; glisendo/geçiş adayı
+tr-TR	report.reason.noStableDestinationContact	Hedef perdede kararlı temas yok
+tr-TR	report.reason.noStableOriginContact	Başlangıç perdesinde kararlı temas yok
+tr-TR	report.reason.outsideSegahBand	Açık Dügâh–Bûselik aralığının içinde ancak Segâh işlevsel bandının dışında
+tr-TR	report.reason.profileNeedsDuration	en az 5 saniyelik kararlı kanıt
+tr-TR	report.reason.profileNeedsEvents	en az 10 kararlı olay
+tr-TR	report.reason.profileNeedsEventsAndDuration	en az 10 kararlı olay ve en az 5 saniyelik kararlı kanıt
+tr-TR	report.reason.shortContact	Kısa temas; birincil ortalamanın dışında bırakıldı
+tr-TR	report.segahReferenceArea	Segâh referansı ve aday bölgesi
+tr-TR	report.theoreticalIntervalClassification	Kuramsal analiz aralığı ve sınıflandırma
+tr-TR	report.tonicDetermination	Karar perdesinin belirlenmesi
+tr-TR	report.tonicSource.automaticFinal	Son kararlı sesten otomatik olarak belirlendi
+tr-TR	report.tonicSource.graphRegion	Grafikte seçilen bölge
+tr-TR	report.tonicSource.manualHertz	Elle girilen frekans
+tr-TR	report.uncertainOther	Belirsiz/diğer
+en-US	report.lowSimilarity	Low similarity
+tr-TR	report.lowSimilarity	Az benzerlik
+en-US	menu.settings	Settings
+en-US	settings.firstFour.title	First-four-pitch comparison settings
+en-US	settings.firstFour.heading	First-four-pitch similarity profiles
+en-US	settings.firstFour.description	The five core profiles are always compared. Select the optional profiles to include in Pitch Analysis reports.
+en-US	settings.firstFour.core	Always included
+en-US	settings.firstFour.coreHint	Core profile; always included
+en-US	settings.firstFour.optional	Optional profiles
+en-US	settings.restoreDefaults	Restore defaults
+en-US	settings.save	Save
+en-US	settings.saveError	The settings could not be saved.
+en-US	status.profileSettingsUpdated	Profile-comparison settings updated; run the analysis again.
+tr-TR	menu.settings	Ayarlar
+tr-TR	settings.firstFour.title	İlk dört ses karşılaştırma ayarları
+tr-TR	settings.firstFour.heading	İlk dört ses benzerlik profilleri
+tr-TR	settings.firstFour.description	Beş temel profil her zaman karşılaştırılır. Perde Analizi raporlarına eklenmesini istediğiniz isteğe bağlı profilleri seçin.
+tr-TR	settings.firstFour.core	Her zaman dahil
+tr-TR	settings.firstFour.coreHint	Temel profil; her zaman dahil
+tr-TR	settings.firstFour.optional	İsteğe bağlı profiller
+tr-TR	settings.restoreDefaults	Varsayılanlara dön
+tr-TR	settings.save	Kaydet
+tr-TR	settings.saveError	Ayarlar kaydedilemedi.
+tr-TR	status.profileSettingsUpdated	Profil karşılaştırma ayarları güncellendi; analizi yeniden çalıştırın.
+en-US	report.pitchPeakDistribution	Performed pitch and intermediate-sound peaks
+en-US	report.prose.pitchPeakDistribution	Every detected contact in the selected analysis region is retained in this chart. Filled points indicate events admitted to the main numerical summary; pale or open points are shorter audit contacts. The horizontal position is the measured tonic-relative Hc value, so sounds between named theoretical centres remain visible rather than being silently discarded.
+en-US	report.pitchCentreDeviations	Observed pitch centres and theoretical distances
+en-US	report.prose.pitchCentreDeviations	Observed centres are compared with their nearest theoretical pitch centres by using the same measured F0 evidence. A negative difference means that the observed centre is flatter; a positive difference means that it is sharper. Separate observed modes are preserved instead of being replaced by a single artificial mean.
+tr-TR	report.pitchPeakDistribution	İcra edilen perde ve ara-ses tepeleri
+tr-TR	report.prose.pitchPeakDistribution	Bu grafik, seçilen inceleme alanında bulunan bütün temasları korur. Dolu noktalar ana sayısal özete alınan olayları; soluk veya içi boş noktalar ise daha kısa denetim temaslarını gösterir. Yatay konum, karar perdesine göre ölçülen Hc değeridir. Böylece adlandırılmış iki kuramsal merkezin arasında kalan sesler sessizce atılmadan görülebilir.
+tr-TR	report.pitchCentreDeviations	Gözlenen perde merkezleri ve kuramsal uzaklıklar
+tr-TR	report.prose.pitchCentreDeviations	Gözlenen merkezler, aynı gerçek F0 kanıtı korunarak en yakın kuramsal perde merkezleriyle karşılaştırılır. Negatif fark gözlenen merkezin kuramsal merkezden pest; pozitif fark ise dik olduğunu gösterir. Ayrı gözlenen tepeler, tek bir yapay ortalamada eritilmeden korunur.

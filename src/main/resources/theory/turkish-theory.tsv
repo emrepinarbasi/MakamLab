@@ -1,0 +1,121 @@
+# MakamBox Turkish makam theory catalog (derived from the trusted bundled TurkishExtended data)
+# NOTE<TAB>key<TAB>ratio relative to Kaba Cargah
+NOTE	acem	2.6667717
+NOTE	acemasiran	1.3333858
+NOTE	buselik	1.8980635
+NOTE	cargah	2.0
+NOTE	dik acem	2.7018776
+NOTE	dik acemasiran	1.3509388
+NOTE	dik buselik	1.9740138
+NOTE	dik gevest	1.4804521
+NOTE	dik hicaz	2.2205906
+NOTE	dik hisar	2.4979675
+NOTE	dik kurdi	1.8013226
+NOTE	dik mahur	2.9609041
+NOTE	dik sehnaz	3.3307545
+NOTE	dik sunbule	3.6026452
+NOTE	dik zirgule	1.6653773
+NOTE	dugah	1.6873006
+NOTE	evic	2.809992
+NOTE	gerdaniye	2.9998817
+NOTE	gevest	1.4234916
+NOTE	hicaz	2.1351533
+NOTE	hisar	2.401858
+NOTE	huseyni asiran	1.26542555
+NOTE	huseyni	2.5308511
+NOTE	irak	1.404996
+NOTE	kaba cargah	1.0
+NOTE	kaba dik hicaz	1.1102953
+NOTE	kaba dik hisar	1.2489837
+NOTE	kaba hicaz	1.0675766
+NOTE	kaba hisar	1.200929
+NOTE	kaba nim hicaz	1.0537055
+NOTE	kaba nim hisar	1.1853253
+NOTE	kurdi	1.7779179
+NOTE	mahur	2.8469832
+NOTE	muhayyer	3.3746011
+NOTE	neva	2.2498226
+NOTE	nim hicaz	2.107411
+NOTE	nim hisar	2.3706505
+NOTE	nim sehnaz	3.160992
+NOTE	nim zirgule	1.580496
+NOTE	rast	1.4999409
+NOTE	segah	1.8734019
+NOTE	sehnaz	3.2026036
+NOTE	sunbule	3.5558357
+NOTE	tiz acem	5.3335433
+NOTE	tiz buselik	3.796127
+NOTE	tiz cargah	4.0
+NOTE	tiz dik acem	5.403755
+NOTE	tiz dik buselik	3.9480276
+NOTE	tiz dik hicaz	4.441181
+NOTE	tiz dik hisar	4.995935
+NOTE	tiz dik mahur	5.9218082
+NOTE	tiz dik sehnaz	6.661509
+NOTE	tiz dik sunbule	7.2052903
+NOTE	tiz evic	5.619984
+NOTE	tiz gerdaniye	5.9997635
+NOTE	tiz hicaz	4.2703066
+NOTE	tiz hisar	4.803716
+NOTE	tiz huseyni	5.0617023
+NOTE	tiz mahur	5.6939664
+NOTE	tiz muhayyer	6.7492023
+NOTE	tiz neva	4.499645
+NOTE	tiz nim hicaz	4.214822
+NOTE	tiz nim hisar	4.741301
+NOTE	tiz nim sehnaz	6.321984
+NOTE	tiz segah	3.7468038
+NOTE	tiz sehnaz	6.405207
+NOTE	tiz sunbule	7.1116714
+NOTE	tiz tiz buselik	7.592254
+NOTE	tiz tiz cargah	8.0
+NOTE	tiz tiz dik buselik	7.8960552
+NOTE	tiz tiz segah	7.4936075
+NOTE	yegah	1.1249113
+NOTE	zirgule	1.6013018
+# MAKAM<TAB>display name<TAB>tonic note key
+MAKAM	Acem	dugah
+MAKAM	Acemasiran	acemasiran
+MAKAM	Bestenigar	irak
+MAKAM	Beyati	dugah
+MAKAM	Beyatiaraban	dugah
+MAKAM	Buselik	dugah
+MAKAM	Dugah	dugah
+MAKAM	Evcara	irak
+MAKAM	Evic	irak
+MAKAM	Ferahfeza	yegah
+MAKAM	Ferahnak	irak
+MAKAM	Gulizar	dugah
+MAKAM	Hicaz	dugah
+MAKAM	Hicazkar	rast
+MAKAM	Huseyni	dugah
+MAKAM	Huzzam	segah
+MAKAM	Irak	irak
+MAKAM	Isfahan	dugah
+MAKAM	Karcigar	dugah
+MAKAM	Kurdi	dugah
+MAKAM	Kurdilihicazkar	rast
+MAKAM	Mahur	rast
+MAKAM	Muhayyer	dugah
+MAKAM	Mustear	segah
+MAKAM	Neva	dugah
+MAKAM	Neveser	rast
+MAKAM	Nihavend	rast
+MAKAM	Nikriz	rast
+MAKAM	Nisaburek	dugah
+MAKAM	Nuhuft	huseyni asiran
+MAKAM	Pencgah	rast
+MAKAM	Pesendide	rast
+MAKAM	Rast	rast
+MAKAM	Saba	dugah
+MAKAM	Sedaraban	yegah
+MAKAM	Segah	segah
+MAKAM	Sehnaz	dugah
+MAKAM	Sevkefza	acemasiran
+MAKAM	Sultaniyegah	yegah
+MAKAM	Suzidil	huseyni asiran
+MAKAM	Suzinak	rast
+MAKAM	Tahir	dugah
+MAKAM	Tahirbuselik	dugah
+MAKAM	Ussak	dugah
+MAKAM	Yegah	yegah

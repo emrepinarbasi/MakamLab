@@ -1,0 +1,66 @@
+name: Bug report
+description: Report a reproducible MakamLab problem
+title: "[Bug] "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Do not upload copyrighted, confidential, or personally sensitive recordings without permission.
+  - type: input
+    id: version
+    attributes:
+      label: MakamLab version
+      placeholder: "1.1.0"
+    validations:
+      required: true
+  - type: dropdown
+    id: os
+    attributes:
+      label: Operating system
+      options:
+        - macOS Apple Silicon
+        - Windows 10/11 x64
+        - Ubuntu amd64
+        - Other
+    validations:
+      required: true
+  - type: dropdown
+    id: module
+    attributes:
+      label: Analysis module
+      options:
+        - Pitch Analysis
+        - Ascending–Descending Pitch Analysis
+        - Augmented Interval Analysis
+        - Glissando Analysis
+        - Playback / waveform editor
+        - DOCX report
+        - Installation / startup
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Reproduction steps
+      description: Include tonic, target pitch/interval, audio format, channel, and time range when relevant.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected result
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual result
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Non-sensitive evidence
+      description: Paste logs or attach a screenshot/report only if you may legally share it.

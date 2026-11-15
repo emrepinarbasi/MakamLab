@@ -1,0 +1,33 @@
+name: Source and Ubuntu validation
+
+on:
+  push:
+    branches: ["main"]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  ubuntu-release-gate:
+    runs-on: ubuntu-22.04
+    timeout-minutes: 45
+    steps:
+      - name: Check out source
+        uses: actions/checkout@v4
+      - name: Install host build shell
+        run: sudo apt-get update -qq && sudo apt-get install -y zsh
+      - name: Validate shell scripts
+        run: |
+          bash -n linux/build-deb-in-container.sh
+          zsh -n build-makam-linux-deb.sh
+      - name: Build, test, install, and launch Ubuntu package
+        run: |
+          chmod +x build-makam-linux-deb.sh linux/build-deb-in-container.sh
+          MAKAM_LINUX_SKIP_TESTS=0 ./build-makam-linux-deb.sh
+      - name: Upload Ubuntu package and verification files
+        uses: actions/upload-artifact@v4
+        with:
+          name: MakamLab-Ubuntu-amd64
+          path: build/makam/linux-dist/

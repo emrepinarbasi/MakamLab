@@ -1,0 +1,22 @@
+cff-version: 1.2.0
+message: "If you use MakamLab in academic work, please cite this software."
+title: "MakamLab"
+type: software
+version: "1.1.0"
+date-released: 2026-11-15
+authors:
+  - family-names: "Pınarbaşı"
+    given-names: "Emre"
+    email: "emrepinarbasi@gmail.com"
+abstract: >-
+  Academic desktop software for tonic-anchored pitch, interval, melodic
+  direction, and glissando analysis in Turkish makam music recordings, with
+  cent and 53-Hc measurements and DOCX reporting.
+keywords:
+  - Turkish makam music
+  - pitch analysis
+  - music information retrieval
+  - microtonal music
+  - fundamental frequency
+  - YIN
+license: GPL-3.0-or-later

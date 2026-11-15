@@ -1,0 +1,3 @@
+MakamBox v1.0 GPL-3.0-or-later altında dağıtılır. Lisansın tam metni bu dağıtımın kök `LICENSE.txt` dosyasında bulunmaktadır.
+
+Kaynak: https://github.com/miracatici/MakamBox

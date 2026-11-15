@@ -1,0 +1,21 @@
+MakamLab 1.1.0 — Ubuntu amd64
+================================
+
+Desteklenen hedef: Ubuntu 22.04 LTS veya daha yenisi, 64 bit Intel/AMD.
+
+Kurulum:
+  sudo apt install ./MakamLab-1.1.0-Ubuntu-amd64.deb
+
+Paket, Java 21 çalışma zamanını içerir. MP3 ve M4A kayıtlarını aynı PCM
+yolundan açabilmek için Ubuntu'nun ffmpeg paketi; oluşturulan DOCX raporunu
+varsayılan uygulamada açabilmek için xdg-utils bağımlılığı otomatik kurulur.
+
+Uygulama menüsünde “MakamLab” adıyla görünür. Uçbirimden başlatma:
+  MakamLab
+
+Kaldırma:
+  sudo apt remove makamlab
+
+Ses çalma/kayıt, Ubuntu'nun ALSA/PipeWire masaüstü ses yapılandırmasına
+bağlıdır. Sunucuda veya uzak masaüstünde ses aygıtı yoksa analiz çalışabilir,
+ancak oynatma ve kayıt kullanılamayabilir.

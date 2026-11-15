@@ -1,0 +1,19 @@
+FFmpeg Windows x64 LGPL shared build
+===================================
+
+MakamLab'ın Windows paketi, M4A/AAC seslerini WAV çalışma kopyasına
+dönüştürmek için değiştirilmemiş FFmpeg ikili dosyaları içerir. FFmpeg ayrı
+bir süreç olarak çalıştırılır ve paylaşımlı kitaplıklarıyla birlikte dağıtılır.
+
+Upstream project: https://ffmpeg.org/
+Windows build source: https://github.com/BtbN/FFmpeg-Builds
+Release: autobuild-2026-10-30-13-01
+Exact archive: ffmpeg-n9.0.2-39-g7adfbe40dc-win64-lgpl-shared-9.0.zip
+Archive SHA-256: 8aeb11be252902a772ff04ac89b705f7a7b24815f0a21da2ab100b192a5c16e4
+
+This build is identified by its distributor as an LGPL shared build. The
+complete license text supplied in the upstream archive is redistributed as
+FFmpeg-LICENSE.txt beside this notice. Corresponding FFmpeg source and build
+scripts are available from the upstream and build-source URLs above.
+
+FFmpeg is a trademark of Fabrice Bellard, originator of the FFmpeg project.
