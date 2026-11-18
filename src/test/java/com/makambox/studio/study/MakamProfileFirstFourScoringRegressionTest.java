@@ -62,28 +62,28 @@ public final class MakamProfileFirstFourScoringRegressionTest {
                 MakamProfileComparator.DEFAULT_REFERENCE_SYSTEM,
                 FirstFourProfileSelection.defaults());
         check(tonicAnchoredThreeDegrees.phraseEvidence().status()
-                        == MakamProfileComparison.PhraseEvidenceStatus.COMPLETE,
-                "an ordered 1-2-3 path must authorize a comparable tetrachord claim");
+                        == MakamProfileComparison.PhraseEvidenceStatus.PARTIAL_MIXED,
+                "an ordered 1-2-3 path must remain a partial tetrachord claim");
         check(tonicAnchoredThreeDegrees.phraseEvidence().qualifyingPhraseCount() == 1
                         && tonicAnchoredThreeDegrees.phraseEvidence().completePhraseCount() == 0
                         && tonicAnchoredThreeDegrees.candidates().stream()
-                        .anyMatch(value -> value.scorePercent() > 0.0),
-                "an ordered tonic-anchored three-degree path must remain comparable while literal four-degree paths stay separately counted");
-        check(tonicAnchoredThreeDegrees.sufficientEvidence(),
-                "an ordered 1-2-3 path must authorize a published percentage claim");
+                        .allMatch(value -> Double.isNaN(value.scorePercent())),
+                "an ordered tonic-anchored three-degree path must not publish a percentage without degrees 2, 3 and 4");
+        check(!tonicAnchoredThreeDegrees.sufficientEvidence(),
+                "an ordered 1-2-3 path must not authorize a published percentage claim");
 
         MakamProfileComparison fourthAnchoredThreeDegrees = comparator.compare(
                 orderedAnchoredThreeDegreePath(false), TONIC_HZ, "Uşşak",
                 MakamProfileComparator.DEFAULT_REFERENCE_SYSTEM,
                 FirstFourProfileSelection.defaults());
         check(fourthAnchoredThreeDegrees.phraseEvidence().status()
-                        == MakamProfileComparison.PhraseEvidenceStatus.COMPLETE,
-                "an ordered 2-3-4 path must authorize a comparable tetrachord claim");
+                        == MakamProfileComparison.PhraseEvidenceStatus.PARTIAL_MIXED,
+                "an ordered 2-3-4 path must remain a partial phrase claim");
         check(fourthAnchoredThreeDegrees.phraseEvidence().qualifyingPhraseCount() == 1
                         && fourthAnchoredThreeDegrees.phraseEvidence().completePhraseCount() == 0,
                 "an ordered fourth-anchored three-degree path must qualify without pretending that all four degrees occurred");
         check(fourthAnchoredThreeDegrees.sufficientEvidence(),
-                "an ordered 2-3-4 path must authorize a published percentage claim");
+                "a fixed inventory containing all discriminating degrees 2, 3 and 4 must authorize a published percentage claim");
 
         MakamProfileComparison unanchoredTwoDegree = comparator.compare(
                 unanchoredTwoDegreePath(), TONIC_HZ, "Uşşak",
@@ -95,10 +95,10 @@ public final class MakamProfileFirstFourScoringRegressionTest {
         check(unanchoredTwoDegree.phraseEvidence().qualifyingPhraseCount() == 0
                         && unanchoredTwoDegree.phraseEvidence().partialPhraseCount() == 1,
                 "an unanchored two-degree path must not become a complete phrase claim");
-        check(unanchoredTwoDegree.sufficientEvidence()
+        check(!unanchoredTwoDegree.sufficientEvidence()
                         && unanchoredTwoDegree.candidates().stream()
-                        .anyMatch(value -> value.scorePercent() > 0.0),
-                "usable global inventory must still produce the required ranked similarity graph");
+                        .allMatch(value -> Double.isNaN(value.scorePercent())),
+                "a two-degree inventory must remain visible without publishing a misleading similarity percentage");
 
         MakamProfileComparison all = comparator.compare(firstFour, TONIC_HZ, "Uşşak",
                 MakamProfileComparator.DEFAULT_REFERENCE_SYSTEM,

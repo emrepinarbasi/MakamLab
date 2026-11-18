@@ -32,6 +32,25 @@ public final class AllPitchEventAnalyzer {
 
     public List<PitchEvent> analyze(List<PitchFrame> frames, AnalysisConfig config,
                                     TheoryCatalog catalog, TheoryCatalog.Makam makam) {
+        return analyze(frames, config, catalog, makam, false);
+    }
+
+    /**
+     * Segments an interval study by makam pitch class rather than by one
+     * physical tonic register.  A confirmed tonic and its exact octave
+     * equivalents must produce the same normalized event evidence; the
+     * physical F0 and register are still retained in each occurrence for audit.
+     */
+    public List<PitchEvent> analyzePitchClasses(List<PitchFrame> frames,
+                                                AnalysisConfig config,
+                                                TheoryCatalog catalog,
+                                                TheoryCatalog.Makam makam) {
+        return analyze(frames, config, catalog, makam, true);
+    }
+
+    private List<PitchEvent> analyze(List<PitchFrame> frames, AnalysisConfig config,
+                                     TheoryCatalog catalog, TheoryCatalog.Makam makam,
+                                     boolean pitchClassMode) {
         Objects.requireNonNull(frames, "frames");
         Objects.requireNonNull(config, "config");
         Objects.requireNonNull(catalog, "catalog");
@@ -41,13 +60,17 @@ public final class AllPitchEventAnalyzer {
             throw new IllegalArgumentException("tonicHz must be finite and positive");
         }
 
-        List<NoteCenter> centers = noteCenters(catalog, makam);
+        List<NoteCenter> centers = pitchClassMode
+                ? pitchClassCenters(catalog, makam) : noteCenters(catalog, makam);
         double tonicAbsoluteCent = hertzToAbsoluteCent(config.tonicHz());
         NoteCenter[] rawAssignments = new NoteCenter[frames.size()];
         for (int i = 0; i < frames.size(); i++) {
             PitchFrame frame = frames.get(i);
             if (eligible(frame)) {
-                rawAssignments[i] = nearestCenter(frame.absoluteCent() - tonicAbsoluteCent, centers);
+                double relativeCent = frame.absoluteCent() - tonicAbsoluteCent;
+                rawAssignments[i] = pitchClassMode
+                        ? nearestPitchClassCenter(relativeCent, centers)
+                        : nearestCenter(relativeCent, centers);
             }
         }
 
@@ -216,7 +239,8 @@ public final class AllPitchEventAnalyzer {
 
     private static boolean sameNote(NoteCenter first, NoteCenter second) {
         return first != null && second != null
-                && first.note().key().equals(second.note().key());
+                && first.note().key().equals(second.note().key())
+                && Math.abs(first.relativeCent() - second.relativeCent()) <= 1.0e-7;
     }
 
     private static void fill(NoteCenter[] assignments, int start, int end, NoteCenter value) {
@@ -303,6 +327,53 @@ public final class AllPitchEventAnalyzer {
             }
         }
         return centers;
+    }
+
+    private static List<NoteCenter> pitchClassCenters(TheoryCatalog catalog,
+                                                       TheoryCatalog.Makam makam) {
+        List<NoteCenter> unique = new ArrayList<>();
+        for (NoteCenter center : noteCenters(catalog, makam)) {
+            double normalized = center.relativeCent() % 1200.0;
+            if (normalized < 0.0) normalized += 1200.0;
+            if (normalized >= 1200.0 - 1.0e-7) normalized = 0.0;
+            NoteCenter candidate = new NoteCenter(center.note(), normalized);
+            int duplicate = -1;
+            for (int index = 0; index < unique.size(); index++) {
+                if (Math.abs(unique.get(index).relativeCent() - normalized) <= 0.10) {
+                    duplicate = index;
+                    break;
+                }
+            }
+            NoteCenter previous = duplicate < 0 ? null : unique.get(duplicate);
+            boolean candidateIsBase = center.relativeCent() >= -1.0e-7
+                    && center.relativeCent() < 1200.0 - 1.0e-7;
+            boolean previousIsBase = previous != null
+                    && catalog.relativeCent(makam, previous.note()) >= -1.0e-7
+                    && catalog.relativeCent(makam, previous.note()) < 1200.0 - 1.0e-7;
+            if (previous == null || candidateIsBase && !previousIsBase) {
+                if (duplicate < 0) unique.add(candidate);
+                else unique.set(duplicate, candidate);
+            }
+        }
+        return unique.stream()
+                .sorted(Comparator.comparingDouble(NoteCenter::relativeCent)).toList();
+    }
+
+    private static NoteCenter nearestPitchClassCenter(double relativeCent,
+                                                       List<NoteCenter> centers) {
+        if (!Double.isFinite(relativeCent) || centers.isEmpty()) return null;
+        NoteCenter nearest = null;
+        double nearestDistance = Double.POSITIVE_INFINITY;
+        for (NoteCenter center : centers) {
+            double shifted = center.relativeCent()
+                    + Math.rint((relativeCent - center.relativeCent()) / 1200.0) * 1200.0;
+            double distance = Math.abs(relativeCent - shifted);
+            if (distance + 1.0e-9 < nearestDistance) {
+                nearestDistance = distance;
+                nearest = new NoteCenter(center.note(), shifted);
+            }
+        }
+        return nearest;
     }
 
     /** Returns null outside the two finite outer half-interval boundaries. */

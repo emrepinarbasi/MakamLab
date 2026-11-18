@@ -44,7 +44,7 @@ public final class PitchIntervalStudyService {
         double upperCent = Math.max(firstCent, secondCent);
 
         AnalysisConfig config = intervalConfig(request, lower, upper, lowerCent, upperCent);
-        List<PitchEvent> canonical = new AllPitchEventAnalyzer().analyze(
+        List<PitchEvent> canonical = new AllPitchEventAnalyzer().analyzePitchClasses(
                 request.frames(), config, request.theory(), request.makam());
         double tonicAbsoluteCent = hertzToCent(request.tonicSelection().hertz());
         List<StudyPitchEvent> allEvents = canonical.stream()

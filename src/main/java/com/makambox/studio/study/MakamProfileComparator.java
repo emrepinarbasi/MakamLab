@@ -102,10 +102,12 @@ public final class MakamProfileComparator {
                 phraseSet.scoredEvents(), degreeBands);
         int timeRegions = representedPhraseTimeRegions(phraseSet.scoredEvents());
         double totalDuration = observations.stream().mapToDouble(Observation::duration).sum();
-        // A similarity ranking is reportable whenever at least one
-        // discriminating degree is present in the global first-four
-        // inventory. Phrase completeness is reported independently below.
-        boolean sufficient = inventoryDegreeEvidence.stream().anyMatch(DegreeEvidence::observed);
+        // A percentage is meaningful only when the same fixed inventory has
+        // evidence for all three discriminating degrees (2, 3 and 4).  Partial
+        // evidence stays visible in the inventory and phrase tables, but must
+        // not be converted into a deceptively precise profile percentage.
+        boolean sufficient = inventoryDegreeEvidence.size() == 3
+                && inventoryDegreeEvidence.stream().allMatch(DegreeEvidence::observed);
 
         List<FirstFourProfileReferenceCatalog.ReferenceProfile> references =
                 FirstFourProfileReferenceCatalog.references(system, profileSelection).stream()
@@ -134,8 +136,9 @@ public final class MakamProfileComparator {
         List<MakamProfileComparison.Candidate> candidates = new ArrayList<>(scored.size());
         for (int i = 0; i < scored.size(); i++) {
             ScoredCandidate value = scored.get(i);
+            double reportedScore = sufficient ? value.score() : Double.NaN;
             candidates.add(new MakamProfileComparison.Candidate(i + 1, value.name(), value.groupNames(),
-                    value.selected(), value.score(), value.robustError(), value.medianError(),
+                    value.selected(), reportedScore, value.robustError(), value.medianError(),
                     value.p90Error(), value.withinOneHc(), value.coverage(), value.matchedDegrees(),
                     value.degreeCount(), value.matches()));
         }
@@ -485,9 +488,10 @@ public final class MakamProfileComparator {
     private static MakamProfileComparison.PhraseEvidence publicPhraseEvidence(
             PhraseSet phraseSet, List<DegreeEvidence> evidence) {
         MakamProfileComparison.PhraseEvidenceStatus status =
-                phraseSet.qualifyingPhraseCount() > 0
+                phraseSet.completePhraseCount() > 0
                         ? MakamProfileComparison.PhraseEvidenceStatus.COMPLETE
-                        : phraseSet.partialPhraseCount() > 0
+                        : phraseSet.qualifyingPhraseCount() > 0
+                                || phraseSet.partialPhraseCount() > 0
                         ? MakamProfileComparison.PhraseEvidenceStatus.PARTIAL_MIXED
                         : MakamProfileComparison.PhraseEvidenceStatus.INSUFFICIENT;
         List<MakamProfileComparison.DegreePeak> peaks = new ArrayList<>();

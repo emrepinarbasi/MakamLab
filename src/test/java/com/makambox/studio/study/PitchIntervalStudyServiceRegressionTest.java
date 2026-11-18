@@ -23,6 +23,7 @@ public final class PitchIntervalStudyServiceRegressionTest {
         verifyOpenActualF0IntervalAndAutomaticBoundaryOrder();
         verifyIntervalEvidenceTiersStayConsistentAcrossSummaries();
         verifyEveryCoherentRegisterIsRetainedAndNormalized();
+        verifyTonicOctaveDoesNotChangePitchClassStudy();
         verifyIsolatedOctaveNoiseDoesNotEnterCoherentRegisterEvidence();
         verifyIdenticalBoundariesRejected();
         System.out.println("PITCH_INTERVAL_STUDY_SERVICE_REGRESSION_OK");
@@ -111,7 +112,8 @@ public final class PitchIntervalStudyServiceRegressionTest {
         check(result.lowerBoundaryKey().equals("rast"), "alt sınır Rast olmalı");
         check(result.upperBoundaryKey().equals("dugah"), "üst sınır Dügâh olmalı");
         check(result.intervalContacts().size() == 4,
-                "açık Rast–Dügâh aralığındaki üç adlı ve bir adlandırılamayan temas korunmalı");
+                "açık Rast–Dügâh aralığındaki üç adlı ve bir adlandırılamayan temas korunmalı: "
+                        + result.intervalContacts());
         check(result.measurableIntervalEvents().size() == 4,
                 "dört ara temasın tamamı ölçülebilir olmalı");
         check(result.stableIntervalEvents().size() == 4,
@@ -254,6 +256,58 @@ public final class PitchIntervalStudyServiceRegressionTest {
                 "yalıtılmış veya düşük güvenli register araştırmaya karışmamalı");
     }
 
+    private static void verifyTonicOctaveDoesNotChangePitchClassStudy() {
+        List<PitchFrame> frames = new ArrayList<>();
+        addRelativeHc(frames, 4.0, 7, 0.95);
+        addSilence(frames, 4);
+        addRelativeHc(frames, 5.0, 7, 0.95);
+        addSilence(frames, 4);
+        addRelativeHc(frames, 9.0, 7, 0.95);
+        addSilence(frames, 4);
+        addRelativeHc(frames, 13.0, 7, 0.95);
+
+        PitchIntervalStudyResult base = analyzeWithTonic(frames, TONIC_HZ);
+        PitchIntervalStudyResult upper = analyzeWithTonic(frames, TONIC_HZ * 2.0);
+        check(base.intervalContacts().size() == upper.intervalContacts().size(),
+                "kararın oktavı açık aralık temas sayısını değiştirmemeli");
+        check(base.measurableIntervalEvents().size()
+                        == upper.measurableIntervalEvents().size(),
+                "kararın oktavı ölçülebilir olay sayısını değiştirmemeli");
+        for (int index = 0; index < base.intervalContacts().size(); index++) {
+            check(Math.abs(base.intervalContacts().get(index).observedRelativeCent()
+                    - upper.intervalContacts().get(index).observedRelativeCent()) < 0.02,
+                    "kararın oktavı normalize C konumunu değiştirmemeli");
+        }
+        for (int index = 0; index < base.profileComparison().candidates().size(); index++) {
+            MakamProfileComparison.Candidate first =
+                    base.profileComparison().candidates().get(index);
+            MakamProfileComparison.Candidate second =
+                    upper.profileComparison().candidates().get(index);
+            check(first.makamName().equals(second.makamName())
+                            && sameScore(first.scorePercent(), second.scorePercent()),
+                    "kararın oktavı ilk-dört-ses sırasını veya puanını değiştirmemeli");
+        }
+    }
+
+    private static boolean sameScore(double first, double second) {
+        return (Double.isNaN(first) && Double.isNaN(second))
+                || Math.abs(first - second) < 0.02;
+    }
+
+    private static PitchIntervalStudyResult analyzeWithTonic(List<PitchFrame> frames,
+                                                               double tonicHz) {
+        AudioData audio = new AudioData("oktav-degisimsizligi.wav", null, 22_050f,
+                new float[Math.max(1, (int) Math.ceil(frames.size() * STEP * 22_050))],
+                AudioChannelMode.MIX, 1);
+        TonicSelection tonic = new TonicSelection(tonicHz,
+                TonicSelection.Source.GRAPH_REGION, 0.0, 0.14, 0.95, 2.0, 7,
+                "Mono", true);
+        PitchIntervalStudyRequest request = new PitchIntervalStudyRequest(audio, frames, THEORY,
+                MAKAM, THEORY.note("rast"), THEORY.note("cargah"), tonic,
+                config(tonicHz), "test", MakamProfileComparator.DEFAULT_REFERENCE_SYSTEM);
+        return new PitchIntervalStudyService().analyze(request);
+    }
+
     private static void addNote(List<PitchFrame> frames, String key, int count,
                                 double confidence, double offsetCent) {
         double relative = THEORY.relativeCent(MAKAM, THEORY.note(key));
@@ -290,9 +344,13 @@ public final class PitchIntervalStudyServiceRegressionTest {
     }
 
     private static AnalysisConfig config() {
+        return config(TONIC_HZ);
+    }
+
+    private static AnalysisConfig config(double tonicHz) {
         TheoryCatalog.Note target = THEORY.note("nim zirgule");
         return new AnalysisConfig(MAKAM.toString(), THEORY.tonicFor(MAKAM).toString(),
-                target.toString(), TONIC_HZ, THEORY.relativeCent(MAKAM, target),
+                target.toString(), tonicHz, THEORY.relativeCent(MAKAM, target),
                 2.0, 2.0, 1.0, 0.10, 0.35, 0.70, 0.28, 0.75, 0.55,
                 0.12, 1.10, 0.72, 100.0, 700.0, 1.5, 0.02, 32.0, false);
     }
