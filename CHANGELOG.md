@@ -3,6 +3,23 @@
 All notable changes are documented here. MakamLab follows semantic versioning
 for public releases.
 
+## [1.1.2] — 2026-11-18
+
+### Fixed
+
+- Recovers repeated, high-confidence 20–60 ms second-degree contacts for the
+  shared pitch inventory only when they recur in independent time regions.
+- Keeps isolated short transients out of similarity percentages.
+- Separates supported dominant and secondary performed modes instead of
+  collapsing bridge-connected peaks into an artificial midpoint.
+- Preserves the existing DOCX section order, headings, tables, and chart layout.
+
+### Validation
+
+- Passed 54 core and 3 desktop-interface regression tests.
+- Passed Windows cross-package, real Ubuntu amd64 package-installation, real
+  FFmpeg MP3/M4A loading, and Linux GUI-launch gates.
+
 ## [1.1.0] — 2026-11-15
 
 ### Added

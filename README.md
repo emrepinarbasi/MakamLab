@@ -1,9 +1,9 @@
-# MakamLab 1.1.0
+# MakamLab 1.1.2
 
 ![MakamLab wordmark](assets/MakamLab-Wordmark-v1.png)
 
 [Türkçe README](README_TR.md) · [Installation](INSTALLATION.md) ·
-[Build from source](BUILDING.md) · [Release notes](RELEASE_NOTES_1.1.0.md)
+[Build from source](BUILDING.md) · [Release notes](RELEASE_NOTES_1.1.2.md)
 
 MakamLab is an academic desktop application for analysing performed pitch,
 interval, melodic direction, and glissando in Turkish makam music recordings.
@@ -59,7 +59,7 @@ Pençgâh, Ferahnâk, and Nişabur. Bûselik is not a comparison row in version
 Java 21 is bundled with the desktop packages. Ubuntu installs FFmpeg and the
 required desktop libraries through the package manager.
 
-> **Signing notice:** version 1.1.0 community packages are not commercially
+> **Signing notice:** version 1.1.2 community packages are not commercially
 > code-signed. The macOS package is ad-hoc signed and not notarized; the Windows
 > installer and portable package are unsigned. Operating-system security
 > warnings may therefore appear. Verify the SHA-256 checksums before use.
@@ -87,7 +87,7 @@ See [BUILDING.md](BUILDING.md) for prerequisites and platform notes.
 Use the repository's **Cite this repository** menu, backed by
 [`CITATION.cff`](CITATION.cff), or cite the software as:
 
-> Pınarbaşı, E. (2026). *MakamLab* (Version 1.1.0) [Computer software].
+> Pınarbaşı, E. (2026). *MakamLab* (Version 1.1.2) [Computer software].
 
 ## License and provenance
 

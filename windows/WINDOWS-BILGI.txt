@@ -1,4 +1,4 @@
-MAKAMLAB 1.1.0 - WINDOWS x64
+MAKAMLAB 1.1.2 - WINDOWS x64
 ============================
 
 Desteklenen sistemler:
@@ -9,7 +9,7 @@ Paketin içinde Java 21 ve FFmpeg 9.0.2 bulunur. Ayrıca Java veya FFmpeg
 kurmanız gerekmez. WAV, AIFF, AU, MP3 ve M4A dosyaları desteklenir.
 
 KURULUM
-1. MakamLab-1.1.0-Windows-x64-Setup.exe dosyasını çalıştırın.
+1. MakamLab-1.1.2-Windows-x64-Setup.exe dosyasını çalıştırın.
 2. Uygulama %LOCALAPPDATA%\Programs\MakamLab klasörüne kurulur.
 3. Başlat menüsüne “MakamLab” kısayolu eklenir.
 

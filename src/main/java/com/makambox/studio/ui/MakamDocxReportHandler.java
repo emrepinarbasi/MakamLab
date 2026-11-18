@@ -46,7 +46,7 @@ import java.util.Set;
 
 /** Connects the guided Makam workspace to the editable academic DOCX report. */
 public final class MakamDocxReportHandler implements MakamWordReportHandler {
-    private static final String APP_VERSION = "MakamLab 1.1.0";
+    private static final String APP_VERSION = "MakamLab 1.1.2";
     private static final String ENGINE_VERSION = "YIN / 53-Hc 1.0";
     private final SinglePitchStudyService service = new SinglePitchStudyService();
     private final PitchIntervalStudyService intervalService = new PitchIntervalStudyService();

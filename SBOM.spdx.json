@@ -2,10 +2,10 @@
   "spdxVersion": "SPDX-2.3",
   "dataLicense": "CC0-1.0",
   "SPDXID": "SPDXRef-DOCUMENT",
-  "name": "MakamLab-1.1.0",
-  "documentNamespace": "https://spdx.org/spdxdocs/MakamLab-1.1.0-f6b07158-a6c4-5cb5-8241-fd758b3f6098",
+  "name": "MakamLab-1.1.2",
+  "documentNamespace": "https://spdx.org/spdxdocs/MakamLab-1.1.2-127a4709-18bb-5190-a491-7e9f0da1e3b5",
   "creationInfo": {
-    "created": "2026-11-15T11:35:10Z",
+    "created": "2026-11-18T10:32:42Z",
     "creators": [
       "Person: Emre Pinarbasi (emrepinarbasi@gmail.com)",
       "Tool: MakamLab tools/generate_sbom.py"
@@ -15,7 +15,7 @@
     {
       "SPDXID": "SPDXRef-MakamLab",
       "name": "MakamLab",
-      "versionInfo": "1.1.0",
+      "versionInfo": "1.1.2",
       "downloadLocation": "NOASSERTION",
       "filesAnalyzed": false,
       "licenseConcluded": "GPL-3.0-or-later",

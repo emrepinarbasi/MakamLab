@@ -1,4 +1,4 @@
-# MakamLab 1.1.0 — third-party notices
+# MakamLab 1.1.2 — third-party notices
 
 MakamLab is developed by Prof. Dr. Emre PINARBAŞI and distributed under
 `GPL-3.0-or-later`. Copyright © 2026.
@@ -10,7 +10,7 @@ Hacklily; those components are not part of this distribution.
 
 | Component | Version | License / distribution |
 |---|---:|---|
-| MakamLab | 1.1.0 | GPL-3.0-or-later |
+| MakamLab | 1.1.2 | GPL-3.0-or-later |
 | MakamBox theory/reference data | recorded revision `fdfbd03531af…` | GPL-3.0-or-later |
 | JLayer | 1.0.1 | LGPL-2.1-only |
 | Apache POI / POI OOXML | 6.0.0 | Apache-2.0 |

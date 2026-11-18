@@ -15,6 +15,7 @@ import java.util.Locale;
 import java.util.Map;
 import java.util.Objects;
 import java.util.Set;
+import java.util.function.ToDoubleFunction;
 
 /**
  * Compares an observed, tonic-aligned pitch inventory with theoretical makam
@@ -36,6 +37,16 @@ public final class MakamProfileComparator {
      */
     public static final double MINIMUM_SECONDARY_EVENT_SECONDS = 0.020;
     private static final double CLUSTER_GAP_CENT = 32.0;
+    private static final double MODE_MINIMUM_SEPARATION_CENT = 1.50
+            * AnalysisConfig.COMMA_CENT;
+    private static final double MODE_MAXIMUM_SPLIT_SSE_RATIO = 0.58;
+    private static final double MODE_MINIMUM_WEIGHT_SHARE = 0.15;
+    private static final int MODE_MINIMUM_MEMBER_COUNT = 3;
+    private static final double REPEATED_SHORT_MINIMUM_CONFIDENCE = 0.80;
+    private static final int REPEATED_SHORT_MINIMUM_EVENT_COUNT = 3;
+    private static final int REPEATED_SHORT_MINIMUM_TIME_REGIONS = 3;
+    private static final double REPEATED_SHORT_MINIMUM_TOTAL_SECONDS = 0.10;
+    private static final double REPEATED_SHORT_TIME_REGION_GAP_SECONDS = 1.0;
     private static final double EDGE_WRAP_CENT = 25.0;
     private static final double HUBER_DELTA_CENT = AnalysisConfig.COMMA_CENT;
     private static final double MAXIMUM_PHRASE_GAP_SECONDS = 0.80;
@@ -85,10 +96,10 @@ public final class MakamProfileComparator {
         // The global inventory is descriptive.  It deliberately contains all
         // reliable first-four-domain contacts, including pitches that do not
         // belong to a tonic/fourth-anchored ordered phrase.
-        List<Observation> observations = acceptedObservations(events, tonicCent,
-                firstFourUpperCent);
-        List<Cluster> clusters = cluster(observations);
         DegreeBands degreeBands = degreeBands(system);
+        List<Observation> observations = acceptedObservations(events, tonicCent,
+                firstFourUpperCent, degreeBands);
+        List<Cluster> clusters = cluster(observations);
         PhraseSet phraseSet = phraseEvidence(events, tonicCent, firstFourUpperCent,
                 degreeBands);
         // The ranked, non-directional first-four comparison uses the complete
@@ -175,15 +186,12 @@ public final class MakamProfileComparator {
 
     private static List<Observation> acceptedObservations(List<PitchEvent> events,
                                                           double tonicCent,
-                                                          double firstFourUpperCent) {
+                                                          double firstFourUpperCent,
+                                                          DegreeBands degreeBands) {
         List<Observation> result = new ArrayList<>();
+        List<Observation> repeatedShortCandidates = new ArrayList<>();
         for (PitchEvent event : events) {
             PitchOccurrence occurrence = event.occurrence();
-            if (!measurableFirstFourEvidence(occurrence.durationSeconds(),
-                    occurrence.confidence(), occurrence.stabilityCent(),
-                    occurrence.eventType().measurable())) {
-                continue;
-            }
             double relative = foldOctave(occurrence.observedCent() - tonicCent);
             if (relative > 1200.0 - EDGE_WRAP_CENT) relative -= 1200.0;
             // Only the common first-four domain can contribute.  This fixed
@@ -193,15 +201,67 @@ public final class MakamProfileComparator {
                     || relative >= firstFourUpperCent + AnalysisConfig.COMMA_CENT - 1.0e-9) {
                 continue;
             }
+            boolean measurable = measurableFirstFourEvidence(occurrence.durationSeconds(),
+                    occurrence.confidence(), occurrence.stabilityCent(),
+                    occurrence.eventType().measurable());
+            boolean repeatedShortCandidate = !measurable
+                    && occurrence.durationSeconds() + 1.0e-9
+                    >= MINIMUM_SECONDARY_EVENT_SECONDS
+                    && occurrence.durationSeconds() < MINIMUM_SHORT_MEASURABLE_SECONDS - 1.0e-9
+                    && occurrence.confidence() + 1.0e-9
+                    >= REPEATED_SHORT_MINIMUM_CONFIDENCE
+                    && basicFirstFourQuality(occurrence.durationSeconds(),
+                    occurrence.stabilityCent())
+                    && degreeBands.degree(relative) >= 2;
+            if (!measurable && !repeatedShortCandidate) continue;
             double weight = firstFourEvidenceWeight(occurrence.durationSeconds(),
                     occurrence.confidence(), occurrence.stabilityCent());
             double evidenceUnits = Math.min(1.0,
                     occurrence.durationSeconds() / MINIMUM_EVENT_SECONDS);
-            result.add(new Observation(relative, occurrence.durationSeconds(), weight,
+            Observation observation = new Observation(relative, occurrence.durationSeconds(), weight,
                     occurrence.confidence(), occurrence.startSeconds(), occurrence.endSeconds(),
-                    evidenceUnits));
+                    evidenceUnits);
+            if (measurable) result.add(observation);
+            else repeatedShortCandidates.add(observation);
         }
-        return result;
+
+        // A single 20-60 ms contact is only visual/audit evidence.  Repeated,
+        // high-confidence contacts at the same performed mode, distributed
+        // over the recording, are different: together they establish a
+        // defensible secondary inventory peak without pretending that one
+        // transient is a sustained note or an ordered phrase.
+        List<Observation> secondDegreeCandidates = repeatedShortCandidates.stream()
+                .filter(value -> degreeBands.degree(value.cent()) == 2).toList();
+        for (List<Observation> mode : modeGroups(secondDegreeCandidates,
+                Observation::cent, Observation::weight)) {
+            if (repeatedShortModeQualifies(mode)) result.addAll(mode);
+        }
+        return result.stream().sorted(Comparator.comparingDouble(Observation::start)).toList();
+    }
+
+    private static boolean repeatedShortModeQualifies(List<Observation> mode) {
+        if (mode.size() < REPEATED_SHORT_MINIMUM_EVENT_COUNT) return false;
+        double duration = mode.stream().mapToDouble(Observation::duration).sum();
+        if (duration + 1.0e-9 < REPEATED_SHORT_MINIMUM_TOTAL_SECONDS) return false;
+        double weightedConfidence = mode.stream()
+                .mapToDouble(value -> value.confidence() * Math.max(value.weight(), 1.0e-12)).sum()
+                / mode.stream().mapToDouble(value -> Math.max(value.weight(), 1.0e-12)).sum();
+        return weightedConfidence + 1.0e-9 >= REPEATED_SHORT_MINIMUM_CONFIDENCE
+                && separatedTimeRegions(mode) >= REPEATED_SHORT_MINIMUM_TIME_REGIONS;
+    }
+
+    private static int separatedTimeRegions(List<Observation> values) {
+        if (values.isEmpty()) return 0;
+        List<Observation> ordered = values.stream()
+                .sorted(Comparator.comparingDouble(Observation::start)).toList();
+        int regions = 1;
+        double previousEnd = ordered.get(0).end();
+        for (int index = 1; index < ordered.size(); index++) {
+            Observation value = ordered.get(index);
+            if (value.start() - previousEnd >= REPEATED_SHORT_TIME_REGION_GAP_SECONDS) regions++;
+            previousEnd = Math.max(previousEnd, value.end());
+        }
+        return regions;
     }
 
     /** Quality contract for the non-directional first-four statistical mean. */
@@ -258,23 +318,125 @@ public final class MakamProfileComparator {
 
     private static List<Cluster> cluster(List<Observation> observations) {
         if (observations.isEmpty()) return List.of();
-        List<Observation> sorted = observations.stream()
-                .sorted(Comparator.comparingDouble(Observation::cent)).toList();
-        List<List<Observation>> groups = new ArrayList<>();
-        List<Observation> current = new ArrayList<>();
+        return modeGroups(observations, Observation::cent, Observation::weight).stream()
+                .map(Cluster::from).sorted(Comparator.comparingDouble(Cluster::center)).toList();
+    }
+
+    /**
+     * One-dimensional, candidate-independent mode partition.  The historical
+     * single-link rule joined two real peaks whenever a few transition events
+     * happened to bridge the gap.  This method first respects unequivocal
+     * empty gaps and then accepts a two-mode split only when both sides have
+     * repeated support, meaningful weight, sufficiently separated centres and
+     * a large reduction in within-mode error.  No theoretical pitch or makam
+     * name participates in the split.
+     */
+    private static <T> List<List<T>> modeGroups(List<T> values,
+                                                 ToDoubleFunction<T> cent,
+                                                 ToDoubleFunction<T> weight) {
+        if (values.isEmpty()) return List.of();
+        List<T> sorted = values.stream()
+                .sorted(Comparator.comparingDouble(cent)).toList();
+        List<List<T>> coarse = new ArrayList<>();
+        List<T> current = new ArrayList<>();
         current.add(sorted.get(0));
-        for (int i = 1; i < sorted.size(); i++) {
-            Observation next = sorted.get(i);
-            if (next.cent() - current.get(current.size() - 1).cent() <= CLUSTER_GAP_CENT) {
+        for (int index = 1; index < sorted.size(); index++) {
+            T next = sorted.get(index);
+            if (cent.applyAsDouble(next)
+                    - cent.applyAsDouble(current.get(current.size() - 1))
+                    <= CLUSTER_GAP_CENT) {
                 current.add(next);
             } else {
-                groups.add(current);
-                current = new ArrayList<>();
+                coarse.add(List.copyOf(current));
+                current.clear();
                 current.add(next);
             }
         }
-        groups.add(current);
-        return groups.stream().map(Cluster::from).sorted(Comparator.comparingDouble(Cluster::center)).toList();
+        coarse.add(List.copyOf(current));
+
+        List<List<T>> result = new ArrayList<>();
+        for (List<T> group : coarse) splitModeGroup(group, cent, weight, result);
+        return List.copyOf(result);
+    }
+
+    private static <T> void splitModeGroup(List<T> group,
+                                           ToDoubleFunction<T> cent,
+                                           ToDoubleFunction<T> weight,
+                                           List<List<T>> result) {
+        if (group.size() < MODE_MINIMUM_MEMBER_COUNT * 2) {
+            result.add(List.copyOf(group));
+            return;
+        }
+        double unsplitSse = weightedSse(group, cent, weight);
+        if (unsplitSse <= 1.0e-12) {
+            result.add(List.copyOf(group));
+            return;
+        }
+        double totalWeight = effectiveWeight(group, weight);
+        int bestCut = -1;
+        double bestRatio = Double.POSITIVE_INFINITY;
+        for (int cut = MODE_MINIMUM_MEMBER_COUNT;
+             cut <= group.size() - MODE_MINIMUM_MEMBER_COUNT; cut++) {
+            List<T> left = group.subList(0, cut);
+            List<T> right = group.subList(cut, group.size());
+            double leftWeight = effectiveWeight(left, weight);
+            double rightWeight = effectiveWeight(right, weight);
+            if (leftWeight / totalWeight < MODE_MINIMUM_WEIGHT_SHARE
+                    || rightWeight / totalWeight < MODE_MINIMUM_WEIGHT_SHARE) continue;
+            double separation = weightedMean(right, cent, weight)
+                    - weightedMean(left, cent, weight);
+            if (separation + 1.0e-9 < MODE_MINIMUM_SEPARATION_CENT) continue;
+            double ratio = (weightedSse(left, cent, weight)
+                    + weightedSse(right, cent, weight)) / unsplitSse;
+            if (ratio < bestRatio) {
+                bestRatio = ratio;
+                bestCut = cut;
+            }
+        }
+        if (bestCut < 0 || bestRatio > MODE_MAXIMUM_SPLIT_SSE_RATIO + 1.0e-9) {
+            result.add(List.copyOf(group));
+            return;
+        }
+        splitModeGroup(List.copyOf(group.subList(0, bestCut)), cent, weight, result);
+        splitModeGroup(List.copyOf(group.subList(bestCut, group.size())), cent, weight, result);
+    }
+
+    private static <T> double effectiveWeight(List<T> values,
+                                              ToDoubleFunction<T> weight) {
+        double total = values.stream().mapToDouble(value ->
+                Math.max(0.0, weight.applyAsDouble(value))).sum();
+        return total > 1.0e-12 ? total : values.size();
+    }
+
+    private static <T> double weightedMean(List<T> values,
+                                           ToDoubleFunction<T> cent,
+                                           ToDoubleFunction<T> weight) {
+        double total = values.stream().mapToDouble(value ->
+                Math.max(0.0, weight.applyAsDouble(value))).sum();
+        if (total <= 1.0e-12) {
+            return values.stream().mapToDouble(cent).average().orElse(0.0);
+        }
+        return values.stream().mapToDouble(value -> cent.applyAsDouble(value)
+                * Math.max(0.0, weight.applyAsDouble(value))).sum() / total;
+    }
+
+    private static <T> double weightedSse(List<T> values,
+                                          ToDoubleFunction<T> cent,
+                                          ToDoubleFunction<T> weight) {
+        double mean = weightedMean(values, cent, weight);
+        double total = values.stream().mapToDouble(value ->
+                Math.max(0.0, weight.applyAsDouble(value))).sum();
+        if (total <= 1.0e-12) {
+            return values.stream().mapToDouble(value -> {
+                double difference = cent.applyAsDouble(value) - mean;
+                return difference * difference;
+            }).sum();
+        }
+        return values.stream().mapToDouble(value -> {
+            double difference = cent.applyAsDouble(value) - mean;
+            return Math.max(0.0, weight.applyAsDouble(value))
+                    * difference * difference;
+        }).sum();
     }
 
     private static DegreeBands degreeBands(TuningSystemCatalog.SystemData system) {
@@ -824,24 +986,8 @@ public final class MakamProfileComparator {
         private static DegreeEvidence from(int degree,
                                            List<EvidenceObservation> events) {
             if (events.isEmpty()) return new DegreeEvidence(degree, List.of());
-            List<EvidenceObservation> sorted = events.stream()
-                    .sorted(Comparator.comparingDouble(EvidenceObservation::cent))
-                    .toList();
-            List<List<EvidenceObservation>> groups = new ArrayList<>();
-            List<EvidenceObservation> current = new ArrayList<>();
-            current.add(sorted.get(0));
-            for (int i = 1; i < sorted.size(); i++) {
-                EvidenceObservation next = sorted.get(i);
-                if (next.cent() - current.get(current.size() - 1).cent()
-                        <= CLUSTER_GAP_CENT) {
-                    current.add(next);
-                } else {
-                    groups.add(List.copyOf(current));
-                    current.clear();
-                    current.add(next);
-                }
-            }
-            groups.add(List.copyOf(current));
+            List<List<EvidenceObservation>> groups = modeGroups(events,
+                    EvidenceObservation::cent, EvidenceObservation::weight);
 
             List<DegreePeak> raw = new ArrayList<>(groups.size());
             for (List<EvidenceObservation> group : groups) {

@@ -290,7 +290,79 @@ public final class MakamProfileFirstFourScoringRegressionTest {
         assertSameCoreScores(beforeShort, auditContact,
                 "audit-only 20-60 ms contacts must not change non-directional profile scores");
 
+        // Repeated, stable and high-confidence 20 ms contacts at the second
+        // degree may be the only surviving trace of a lightly articulated
+        // pitch.  They are recovered for the common inventory only when they
+        // recur in independent time regions; they are not promoted to an
+        // ordered phrase node.
+        MakamProfileComparison repeatedShortSecond = comparator.compare(
+                repeatedShortSecondEvidence(true), TONIC_HZ, "Kürdilihicazkâr",
+                MakamProfileComparator.DEFAULT_REFERENCE_SYSTEM,
+                FirstFourProfileSelection.defaults());
+        check(repeatedShortSecond.observedClusters().stream()
+                        .anyMatch(value -> Math.abs(value.centerHc() - 4.4) < .20),
+                "repeated reliable short second-degree evidence disappeared from the inventory");
+        check(repeatedShortSecond.candidates().stream()
+                        .allMatch(value -> Double.isFinite(value.scorePercent())),
+                "recovered second-degree evidence must restore finite first-four scores");
+
+        MakamProfileComparison oneRegionShortSecond = comparator.compare(
+                repeatedShortSecondEvidence(false), TONIC_HZ, "Kürdilihicazkâr",
+                MakamProfileComparator.DEFAULT_REFERENCE_SYSTEM,
+                FirstFourProfileSelection.defaults());
+        check(oneRegionShortSecond.observedClusters().stream()
+                        .noneMatch(value -> Math.abs(value.centerHc() - 4.4) < .20),
+                "one local burst of 20 ms transients must not become second-degree evidence");
+        check(oneRegionShortSecond.candidates().stream()
+                        .allMatch(value -> Double.isNaN(value.scorePercent())),
+                "a transient-only second degree must not authorize a similarity percentage");
+
+        // Supported performed modes connected by small adjacent gaps must not
+        // be collapsed into a synthetic midpoint.  This protects dominant and
+        // secondary peaks without consulting any theoretical profile name.
+        MakamProfileComparison bridgedThirdModes = comparator.compare(
+                bridgedThirdModeEvidence(), TONIC_HZ, "Kürdilihicazkâr",
+                MakamProfileComparator.DEFAULT_REFERENCE_SYSTEM,
+                FirstFourProfileSelection.defaults());
+        check(bridgedThirdModes.observedClusters().stream()
+                        .anyMatch(value -> value.centerHc() > 13.8 && value.centerHc() < 14.8),
+                "the lower supported third-degree mode was not preserved");
+        check(bridgedThirdModes.observedClusters().stream()
+                        .anyMatch(value -> value.centerHc() > 16.0 && value.centerHc() < 17.0),
+                "the upper supported third-degree mode was not preserved");
+        check(bridgedThirdModes.observedClusters().stream()
+                        .noneMatch(value -> value.centerHc() > 15.0 && value.centerHc() < 15.8),
+                "two third-degree modes were replaced by an unperformed midpoint");
+
         System.out.println("MAKAM_PROFILE_FIRST_FOUR_SCORING_OK");
+    }
+
+    private static List<PitchEvent> repeatedShortSecondEvidence(boolean separatedRegions) {
+        double hc = 1200.0 / 53.0;
+        List<PitchEvent> result = new ArrayList<>();
+        int index = 8000;
+        result.add(event(index++, 0.0, 13.9 * hc, .20));
+        result.add(event(index++, .4, 22.0 * hc, .20));
+        for (int repeat = 0; repeat < 6; repeat++) {
+            double start = separatedRegions ? 2.0 + repeat * 2.0 : 2.0 + repeat * .04;
+            result.add(shortContact(index++, start,
+                    (4.35 + (repeat % 2) * .10) * hc, .020, .90, 2.0));
+        }
+        return List.copyOf(result);
+    }
+
+    private static List<PitchEvent> bridgedThirdModeEvidence() {
+        double hc = 1200.0 / 53.0;
+        List<PitchEvent> result = new ArrayList<>();
+        int index = 8100;
+        result.add(event(index++, 0.0, 8.2 * hc, .20));
+        result.add(event(index++, .3, 22.0 * hc, .20));
+        double[] thirdModes = {14.0, 14.4, 14.8, 16.0, 16.4, 16.8};
+        for (int repeat = 0; repeat < thirdModes.length; repeat++) {
+            result.add(event(index++, 2.0 + repeat * 1.5,
+                    thirdModes[repeat] * hc, .20));
+        }
+        return List.copyOf(result);
     }
 
     private static List<PitchEvent> microtonalEvents(double secondHc) {

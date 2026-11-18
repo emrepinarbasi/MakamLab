@@ -1,10 +1,10 @@
-MakamLab 1.1.0 — Ubuntu amd64
+MakamLab 1.1.2 — Ubuntu amd64
 ================================
 
 Desteklenen hedef: Ubuntu 22.04 LTS veya daha yenisi, 64 bit Intel/AMD.
 
 Kurulum:
-  sudo apt install ./MakamLab-1.1.0-Ubuntu-amd64.deb
+  sudo apt install ./MakamLab-1.1.2-Ubuntu-amd64.deb
 
 Paket, Java 21 çalışma zamanını içerir. MP3 ve M4A kayıtlarını aynı PCM
 yolundan açabilmek için Ubuntu'nun ffmpeg paketi; oluşturulan DOCX raporunu

@@ -1,29 +1,24 @@
-# Temiz kaynak snapshot'ı
+# Temiz Kaynak Snapshot'ı
 
 - Proje: MakamLab
-- Sürüm: 1.1.0
-- Snapshot tarihi: 15 Kasım 2026
+- Sürüm: 1.1.2
+- Snapshot tarihi: 18 Kasım 2026
 - Kaynak Java sürümü: 21
 - Ana Java kaynak dosyası: 109
 - Regresyon testi: 57
-- Dil kaynağı: temel paket + Türkçe + İngilizce
+- Dil kaynağı: Türkçe ve İngilizce
 
-Bu snapshot, MakamLab'ın 1.1.0 yayın ağacından hazırlanmıştır. `build/`, `tmp/`,
-önbellek, yerel IDE ayarları, AppleDouble dosyaları, kurulum paketleri, kullanıcı
-ses kayıtları ve üretilmiş raporlar kaynak deposuna alınmamıştır.
+Bu snapshot, ortak geliştirme ağacındaki MakamLab kodundan hazırlanmıştır.
+MakamBox Studio'ya ait transkripsiyon arayüzü ve motorları, NeuralNote,
+MuScriptor, LilyPond/Hacklily çalışma zamanı, eski Studio rapor/ayar ekranları,
+derleme çıktıları, geçici dosyalar, yedek uygulamalar ve AppleDouble `._*`
+dosyaları dahil edilmemiştir.
 
-MakamBox Studio transkripsiyon arayüzü, NeuralNote/MuScriptor modeli,
-LilyPond/Hacklily çalışma zamanı ve bunlara ait veri/model dosyaları bu MakamLab
-dağıtımında bulunmaz.
+Temiz kaynak; Java 21 ile baştan derlenmiş, tüm analiz regresyonları, DOCX
+raporu, ilk-dört-ses profil ayarları, oynatma denetimleri, lisans penceresi ve
+Türkçe/İngilizce dil izolasyon denetimleri başarıyla doğrulanmıştır.
 
-Kaynakta bulunan işlevsel kapsam:
-
-- karar seçimi ve YIN tabanlı F0 izleme;
-- perde/açık aralık, yönsel perde, artık aralık ve glissando analizleri;
-- 53-Hc kuram ve referans verileri;
-- Türkçe/İngilizce masaüstü arayüzü;
-- DOCX akademik rapor üretimi;
-- macOS, Windows ve Ubuntu paketleme kaynakları.
-
-Bağımlılık envanteri `SBOM.spdx.json`; lisans kökeni
-`THIRD_PARTY_NOTICES.md` ve `licenses/` altında verilmiştir.
+Perde Analizi ve Perdeler Arası Analiz raporlarındaki yönsel ilk-dört-ses
+katmanı; aynı derece tekrarları, gerçek yön dönüşleri, düşük güvenli ayırıcılar,
+uzun sessizlikler ve register sıçramaları için ayrıca regresyon testlerinden
+geçirilmiştir.

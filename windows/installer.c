@@ -151,7 +151,7 @@ int WINAPI wWinMain(HINSTANCE instance, HINSTANCE previous, PWSTR arguments, int
         L"New-Item -Path $key -Force | Out-Null; "
         L"$quotedUninstall=[char]34+$uninstall+[char]34; "
         L"New-ItemProperty -Path $key -Name 'DisplayName' -PropertyType String -Value 'MakamLab' -Force | Out-Null; "
-        L"New-ItemProperty -Path $key -Name 'DisplayVersion' -PropertyType String -Value '1.1.0' -Force | Out-Null; "
+        L"New-ItemProperty -Path $key -Name 'DisplayVersion' -PropertyType String -Value '1.1.2' -Force | Out-Null; "
         L"New-ItemProperty -Path $key -Name 'Publisher' -PropertyType String -Value 'Prof. Dr. Emre PINARBAŞI' -Force | Out-Null; "
         L"New-ItemProperty -Path $key -Name 'DisplayIcon' -PropertyType String -Value $app -Force | Out-Null; "
         L"New-ItemProperty -Path $key -Name 'InstallLocation' -PropertyType String -Value $dest -Force | Out-Null; "
