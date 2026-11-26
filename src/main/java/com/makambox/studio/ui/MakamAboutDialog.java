@@ -69,7 +69,7 @@ public final class MakamAboutDialog {
         title.setFont(title.getFont().deriveFont(Font.BOLD, 22f));
         identity.add(title);
         identity.add(centered(i18n.textOrDefault("about.version",
-                "Version {0} • {1}", "1.1", "2026")));
+                "Version {0} • {1}", "1.1.3", "2026")));
         identity.add(centered(i18n.textOrDefault("about.developer",
                 "Developed by {0}.", "Prof. Dr. Emre PINARBAŞI")));
         identity.add(centered(i18n.textOrDefault("about.makamboxAttribution",

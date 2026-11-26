@@ -6,9 +6,9 @@ page. Confirm its SHA-256 value against `SHA256SUMS.txt` before installation.
 GitHub **Releases** sayfasından işletim sisteminize uygun paketi indirin.
 Kurulumdan önce dosyanın SHA-256 değerini `SHA256SUMS.txt` ile karşılaştırın.
 
-## macOS — Apple Silicon
+## macOS — Universal (Apple Silicon / Intel)
 
-Supported package: `MakamLab-V1.1.2-macOS-Apple-Silicon-arm64.dmg`
+Supported package: `MakamLab-V1.1.3-macOS-Universal.dmg`
 
 1. Open the DMG and drag MakamLab to Applications.
 2. The package is ad-hoc signed but not Apple-notarized. If Gatekeeper blocks
@@ -25,8 +25,8 @@ kapatmayın.
 
 Packages:
 
-- installer: `MakamLab-1.1.2-Windows-x64-Setup-UNSIGNED.exe`
-- portable: `MakamLab-1.1.2-Windows-x64-Portable-UNSIGNED.zip`
+- installer: `MakamLab-1.1.3-Windows-x64-Setup-UNSIGNED.exe`
+- portable: `MakamLab-1.1.3-Windows-x64-Portable-UNSIGNED.zip`
 
 The files are not Authenticode-signed. Windows SmartScreen may show a warning.
 Verify the checksum and source before choosing to run the package. The portable
@@ -40,7 +40,7 @@ paket, kullanıcı yazma izni bulunan bir klasöre çıkarılarak kurulumsuz aç
 ## Ubuntu 22.04+ amd64
 
 ```sh
-sudo apt install ./MakamLab-1.1.2-Ubuntu-amd64.deb
+sudo apt install ./MakamLab-1.1.3-Ubuntu-amd64.deb
 ```
 
 The package bundles Java 21 and declares its FFmpeg and desktop-library
@@ -62,7 +62,7 @@ shasum -a 256 -c SHA256SUMS.txt
 Windows PowerShell:
 
 ```powershell
-Get-FileHash .\MakamLab-1.1.2-Windows-x64-Setup-UNSIGNED.exe -Algorithm SHA256
+Get-FileHash .\MakamLab-1.1.3-Windows-x64-Setup-UNSIGNED.exe -Algorithm SHA256
 ```
 
 Compare the result character-for-character with the corresponding line in

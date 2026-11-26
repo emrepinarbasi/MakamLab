@@ -8,7 +8,7 @@ public enum MakamAnalysisMode {
     BETWEEN_PITCHES("analysis.between", "Perdeler arası analiz"),
     USSAK_SEGAH_DIRECTIONAL("analysis.directional", "Uşşak dörtlüsü – Segâh yönsel analizi"),
     HICAZ_AUGMENTED_INTERVAL("analysis.augmented", "Artık Aralık Analizi"),
-    GLISSANDO_ANALYSIS("analysis.glissando", "İki perde arası glissando analizi");
+    GLISSANDO_ANALYSIS("analysis.glissando", "İki perde arası Glisendo/Portamento analizi");
 
     private final String messageKey;
     private final String fallback;

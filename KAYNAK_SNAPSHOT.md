@@ -1,10 +1,10 @@
 # Temiz Kaynak Snapshot'ı
 
 - Proje: MakamLab
-- Sürüm: 1.1.2
-- Snapshot tarihi: 18 Kasım 2026
+- Sürüm: 1.1.3
+- Snapshot tarihi: 26 Kasım 2026
 - Kaynak Java sürümü: 21
-- Ana Java kaynak dosyası: 109
+- Ana Java kaynak dosyası: 111
 - Regresyon testi: 57
 - Dil kaynağı: Türkçe ve İngilizce
 

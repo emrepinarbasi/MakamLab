@@ -19,7 +19,8 @@ FINAL_DMG="$DIST_DIR/MakamLab-V$APP_VERSION-macOS-Apple-Silicon-arm64.dmg"
 FINAL_ZIP="$DIST_DIR/MakamLab-$APP_VERSION-macOS-Apple-Silicon-arm64-APP.zip"
 JPACKAGE_BIN="${JPACKAGE_BIN:-$(command -v jpackage)}"
 
-if [[ "$(uname -m)" != "arm64" ]]; then
+HOST_ARCH="$(uname -m)"
+if [[ "$HOST_ARCH" != "arm64" && "${UNIVERSAL_STAGE:-0}" != "1" ]]; then
   print -u2 -- "MakamLab macOS paketi Apple Silicon üzerinde üretilmelidir."
   exit 1
 fi
@@ -96,7 +97,7 @@ plutil -replace CFBundleName -string "$APP_DISPLAY_NAME" "$PLIST"
 plutil -insert CFBundleDisplayName -string "$APP_DISPLAY_NAME" "$PLIST"
 plutil -replace NSHighResolutionCapable -bool YES "$PLIST"
 plutil -replace LSMinimumSystemVersion -string "13.5" "$PLIST"
-plutil -replace LSArchitecturePriority -json '["arm64"]' "$PLIST"
+plutil -replace LSArchitecturePriority -json "[\"$HOST_ARCH\"]" "$PLIST"
 plutil -replace LSRequiresNativeExecution -bool YES "$PLIST"
 plutil -lint "$PLIST"
 
@@ -128,6 +129,7 @@ fi
 # this with Developer ID Application + hardened runtime + notarization.
 codesign --force --deep --sign - "$APP_BUNDLE"
 codesign --verify --deep --strict --verbose=2 "$APP_BUNDLE"
+if [[ "${UNIVERSAL_STAGE:-0}" == "1" ]]; then exit 0; fi
 rm -f "$FINAL_ZIP"
 (
   cd "$DIST_DIR"

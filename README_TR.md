@@ -1,9 +1,9 @@
-# MakamLab 1.1.2
+# MakamLab 1.1.3
 
 ![MakamLab yazı logosu](assets/MakamLab-Wordmark-v1.png)
 
 [English README](README.md) · [Kurulum](INSTALLATION.md) ·
-[Kaynaktan derleme](BUILDING.md) · [Sürüm notları](RELEASE_NOTES_1.1.2.md)
+[Kaynaktan derleme](BUILDING.md) · [Sürüm notları](RELEASE_NOTES_1.1.3.md)
 
 MakamLab, Türk makam müziği ses kayıtlarındaki perde, aralık, ezgi yönü ve
 glissando kullanımlarını incelemek için geliştirilmiş akademik masaüstü
@@ -23,7 +23,7 @@ tasarımıyla birlikte değerlendirilmelidir.
    inici ve kalış gruplarında ayrı değerlendirir.
 3. **Artık Aralık Analizi** — dört dereceli hareketi ve ikinci–üçüncü dereceler
    arasındaki artık aralığı iki yönde ölçer.
-4. **Glissando Analizi** — seçilen iki perde arasındaki çıkıcı ve inici
+4. **Glisendo/Portamento Analizi** — seçilen iki perde arasındaki çıkıcı ve inici
    glissandoları süre, genişlik, başlangıç/bitiş konumu, biçim ve güven
    değerleriyle raporlar.
 
@@ -35,6 +35,7 @@ tasarımıyla birlikte değerlendirilmelidir.
 - anti-alias süzgeçli 22,05 kHz çalışma kopyası
 - YIN tabanlı temel frekans izleme
 - 53-Hc kuramsal referans cetveli
+- genel perde envanteri ve dalga biçimiyle doğrulanan karara inişler için ayrı ilk dört derece benzerliği
 - frekans, göreli C/Hc, sapma, yön, süre, kararlılık ve güven sütunları
 - aynı perde sınıfının güvenilir oktav/register kanıtlarını seçilen kuramsal
   aralığa hizalama; fiziksel register bilgisini denetim için koruma
@@ -50,7 +51,7 @@ devam eder.
 
 ## Desteklenen sistemler
 
-- macOS 13.5 veya üzeri, Apple Silicon (`arm64`)
+- macOS 13.5 veya üzeri, Universal (Apple Silicon ve Intel)
 - Windows 10/11, 64 bit (`x64`)
 - Ubuntu 22.04 LTS veya üzeri, Intel/AMD 64 bit (`amd64`)
 - uzun kayıtlar için en az 8 GB RAM önerilir
@@ -58,7 +59,7 @@ devam eder.
 Java 21 kurulum paketlerinin içindedir. Ubuntu paketi FFmpeg ile gerekli masaüstü
 kitaplıklarını sistem paket yöneticisi üzerinden kurar.
 
-> **İmza uyarısı:** 1.1.2 topluluk paketleri ticari kod imzasına sahip değildir.
+> **İmza uyarısı:** 1.1.3 topluluk paketleri ticari kod imzasına sahip değildir.
 > macOS paketi ad-hoc imzalıdır ve noter onaylı değildir; Windows kurucu ve
 > portable paketleri imzasızdır. Bu nedenle işletim sistemi güvenlik uyarısı
 > gösterebilir. Kullanmadan önce SHA-256 değerini doğrulayın.
@@ -74,7 +75,7 @@ kullanıcının belge veya e-posta bağlantısını açması dış uygulamaya y�
 Depodaki `CITATION.cff` dosyasının etkinleştirdiği **Cite this repository**
 menüsünü kullanabilir veya yazılımı şöyle gösterebilirsiniz:
 
-> Pınarbaşı, E. (2026). *MakamLab* (Sürüm 1.1.2) [Bilgisayar yazılımı].
+> Pınarbaşı, E. (2026). *MakamLab* (Sürüm 1.1.3) [Bilgisayar yazılımı].
 
 ## Lisans ve köken
 

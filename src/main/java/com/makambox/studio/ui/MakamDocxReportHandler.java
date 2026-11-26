@@ -7,6 +7,7 @@ import com.makambox.studio.report.docx.DocxStudyReportExporter;
 import com.makambox.studio.report.docx.ReportLocalization;
 import com.makambox.studio.report.docx.SpecializedAnalysisDocxExporter;
 import com.makambox.studio.report.docx.SpecializedAnalysisMetadata;
+import com.makambox.studio.study.CadenceSimilarity;
 import com.makambox.studio.study.FirstFourMakamGroupCatalog;
 import com.makambox.studio.study.FirstFourDirectionalAnalyzer;
 import com.makambox.studio.study.FirstFourProfileReferenceCatalog;
@@ -46,7 +47,7 @@ import java.util.Set;
 
 /** Connects the guided Makam workspace to the editable academic DOCX report. */
 public final class MakamDocxReportHandler implements MakamWordReportHandler {
-    private static final String APP_VERSION = "MakamLab 1.1.2";
+    private static final String APP_VERSION = "MakamLab 1.1.3";
     private static final String ENGINE_VERSION = "YIN / 53-Hc 1.0";
     private final SinglePitchStudyService service = new SinglePitchStudyService();
     private final PitchIntervalStudyService intervalService = new PitchIntervalStudyService();
@@ -165,8 +166,8 @@ public final class MakamDocxReportHandler implements MakamWordReportHandler {
         }
         if (context.glissandoStudy() == null) {
             throw new IllegalArgumentException(t("report.error.glissandoNotComplete",
-                    "The glissando analysis is not complete yet",
-                    "Glissando analizi henüz tamamlanmadı"));
+                    "The glissando/portamento analysis is not complete yet",
+                    "Glisendo/Portamento analizi henüz tamamlanmadı"));
         }
         specializedExporter.exportGlissando(metadata, context.glissandoStudy(), path);
     }
@@ -358,7 +359,9 @@ public final class MakamDocxReportHandler implements MakamWordReportHandler {
                 limitations, ZonedDateTime.now(), List.of(),
                 List.of(),
                 firstFourInventoryPeaks(study.profileComparison()),
-                firstFourPhraseEvidence(study.profileComparison()));
+                firstFourPhraseEvidence(study.profileComparison(),
+                        CadenceSimilarity.analyze(context.audio(), study.allCanonicalEvents(),
+                                tonic.hertz(), makam.name(), study.profileComparison())));
     }
 
     private static AcademicStudyDocument adaptInterval(MakamStudyContext context,
@@ -432,7 +435,9 @@ public final class MakamDocxReportHandler implements MakamWordReportHandler {
                 method, limitations, ZonedDateTime.now(), List.of(),
                 List.of(),
                 firstFourInventoryPeaks(study.profileComparison()),
-                firstFourPhraseEvidence(study.profileComparison()));
+                firstFourPhraseEvidence(study.profileComparison(),
+                        CadenceSimilarity.analyze(context.audio(), study.allCanonicalEvents(),
+                                tonic.hertz(), makam.name(), study.profileComparison())));
     }
 
     private static List<AcademicStudyDocument.DirectionalFirstFourProfile> directionalFirstFourRows(
@@ -693,7 +698,7 @@ public final class MakamDocxReportHandler implements MakamWordReportHandler {
     }
 
     private static AcademicStudyDocument.FirstFourPhraseEvidence firstFourPhraseEvidence(
-            MakamProfileComparison comparison) {
+            MakamProfileComparison comparison, CadenceSimilarity.Result cadence) {
         if (comparison == null || comparison.phraseEvidence() == null) {
             return AcademicStudyDocument.FirstFourPhraseEvidence.EMPTY;
         }
@@ -706,7 +711,7 @@ public final class MakamDocxReportHandler implements MakamWordReportHandler {
                 .toList();
         return new AcademicStudyDocument.FirstFourPhraseEvidence(evidence.status().name(),
                 evidence.qualifyingPhraseCount(), evidence.completePhraseCount(),
-                evidence.partialPhraseCount(), evidence.evidenceEventCount(), peaks);
+                evidence.partialPhraseCount(), evidence.evidenceEventCount(), peaks, cadence);
     }
 
     private static LinkedHashSet<String> candidateNames(MakamProfileComparison.Candidate candidate) {

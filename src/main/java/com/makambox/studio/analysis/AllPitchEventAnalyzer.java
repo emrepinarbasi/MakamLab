@@ -269,7 +269,8 @@ public final class AllPitchEventAnalyzer {
             while (cursor < frames.size()) {
                 NoteCenter nextCenter = assignments[cursor];
                 if (nextCenter != null) {
-                    if (!nextCenter.note().key().equals(center.note().key())) break;
+                    // Pitch-class assignments can share a key across physical octaves.
+                    if (!sameNote(nextCenter, center)) break;
                     lastAssigned = cursor++;
                     continue;
                 }
@@ -280,8 +281,7 @@ public final class AllPitchEventAnalyzer {
                 while (cursor < frames.size() && !frames.get(cursor).voiced()) cursor++;
                 if (cursor >= frames.size()) break;
                 NoteCenter afterGap = assignments[cursor];
-                if (afterGap == null
-                        || !afterGap.note().key().equals(center.note().key())
+                if (!sameNote(afterGap, center)
                         || unvoicedGapSeconds(frames, lastAssigned, cursor, frameStep)
                         > MAXIMUM_UNVOICED_GAP_SECONDS + 1.0e-9) {
                     break;

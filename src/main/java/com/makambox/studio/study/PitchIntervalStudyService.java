@@ -121,13 +121,18 @@ public final class PitchIntervalStudyService {
         double theoretical = value.theoreticalRelativeCent();
         double observed = value.observedRelativeCent()
                 - octaveOffset * PitchClassInterval.OCTAVE_CENT;
+        double deviation = observed - theoretical;
+        // Keep phase deviations in the same reference register as the event centre.
+        double deviationShift = deviation - value.deviationCent();
         return new StudyPitchEvent(value.index(), value.noteKey(), value.noteName(),
                 value.startSeconds(), value.endSeconds(), value.durationSeconds(),
                 value.observedHertz(), theoretical, observed,
                 observed / AnalysisConfig.COMMA_CENT,
-                value.deviationCent(), value.deviationHc(),
-                value.entryDeviationCent(), value.settledDeviationCent(),
-                value.exitDeviationCent(), value.stabilityCent(), value.vibratoSpanCent(),
+                deviation, deviation / AnalysisConfig.COMMA_CENT,
+                value.entryDeviationCent() + deviationShift,
+                value.settledDeviationCent() + deviationShift,
+                value.exitDeviationCent() + deviationShift,
+                value.stabilityCent(), value.vibratoSpanCent(),
                 value.confidence(), value.entryDirection(), value.exitDirection(),
                 value.direction(), value.eventType(), value.phraseFinal());
     }

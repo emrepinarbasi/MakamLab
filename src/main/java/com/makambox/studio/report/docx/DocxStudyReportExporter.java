@@ -877,6 +877,7 @@ public final class DocxStudyReportExporter {
                         "İki kanıt katmanı bilinçli olarak birbirinden ayrı tutulur. Genel perde envanteri, karar ile dördüncü derece arasındaki alanda duyulan baskın ve ikincil tepelerin tümünü korur; ayrı tepeler yapay bir ortalamada birleştirilmez. Envanter sıralaması grafiği, bu tek ve sabit çok tepeli kanıt kümesini gösterilen bütün kuramsal ilk-dört-ses referanslarıyla sürekli uzaklık üzerinden karşılaştırır. Her satırda tam olarak aynı gözlenen merkezler kullanılır; hiçbir profil kendi lehine kanıt seçemez, atlayamaz veya yeniden adlandıramaz. Gerçek F0 zaman dizisinden, aday profillerden bağımsız olarak çıkarılan sıralı cümle yolları ise ikinci grafikte ayrıca değerlendirilir. Bu yollar kısmi olduğunda grafik tam bir dörtlü cümlesinin kanıtı gibi sunulmaz; açıkça kısmi/karma kanıt olarak işaretlenir. Süre, tekrar, güven ve kararlılık ortak kanıtı ağırlıklandırır; aynı sesin tekrarları tek bir cümlenin sonucu orantısız biçimde baskılamaması için sınırlandırılır. İki grafik de otomatik makam teşhisi değildir."),
                 10, false, INK, 0, 6);
 
+        var cadence = report.firstFourPhraseEvidence().cadence();
         boolean explicitPhraseContract = hasExplicitFirstFourEvidence(report);
         if (explicitPhraseContract) firstFourEvidenceLayers(document, report);
 
@@ -900,7 +901,7 @@ public final class DocxStudyReportExporter {
         boolean completeEvidence = explicitPhraseContract
                 ? report.firstFourPhraseEvidence().complete()
                 : evidence.evidenceSufficient();
-        if (!completeEvidence) {
+        if (cadence == null && !completeEvidence) {
             String warning = explicitPhraseContract
                     ? report.firstFourPhraseEvidence().partialOrMixed()
                     ? firstFourText(
@@ -929,6 +930,9 @@ public final class DocxStudyReportExporter {
         image(document, charts.profileRanking(report),
                 "ilk-dort-ses-envanter-benzerligi.png", 6.35);
 
+        if (cadence != null) {
+            cadenceComparison(document, report);
+        } else {
         heading(document, firstFourText(
                 "Similarity based on ordered phrase evidence",
                 "Sıralı cümle kanıtına göre benzerlik"), 2);
@@ -938,6 +942,7 @@ public final class DocxStudyReportExporter {
                 9.5, false, MUTED, 0, 4);
         image(document, charts.orderedPhraseProfileRanking(report),
                 "ilk-dort-ses-sirali-cumle-benzerligi.png", 6.35);
+        }
 
         List<AcademicStudyDocument.ProfileComparison> orderedFirstFour = comparisonProfiles.stream()
                 .filter(value -> !value.firstFourDegrees().isEmpty())
@@ -1055,6 +1060,59 @@ public final class DocxStudyReportExporter {
         return plain.equalsIgnoreCase("Buselik");
     }
 
+    private void cadenceComparison(XWPFDocument document, AcademicStudyDocument report) throws IOException {
+        var cadence = report.firstFourPhraseEvidence().cadence();
+        heading(document, firstFourText("Last-four-pitch similarity toward the tonic",
+                "Karara yönelik son dört ses benzerliği"), 2);
+        paragraph(document, firstFourText(
+                "The same confirmed descents are scored against every profile. The tonic anchors the measurement. Coverage counts the observed degrees among 2, 3 and 4. A cadence ending is the app’s silence-based phrase-end marker.",
+                "Aynı doğrulanmış inişler bütün profillerde puanlanır. Karar sesi ölçümün referansıdır. Kapsam, 2, 3 ve 4. derecelerden kaçının gözlendiğini gösterir. Cümle sonu, uygulamanın sessizliğe dayalı kapanış işaretidir."),
+                9.5, false, MUTED, 0, 5);
+        if (cadence.variants().isEmpty()) {
+            paragraph(document, firstFourText("The selected makam has no compatible four-degree reference.",
+                    "Seçilen makam için uygun dört derece referansı bulunamadı."),
+                    9, true, MUTED, 0, 5);
+            return;
+        }
+        List<String[]> paths = new ArrayList<>();
+        paths.add(new String[]{firstFourText("Descent", "İniş"),
+                firstFourText("Candidates", "Aday"),
+                firstFourText("Waveform confirmed", "Dalga biçimiyle doğrulanan"),
+                firstFourText("Phrase ends", "Cümle sonu")});
+        for (var variant : cadence.variants()) {
+            paths.add(new String[]{variant.path(), Integer.toString(variant.candidates()),
+                    Integer.toString(variant.confirmed()), Integer.toString(variant.phraseFinals())});
+        }
+        table(document, paths.toArray(String[][]::new), new int[]{27, 14, 36, 23}, true, 8.5);
+        if (cadence.scores().isEmpty()) {
+            paragraph(document, firstFourText(
+                    "No descent was confirmed. Similarity is unavailable.",
+                    "Doğrulanmış iniş bulunamadı. Benzerlik yüzdesi hesaplanmadı."),
+                    9, true, MUTED, 0, 5);
+            return;
+        }
+        paragraph(document, firstFourText(
+                "Observed degrees: {0}/3. Confirmed descents: {1}.",
+                "Gözlenen derece: {0}/3. Doğrulanan iniş: {1}.",
+                cadence.coveredDegrees(), cadence.confirmed()), 9, true, INK, 4, 5);
+        if (cadence.coveredDegrees() < 3 || cadence.confirmed() < 2) {
+            paragraph(document, firstFourText(
+                    "Limited evidence. Read the percentages with the observed degree coverage and descent count.",
+                    "Kanıt sınırlı. Yüzdeleri gözlenen derece kapsamı ve iniş sayısıyla birlikte değerlendirin."),
+                    9, true, MUTED, 0, 5);
+        }
+        image(document, charts.orderedPhraseProfileRanking(report),
+                "son-dort-ses-karara-yonelik-benzerlik.png", 6.35);
+        List<String[]> scores = new ArrayList<>();
+        scores.add(new String[]{firstFourText("Profile", "Profil"),
+                firstFourText("Similarity", "Benzerlik")});
+        for (var score : cadence.scores()) {
+            scores.add(new String[]{score.profile(),
+                    ReportLocalization.percentValue(score.percent(), 1)});
+        }
+        table(document, scores.toArray(String[][]::new), new int[]{65, 35}, true, 8.5);
+    }
+
     /** Writes the global pitch inventory and ordered phrase evidence as two independent layers. */
     private void firstFourEvidenceLayers(XWPFDocument document, AcademicStudyDocument report) {
         heading(document, firstFourText(
@@ -1093,6 +1151,7 @@ public final class DocxStudyReportExporter {
         }
 
         AcademicStudyDocument.FirstFourPhraseEvidence phrase = report.firstFourPhraseEvidence();
+        if (phrase.cadence() != null) return;
         heading(document, firstFourText(
                 "Ordered tetrachord phrase evidence", "Sıralı dörtlü cümle kanıtı"), 2);
         String status = phrase.complete()

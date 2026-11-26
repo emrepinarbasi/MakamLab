@@ -103,7 +103,7 @@ public final class SpecializedAnalysisDocxExporter {
                 "report.dataRequired", "Report data is required", "Rapor verisi gerekli"));
         String pair = result.request().lowerPitchName() + "–" + result.request().upperPitchName();
         write(requestedPath, document -> {
-            String title = pair + " " + t("result.glissando.title", "Glissando Analysis", "Glissando Analizi");
+            String title = pair + " " + t("result.glissando.title", "Glissando/Portamento Analysis", "Glisendo/Portamento Analizi");
             configure(document, title);
             cover(document, title, metadata, t("report.glissando.purpose",
                     "Start, end, span, duration, speed and reversal characteristics of ascending and descending slides between the two selected pitches",
@@ -120,7 +120,7 @@ public final class SpecializedAnalysisDocxExporter {
                     t("report.glissando.method.endpoints", "Start and end values are reported in C and Hc relative to the tonic, and also as deviations from the theoretical endpoints.", "Başlangıç ve bitiş değerleri karar frekansına göre C ve Hc cinsinden, ayrıca kuramsal uç noktalara göre sapma olarak verilmiştir."),
                     t("report.method.auditEvents", "Candidates that do not meet the primary statistical criteria but remain worthy of inspection are retained in the audit-events section.", "Ana istatistik koşullarını karşılamayan fakat incelemeye değer adaylar denetim olayları bölümünde korunmuştur.")),
                     List.of(
-                            t("report.glissando.limit.monophonic", "Glissando analysis assumes one continuous dominant melodic F0; simultaneous sounds may disturb the F0 track.", "Glissando analizi sürekli ve tek baskın melodik F0 varsayar; eşzamanlı sesler F0 izini bozabilir."),
+                            t("report.glissando.limit.monophonic", "Glissando/Portamento analysis assumes one continuous dominant melodic F0; simultaneous sounds may disturb the F0 track.", "Glisendo/Portamento analizi sürekli ve tek baskın melodik F0 varsayar; eşzamanlı sesler F0 izini bozabilir."),
                             t("report.glissando.limit.endpoints", "When endpoint contact is required, movements without sufficiently stable contact at both selected pitches are excluded from the primary statistics.", "Uç temasları zorunlu modda, seçilen iki perdede yeterince kararlı temas bulunmayan hareketler ana istatistiğe alınmaz."),
                             t("report.glissando.limit.speed", "Speed in C/s and Hc/s describes the slope of pitch movement; it does not directly measure the performer's physical movement speed.", "Hız, C/sn ve Hc/sn olarak perde hareketinin eğimini açıklar; icracının fiziksel hareket hızını doğrudan ölçmez.")));
         });

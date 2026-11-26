@@ -1417,7 +1417,12 @@ public final class AcademicStudyCharts {
                 document.firstFourPhraseEvidence().degreePeaks().stream()
                         .filter(value -> value.degree() >= 2 && value.degree() <= 4)
                         .toList();
-        List<PhraseProfileScore> rows = document.profileComparisons().stream()
+        var cadence = document.firstFourPhraseEvidence().cadence();
+        List<PhraseProfileScore> rows = cadence != null
+                ? cadence.scores().stream().map(score -> new PhraseProfileScore(score.profile(),
+                        score.percent(), cadence.coveredDegrees() * 100.0 / 3,
+                        score.meanAbsoluteHc())).toList()
+                : document.profileComparisons().stream()
                 .filter(value -> !"buselik".equals(profileKey(value.profileName())))
                 .map(profile -> phraseProfileScore(profile, phrasePeaks))
                 .filter(value -> Double.isFinite(value.scorePercent()))
@@ -1430,14 +1435,17 @@ public final class AcademicStudyCharts {
         int rowHeight = 67;
         int top = 145;
         int height = Math.max(HEIGHT, top + Math.max(1, rows.size()) * rowHeight + 125);
-        BufferedImage image = canvas(firstFourText(
+        BufferedImage image = canvas(cadence == null ? firstFourText(
                 "First-four-pitch similarity from ordered phrase evidence",
-                "Sıralı cümle kanıtına göre ilk dört ses benzerliği"), height);
+                "Sıralı cümle kanıtına göre ilk dört ses benzerliği") : firstFourText(
+                "Last-four-pitch similarity toward the tonic",
+                "Karara yönelik son dört ses benzerliği"), height);
         Graphics2D g = graphics(image);
-        if (phrasePeaks.isEmpty() || rows.isEmpty()) {
+        if (rows.isEmpty()) {
             empty(g, firstFourText(
                     "No fixed ordered-phrase evidence is available for comparison.",
                     "Karşılaştırılabilir sabit sıralı-cümle kanıtı bulunmuyor."));
+            g.dispose();
             return image;
         }
 
@@ -1448,8 +1456,14 @@ public final class AcademicStudyCharts {
         String evidenceNote = evidence.complete()
                 ? firstFourText("Complete ordered-path evidence", "Tam sıralı-cümle kanıtı")
                 : firstFourText("Partial/mixed ordered-path evidence", "Kısmi/karma sıralı-cümle kanıtı");
-        g.drawString(evidenceNote + "  •  n=" + evidence.qualifyingPhraseCount()
-                + "  •  e=" + evidence.evidenceEventCount(), 70, 112);
+        String chartNote = cadence == null
+                ? evidenceNote + "  •  n=" + evidence.qualifyingPhraseCount()
+                    + "  •  e=" + evidence.evidenceEventCount()
+                : firstFourText("Confirmed descents", "Doğrulanan iniş") + " "
+                    + cadence.confirmed() + "  •  "
+                    + firstFourText("Observed degrees", "Gözlenen derece") + " "
+                    + cadence.coveredDegrees() + "/3";
+        g.drawString(chartNote, 70, 112);
 
         int left = 350, right = WIDTH - 120;
         int usable = right - left;
@@ -1477,8 +1491,7 @@ public final class AcademicStudyCharts {
             g.setColor(MUTED);
             g.drawString(t("report.coverage", "Coverage", "Kapsam") + " "
                     + ReportLocalization.percentValue(row.coveragePercent(), 0)
-                    + "  •  " + t("report.medianAbsoluteError", "Median abs. error",
-                    "Med. mutlak hata") + " "
+                    + "  •  " + firstFourText("Mean absolute error", "Ortalama mutlak hata") + " "
                     + ReportLocalization.number(row.meanAbsoluteErrorHc(), 2) + " Hc",
                     70, y + 47);
             g.setFont(new Font("SansSerif", Font.BOLD, 22));

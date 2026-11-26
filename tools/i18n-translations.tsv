@@ -12,7 +12,7 @@ en-US	header.language	Language
 en-US	module.pitch	Pitch Analysis
 en-US	module.directional	Ascending–Descending Pitch Analysis
 en-US	module.augmented	Augmented Interval Analysis
-en-US	module.glissando	Glissando Analysis
+en-US	module.glissando	Glissando/Portamento Analysis
 en-US	home.selectStudy	Select an analysis module
 en-US	home.pitch.description	Analyze one pitch or an open interval between two pitches.
 en-US	home.directional.description	Compare ascending, descending and sustained uses of the reference pitch.
@@ -40,7 +40,7 @@ en-US	analysis.single	Single-pitch analysis
 en-US	analysis.between	Between-pitches analysis
 en-US	analysis.directional	Directional pitch analysis
 en-US	analysis.augmented	Augmented Interval Analysis
-en-US	analysis.glissando	Two-pitch glissando analysis
+en-US	analysis.glissando	Two-pitch glissando/portamento analysis
 en-US	status.ready	Ready
 en-US	status.selectStudy	Select an analysis module
 en-US	status.openAudio	Open an audio file to begin
@@ -299,7 +299,7 @@ en-US	validation.waitForPitch	Wait until pitch tracking is complete.
 en-US	validation.selectTonic	Select and confirm the tonic.
 en-US	validation.selectTarget	Select a target pitch.
 en-US	validation.distinctBoundaries	The lower and upper boundaries must be different.
-en-US	validation.distinctGlissandoPitches	Select two different pitches for glissando analysis.
+en-US	validation.distinctGlissandoPitches	Select two different pitches for glissando/portamento analysis.
 en-US	dialog.openAudio.title	Open audio file
 en-US	dialog.error.audioDecode	The audio file could not be decoded.
 en-US	dialog.error.analysis	The analysis could not be completed.
@@ -351,7 +351,7 @@ en-US	status.result.single	Single-pitch analysis complete
 en-US	status.result.between	Between-pitches analysis complete
 en-US	status.result.directional	Directional analysis complete
 en-US	status.result.hicaz	Augmented-interval analysis complete
-en-US	status.result.glissando	Glissando analysis complete
+en-US	status.result.glissando	Glissando/Portamento analysis complete
 en-US	validation.reportHandler	The report service is not available.
 en-US	validation.analysisInProgress	Wait until the current analysis is complete.
 en-US	action.home.tooltip	Return to the analysis-module selection screen
@@ -362,7 +362,7 @@ en-US	canvas.navigationHint	Two fingers ↕: move through pitches • ↔: move 
 en-US	canvas.waveformBuilding	Preparing the waveform in the background…
 en-US	theory.target.empty	Theoretical target: —
 en-US	theory.augmented.reference	{0} tetrachord reference: 0–5–17–22 Hc • augmented interval 2↔3
-en-US	theory.glissando.distinct	Select two different pitches for glissando analysis
+en-US	theory.glissando.distinct	Select two different pitches for glissando/portamento analysis
 en-US	theory.glissando.span	{0} ↔ {1} • theoretical span {2} C / {3} Hc
 en-US	theory.directional.reference	"{0} reference: {3} C / {4} Hc{5}
 Candidate range: {1} < F0 < {2} (boundaries excluded)"
@@ -514,7 +514,7 @@ en-US	report.endpointDeviations	Endpoint deviations C/Hc
 en-US	report.engine	Analysis engine
 en-US	report.entryCent	Entry C
 en-US	report.entrySettledExit	Entry / settled / exit
-en-US	report.error.glissandoNotComplete	The glissando analysis is not complete yet
+en-US	report.error.glissandoNotComplete	The glissando/portamento analysis is not complete yet
 en-US	report.error.hicazNotComplete	The augmented-interval analysis is not complete yet
 en-US	report.error.intervalBoundaries	Pitch-interval boundaries were not specified
 en-US	report.error.makamNotFound	The makam was not found in the theory catalogue
@@ -541,7 +541,7 @@ en-US	report.glissando.countSummary	Primary statistics contain {0} events; the a
 en-US	report.glissando.directionSummary	Glissando summary by direction
 en-US	report.glissando.individualEvents	Individual glissando events
 en-US	report.glissando.limit.endpoints	When endpoint contact is required, movements without sufficiently stable contact at both selected pitches are excluded from the primary statistics.
-en-US	report.glissando.limit.monophonic	Glissando analysis assumes one continuous dominant melodic F0; simultaneous sounds may disturb the F0 track.
+en-US	report.glissando.limit.monophonic	Glissando/Portamento analysis assumes one continuous dominant melodic F0; simultaneous sounds may disturb the F0 track.
 en-US	report.glissando.limit.speed	Speed in C/s and Hc/s describes the slope of pitch movement; it does not directly measure the performer's physical movement speed.
 en-US	report.glissando.method.continuous	Each event was sought as a continuous F0 movement between the selected lower and upper pitches.
 en-US	report.glissando.method.directions	Ascending and descending events were calculated separately. A brief reverse movement does not remove the event; its shape is additionally labelled as returning or mixed.
@@ -811,7 +811,7 @@ en-US	report.value	Value
 en-US	report.voicedFrames	Voiced frames
 en-US	report.weightedMeanShort	Duration-wtd. mean
 en-US	report.withinOneHc	Within ±1 Hc
-en-US	result.glissando.title	Glissando Analysis
+en-US	result.glissando.title	Glissando/Portamento Analysis
 en-US	result.hicaz.title	Augmented Interval Analysis
 en-US	unit.centPerSecond	C/s
 en-US	unit.hcPerSecond	Hc/s
@@ -875,7 +875,7 @@ tr-TR	header.language	Dil
 tr-TR	module.pitch	Perde Analizi
 tr-TR	module.directional	İnici-Çıkıcı Perde Analizi
 tr-TR	module.augmented	Artık Aralık Analizi
-tr-TR	module.glissando	Glisendo Analizi
+tr-TR	module.glissando	Glisendo/Portamento Analizi
 tr-TR	home.selectStudy	Bir analiz modülü seç
 tr-TR	home.pitch.description	Bir perdeyi veya iki perde arasındaki açık aralığı analiz edin.
 tr-TR	home.directional.description	Referans perdenin çıkıcı, inici ve sürdürülen kullanımını karşılaştırın.
@@ -903,7 +903,7 @@ tr-TR	analysis.single	Tek Perde Analizi
 tr-TR	analysis.between	Perdeler Arası Analiz
 tr-TR	analysis.directional	İnici-Çıkıcı Perde Analizi
 tr-TR	analysis.augmented	Artık Aralık Analizi
-tr-TR	analysis.glissando	İki Perde Arası Glisendo Analizi
+tr-TR	analysis.glissando	İki Perde Arası Glisendo/Portamento Analizi
 tr-TR	status.ready	Hazır
 tr-TR	status.selectStudy	Bir analiz modülü seçin
 tr-TR	status.openAudio	Başlamak için bir ses dosyası açın
@@ -1162,7 +1162,7 @@ tr-TR	validation.waitForPitch	Perde izleme tamamlanana kadar bekleyin.
 tr-TR	validation.selectTonic	Karar sesini seçip onaylayın.
 tr-TR	validation.selectTarget	İncelenecek perdeyi seçin.
 tr-TR	validation.distinctBoundaries	Alt ve üst sınırlar farklı olmalıdır.
-tr-TR	validation.distinctGlissandoPitches	Glisendo analizi için iki farklı perde seçin.
+tr-TR	validation.distinctGlissandoPitches	Glisendo/Portamento analizi için iki farklı perde seçin.
 tr-TR	dialog.openAudio.title	Ses dosyasını aç
 tr-TR	dialog.error.audioDecode	Ses dosyası çözülemedi.
 tr-TR	dialog.error.analysis	Analiz tamamlanamadı.
@@ -1214,7 +1214,7 @@ tr-TR	status.result.single	Tek perdeli analiz tamamlandı
 tr-TR	status.result.between	Perdeler arası analiz tamamlandı
 tr-TR	status.result.directional	İnici-çıkıcı perde analizi tamamlandı
 tr-TR	status.result.hicaz	Artık aralık analizi tamamlandı
-tr-TR	status.result.glissando	Glisendo analizi tamamlandı
+tr-TR	status.result.glissando	Glisendo/Portamento analizi tamamlandı
 tr-TR	validation.reportHandler	Rapor servisi kullanılamıyor.
 tr-TR	validation.analysisInProgress	Mevcut analiz tamamlanana kadar bekleyin.
 tr-TR	action.home.tooltip	Analiz türü seçim ekranına dön
@@ -1225,7 +1225,7 @@ tr-TR	canvas.navigationHint	İki parmak ↕: perdeler arasında hareket • ↔:
 tr-TR	canvas.waveformBuilding	Arka planda dalga formu hazırlanıyor…
 tr-TR	theory.target.empty	Kuramsal hedef: —
 tr-TR	theory.augmented.reference	{0} dörtlü referansı: 0–5–17–22 Hc • artık aralık 2↔3
-tr-TR	theory.glissando.distinct	Glisendo analizi için iki farklı perde seçin
+tr-TR	theory.glissando.distinct	Glisendo/Portamento analizi için iki farklı perde seçin
 tr-TR	theory.glissando.span	{0} ↔ {1} • kuramsal aralık {2} C / {3} Hc
 tr-TR	theory.directional.reference	"{0} referans: {3} C / {4} Hc{5}
  Aday aralığı: {1} < F0 < {2} (sınırlar dahil değil)"
@@ -1377,7 +1377,7 @@ tr-TR	report.endpointDeviations	Uç nokta sapmaları C/Hc
 tr-TR	report.engine	Analiz motoru
 tr-TR	report.entryCent	Giriş C
 tr-TR	report.entrySettledExit	Giriş / yerleşmiş / çıkış
-tr-TR	report.error.glissandoNotComplete	Glisendo analizi henüz tamamlanmadı
+tr-TR	report.error.glissandoNotComplete	Glisendo/Portamento analizi henüz tamamlanmadı
 tr-TR	report.error.hicazNotComplete	Artık aralık analizi henüz tamamlanmadı
 tr-TR	report.error.intervalBoundaries	Ses aralığı sınırları belirtilmedi
 tr-TR	report.error.makamNotFound	Makam teori kataloğunda bulunamadı
@@ -1404,7 +1404,7 @@ tr-TR	report.glissando.countSummary	Birincil istatistikler {0} olayı içerir; d
 tr-TR	report.glissando.directionSummary	Yöne göre glisendo özeti
 tr-TR	report.glissando.individualEvents	Bireysel glisendo olayları
 tr-TR	report.glissando.limit.endpoints	Uç nokta teması gerektiğinde, her iki seçilen perdede de yeterince stabil temas olmadan yapılan hareketler, birincil istatistiklerden dışlanır.
-tr-TR	report.glissando.limit.monophonic	Glisendo analizi, sürekli bir baskın melodik F0 varsayar; aynı anda çıkan sesler F0 izini bozabilir.
+tr-TR	report.glissando.limit.monophonic	Glisendo/Portamento analizi, sürekli bir baskın melodik F0 varsayar; aynı anda çıkan sesler F0 izini bozabilir.
 tr-TR	report.glissando.limit.speed	C/s ve Hc/s cinsinden hız, perde hareketinin eğimini tanımlar; bu, icracının fiziksel hareket hızını doğrudan ölçmez.
 tr-TR	report.glissando.method.continuous	Her bir etkinlik, seçilen alt ve üst notalar arasında sürekli bir F0 hareketi olarak araştırıldı.
 tr-TR	report.glissando.method.directions	Çıkıcı ve inici olaylar ayrı ayrı hesaplandı. Kısa bir ters hareket olayı ortadan kaldırmaz; şekli ayrıca geri dönen veya karışık olarak etiketlenir.
@@ -1674,7 +1674,7 @@ tr-TR	report.value	Değer
 tr-TR	report.voicedFrames	Sesli çerçeveler
 tr-TR	report.weightedMeanShort	Süre-ağırlıkça Anlam
 tr-TR	report.withinOneHc	±1 Hc içinde
-tr-TR	result.glissando.title	Glisendo Analizi
+tr-TR	result.glissando.title	Glisendo/Portamento Analizi
 tr-TR	result.hicaz.title	Artık Aralık Analizi
 tr-TR	unit.centPerSecond	C/sn
 tr-TR	unit.hcPerSecond	Hc/sn

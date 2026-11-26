@@ -1,9 +1,9 @@
-# MakamLab 1.1.2
+# MakamLab 1.1.3
 
 ![MakamLab wordmark](assets/MakamLab-Wordmark-v1.png)
 
 [Türkçe README](README_TR.md) · [Installation](INSTALLATION.md) ·
-[Build from source](BUILDING.md) · [Release notes](RELEASE_NOTES_1.1.2.md)
+[Build from source](BUILDING.md) · [Release notes](RELEASE_NOTES_1.1.3.md)
 
 MakamLab is an academic desktop application for analysing performed pitch,
 interval, melodic direction, and glissando in Turkish makam music recordings.
@@ -23,7 +23,7 @@ design.
    events into ascending, descending, and sustained-use groups.
 3. **Augmented Interval Analysis** — measures the four-degree motion and the
    augmented interval between the second and third degrees in both directions.
-4. **Glissando Analysis** — detects ascending and descending glissandi between
+4. **Glissando/Portamento Analysis** — detects ascending and descending glissandi between
    two selected pitches and reports duration, span, start/end position, shape,
    and confidence.
 
@@ -40,6 +40,8 @@ design.
   interval while retaining physical-register audit information
 - separate event tiers for strong, conditionally measurable, and audit-only
   contacts
+- separate first-four-degree similarity scores for the general pitch inventory and
+  waveform-confirmed descents to the tonic
 - DOCX academic reports with tables, charts, method notes, and limitations
 - Turkish and English interface/report output; makam and pitch proper names are
   never translated
@@ -51,7 +53,7 @@ Pençgâh, Ferahnâk, and Nişabur. Bûselik is not a comparison row in version
 
 ## Supported systems
 
-- macOS 13.5 or later, Apple Silicon (`arm64`)
+- macOS 13.5 or later, Universal (Apple Silicon and Intel)
 - Windows 10/11, 64-bit (`x64`)
 - Ubuntu 22.04 LTS or later, Intel/AMD 64-bit (`amd64`)
 - 8 GB RAM recommended for long recordings
@@ -59,7 +61,7 @@ Pençgâh, Ferahnâk, and Nişabur. Bûselik is not a comparison row in version
 Java 21 is bundled with the desktop packages. Ubuntu installs FFmpeg and the
 required desktop libraries through the package manager.
 
-> **Signing notice:** version 1.1.2 community packages are not commercially
+> **Signing notice:** version 1.1.3 community packages are not commercially
 > code-signed. The macOS package is ad-hoc signed and not notarized; the Windows
 > installer and portable package are unsigned. Operating-system security
 > warnings may therefore appear. Verify the SHA-256 checksums before use.
@@ -75,7 +77,7 @@ or e-mail link is the only user-initiated external action in the application.
 MakamLab requires Java 21. Platform packages are generated with:
 
 ```sh
-./build-makam-macos.sh
+./build-makam-macos-universal.sh
 ./build-makam-windows-cross.sh
 ./build-makam-linux-deb.sh
 ```
@@ -87,7 +89,7 @@ See [BUILDING.md](BUILDING.md) for prerequisites and platform notes.
 Use the repository's **Cite this repository** menu, backed by
 [`CITATION.cff`](CITATION.cff), or cite the software as:
 
-> Pınarbaşı, E. (2026). *MakamLab* (Version 1.1.2) [Computer software].
+> Pınarbaşı, E. (2026). *MakamLab* (Version 1.1.3) [Computer software].
 
 ## License and provenance
 

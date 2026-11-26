@@ -3,6 +3,16 @@
 All notable changes are documented here. MakamLab follows semantic versioning
 for public releases.
 
+## [1.1.3] — 2026-11-26
+
+- Corrected octave handling in open-interval analysis. Contacts in different
+  physical octaves stay distinct, and their deviations use the report's
+  reference octave.
+- Added a separate similarity comparison for waveform-confirmed descents to
+  the approved tonic, with path counts and degree coverage in DOCX reports.
+- Updated the language controls and the Glissando/Portamento module name.
+- Added a macOS Universal package with both Apple Silicon and Intel runtimes.
+
 ## [1.1.2] — 2026-11-18
 
 ### Fixed

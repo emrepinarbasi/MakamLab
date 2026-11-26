@@ -319,8 +319,16 @@ public record AcademicStudyDocument(
             int completePhraseCount,
             int partialPhraseCount,
             int evidenceEventCount,
-            List<FirstFourPeak> degreePeaks
+            List<FirstFourPeak> degreePeaks,
+        com.makambox.studio.study.CadenceSimilarity.Result cadence
     ) {
+        public FirstFourPhraseEvidence(String status, int qualifyingPhraseCount,
+                                       int completePhraseCount, int partialPhraseCount,
+                                       int evidenceEventCount, List<FirstFourPeak> degreePeaks) {
+            this(status, qualifyingPhraseCount, completePhraseCount,
+                    partialPhraseCount, evidenceEventCount, degreePeaks, null);
+        }
+
         public static final FirstFourPhraseEvidence EMPTY = new FirstFourPhraseEvidence(
                 "INSUFFICIENT", 0, 0, 0, 0, List.of());
 

@@ -25,6 +25,22 @@ and builds the DMG. Developer ID signing and Apple notarization require the
 publisher's own Apple Developer credentials and are not performed by the public
 script.
 
+## macOS Universal (Apple Silicon and Intel)
+
+On macOS with Xcode command-line tools, provide both Java 21 JDK homes. Use
+matching JDK releases for the two architectures.
+
+```sh
+MAKAM_X64_JDK=/path/to/intel-jdk/Contents/Home \
+MAKAM_ARM64_JDK=/path/to/arm64-jdk/Contents/Home \
+zsh build-makam-macos-universal.sh
+```
+
+The script puts the Universal DMG in `build/makam/dist/` and verifies that
+the launcher contains both architectures and each bundled Java runtime has
+the corresponding architecture. Test installation and launch on each target
+architecture before distributing a new package.
+
 ## Windows x64 cross-package
 
 The cross-build uses Zig plus the verified Windows JRE and FFmpeg resources

@@ -32,13 +32,13 @@ import java.util.function.Function;
 import java.util.function.Supplier;
 
 /**
- * Compact flag button backed by a scrollable, alphabetically sorted language
+ * Compact language-code button backed by a scrollable, alphabetically sorted language
  * popup.  The class deliberately depends only on adapter functions, keeping it
  * reusable by the application's i18n service without coupling the UI to the
  * language catalogue implementation.
  */
 public final class LanguageSelectorButton<T> extends AutoFitButton {
-    private final Function<T, String> flagProvider;
+    private final Function<T, String> codeProvider;
     private final Function<T, String> nameProvider;
     private final List<T> options = new ArrayList<>();
     private Consumer<T> selectionListener = ignored -> {};
@@ -47,33 +47,49 @@ public final class LanguageSelectorButton<T> extends AutoFitButton {
     private String selectorLabel = "Select language";
     private String selectedLanguagePrefix = "Language";
 
-    public LanguageSelectorButton(Function<T, String> flagProvider,
+    public LanguageSelectorButton(Function<T, String> codeProvider,
                                   Function<T, String> nameProvider) {
-        super("🌐");
-        this.flagProvider = Objects.requireNonNull(flagProvider, "flagProvider");
+        super("—");
+        this.codeProvider = Objects.requireNonNull(codeProvider, "codeProvider");
         this.nameProvider = Objects.requireNonNull(nameProvider, "nameProvider");
         setName("makam-language-selector");
-        // AquaButtonUI reserves very wide internal side insets. AutoFitButton
-        // then sees almost no drawable width and shrinks a 30 pt flag down to
-        // a tiny 9 pt glyph. A compact basic UI keeps the intended Retina-size
-        // flag while retaining a clear, conventional button boundary.
-        setUI(new javax.swing.plaf.basic.BasicButtonUI());
-        setOpaque(true);
-        setContentAreaFilled(true);
-        setBackground(Color.WHITE);
-        setBorder(BorderFactory.createCompoundBorder(
-                BorderFactory.createLineBorder(new Color(205, 208, 214), 1, true),
-                BorderFactory.createEmptyBorder(3, 8, 3, 8)));
+        styleUtilityButton(this);
+        setIconTextGap(7);
         setHorizontalAlignment(SwingConstants.CENTER);
-        // Emoji flags have a much smaller visible mark than ordinary text on
-        // macOS Retina displays. Keep the selected language unmistakable.
-        setFont(getFont().deriveFont(Font.PLAIN, 30f));
-        setMinimumAutoFitFontSize(24f);
+        setFont(getFont().deriveFont(Font.BOLD, 15f));
+        setMinimumAutoFitFontSize(12f);
         setMargin(new java.awt.Insets(2, 8, 2, 8));
         setPreferredSize(new Dimension(80, 46));
         setMinimumSize(new Dimension(72, 42));
         getAccessibleContext().setAccessibleName(selectorLabel);
         addActionListener(event -> showLanguagePopup());
+    }
+
+    static void styleUtilityButton(javax.swing.JButton button) {
+        button.setUI(new javax.swing.plaf.basic.BasicButtonUI() {
+            @Override public void paint(java.awt.Graphics graphics, javax.swing.JComponent component) {
+                var g = (java.awt.Graphics2D) graphics.create();
+                try {
+                    g.setRenderingHint(java.awt.RenderingHints.KEY_ANTIALIASING,
+                            java.awt.RenderingHints.VALUE_ANTIALIAS_ON);
+                    var shape = new java.awt.geom.RoundRectangle2D.Double(
+                            .5, .5, component.getWidth() - 1, component.getHeight() - 1, 13, 13);
+                    g.setColor(button.getModel().isPressed() ? new Color(219, 232, 240)
+                            : button.getModel().isRollover() ? new Color(235, 243, 248) : Color.WHITE);
+                    g.fill(shape);
+                    g.setColor(button.hasFocus() ? new Color(25, 107, 142) : new Color(205, 216, 224));
+                    g.draw(shape);
+                } finally {
+                    g.dispose();
+                }
+                super.paint(graphics, component);
+            }
+        });
+        button.setOpaque(false);
+        button.setContentAreaFilled(false);
+        button.setRolloverEnabled(true);
+        button.setBorder(BorderFactory.createEmptyBorder(3, 7, 3, 7));
+        button.setForeground(new Color(31, 49, 65));
     }
 
     public void setOptions(Collection<? extends T> values, T selected) {
@@ -85,12 +101,15 @@ public final class LanguageSelectorButton<T> extends AutoFitButton {
     public void setSelectedOption(T selected) {
         selectedOption = selected;
         if (selected == null) {
-            setText("🌐");
+            setText("—");
+            setIcon(null);
             setToolTipText(selectorLabel);
             getAccessibleContext().setAccessibleName(selectorLabel);
             return;
         }
-        setText(flagProvider.apply(selected));
+        String code = codeProvider.apply(selected);
+        setText(code);
+        setIcon(LanguageFlagIcon.forCode(code));
         String name = nameProvider.apply(selected);
         setToolTipText(name);
         getAccessibleContext().setAccessibleName(selectedLanguagePrefix + ": " + name);
@@ -124,9 +143,6 @@ public final class LanguageSelectorButton<T> extends AutoFitButton {
         list.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
         list.setFixedCellHeight(40);
         list.setCellRenderer(new LanguageRenderer());
-        // The product requirement keeps the flag in the left column and the
-        // language name to its right, even when the selected application
-        // language itself uses a right-to-left workspace orientation.
         list.setComponentOrientation(ComponentOrientation.LEFT_TO_RIGHT);
         if (selectedOption != null) list.setSelectedValue(selectedOption, true);
 
@@ -135,7 +151,7 @@ public final class LanguageSelectorButton<T> extends AutoFitButton {
         popup.setLayout(new BorderLayout());
         JScrollPane scroll = new JScrollPane(list);
         scroll.setBorder(BorderFactory.createEmptyBorder());
-        scroll.setPreferredSize(new Dimension(310, 510));
+        scroll.setPreferredSize(new Dimension(210, Math.max(40, Math.min(sorted.size(), 8) * list.getFixedCellHeight())));
         popup.add(scroll, BorderLayout.CENTER);
 
         Runnable accept = () -> {
@@ -184,16 +200,16 @@ public final class LanguageSelectorButton<T> extends AutoFitButton {
 
     private final class LanguageRenderer extends JPanel
             implements javax.swing.ListCellRenderer<T> {
-        private final JLabel flag = new JLabel("", SwingConstants.CENTER);
+        private final JLabel code = new JLabel("", SwingConstants.CENTER);
         private final JLabel name = new JLabel();
 
         private LanguageRenderer() {
             super(new BorderLayout(10, 0));
             setBorder(BorderFactory.createEmptyBorder(4, 7, 4, 9));
-            flag.setPreferredSize(new Dimension(40, 30));
-            flag.setFont(flag.getFont().deriveFont(24f));
+            code.setPreferredSize(new Dimension(40, 30));
+            code.setFont(code.getFont().deriveFont(Font.BOLD, 13f));
             name.setFont(name.getFont().deriveFont(13f));
-            add(flag, BorderLayout.WEST);
+            add(code, BorderLayout.WEST);
             add(name, BorderLayout.CENTER);
             setComponentOrientation(ComponentOrientation.LEFT_TO_RIGHT);
         }
@@ -203,12 +219,14 @@ public final class LanguageSelectorButton<T> extends AutoFitButton {
                                                                  int index,
                                                                  boolean selected,
                                                                  boolean focus) {
-            flag.setText(flagProvider.apply(value));
+            String languageCode = codeProvider.apply(value);
+            code.setIcon(LanguageFlagIcon.forCode(languageCode));
+            code.setText(code.getIcon() == null ? languageCode : "");
             name.setText(nameProvider.apply(value));
             Color background = selected ? list.getSelectionBackground() : list.getBackground();
             Color foreground = selected ? list.getSelectionForeground() : list.getForeground();
             setBackground(background);
-            flag.setForeground(foreground);
+            code.setForeground(foreground);
             name.setForeground(foreground);
             return this;
         }

@@ -80,7 +80,7 @@ public final class SpecializedAnalysisDocxExporterRegressionTest {
             exporter.exportGlissando(metadata, glissando, glissPath);
             assertDocxContract(glissPath, 4, 2,
                     List.of(
-                            "Glissando Analizi",
+                            "Glisendo/Portamento Analizi",
                             "Rapor nasıl okunur?",
                             "Seçilen perde çifti ve kuramsal referans",
                             "Yönlere göre glissando özeti",

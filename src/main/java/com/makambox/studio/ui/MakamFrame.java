@@ -175,7 +175,8 @@ public final class MakamFrame extends JFrame {
     private final JButton homeButton = button(localized("action.home", "‹ Ana menü"));
     private final JButton openAudioButton = button(localized("action.openAudio", "Ses dosyasını aç…"));
     private final LanguageSelectorButton<AppLanguage> languageSelectorButton =
-            new LanguageSelectorButton<>(AppLanguage::flag, i18n::languageDisplayName);
+            new LanguageSelectorButton<>(language -> language.locale().getLanguage().toUpperCase(Locale.ROOT),
+                    i18n::languageDisplayName);
     private final JButton settingsButton = button("⚙");
     private final JButton aboutButton = button("ⓘ");
     private final FirstFourProfilePreferences firstFourProfilePreferences =
@@ -547,13 +548,7 @@ public final class MakamFrame extends JFrame {
     private static void configureHomeUtilityButton(JButton button, String name,
                                                    float fontSize) {
         button.setName(name);
-        button.setUI(new javax.swing.plaf.basic.BasicButtonUI());
-        button.setOpaque(true);
-        button.setContentAreaFilled(true);
-        button.setBackground(Color.WHITE);
-        button.setBorder(BorderFactory.createCompoundBorder(
-                BorderFactory.createLineBorder(new Color(205, 208, 214), 1, true),
-                BorderFactory.createEmptyBorder(3, 8, 3, 8)));
+        LanguageSelectorButton.styleUtilityButton(button);
         if (button instanceof AutoFitButton adaptive) {
             adaptive.setMinimumAutoFitFontSize(22f);
         }
@@ -745,7 +740,7 @@ public final class MakamFrame extends JFrame {
                 "Hicaz dörtlüsünün çıkıcı ve inici icrasında 2., 3. ve 4. dereceyi inceleyin.",
                 MakamAnalysisMode.HICAZ_AUGMENTED_INTERVAL));
         menuGrid.add(menuCard("MenuIcon-GlissandoAnalizi-v1-preview.png", "module.glissando",
-                "Glissando Analizi", "home.glissando.description",
+                "Glisendo/Portamento Analizi", "home.glissando.description",
                 "Seçtiğiniz iki perde arasındaki kesintisiz kaymaları iki yönde ayrı ölçün.",
                 MakamAnalysisMode.GLISSANDO_ANALYSIS));
         menuGrid.setAlignmentX(Component.CENTER_ALIGNMENT);
@@ -830,7 +825,7 @@ public final class MakamFrame extends JFrame {
             }
             case GLISSANDO_ANALYSIS -> {
                 iconName = "MenuIcon-GlissandoAnalizi-v1-preview.png";
-                label = localized("module.glissando", "Glissando Analizi");
+                label = localized("module.glissando", "Glisendo/Portamento Analizi");
             }
             default -> throw new IllegalStateException("Desteklenmeyen analiz türü: " + mode);
         }
@@ -1456,7 +1451,7 @@ public final class MakamFrame extends JFrame {
         }
         if (mode == MakamAnalysisMode.GLISSANDO_ANALYSIS && glissandoPair == null) {
             showWorkflowMessage("validation.distinctGlissandoPitches",
-                    "Glissando analizi için birbirinden farklı iki perde seçin.");
+                    "Glisendo/Portamento analizi için birbirinden farklı iki perde seçin.");
             return;
         }
         // Freeze the selected reference inventory for this run. Reports use

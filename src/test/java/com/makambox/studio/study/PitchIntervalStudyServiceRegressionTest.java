@@ -23,6 +23,7 @@ public final class PitchIntervalStudyServiceRegressionTest {
         verifyOpenActualF0IntervalAndAutomaticBoundaryOrder();
         verifyIntervalEvidenceTiersStayConsistentAcrossSummaries();
         verifyEveryCoherentRegisterIsRetainedAndNormalized();
+        verifyAdjacentOctavesDoNotCreateOneOccurrence();
         verifyTonicOctaveDoesNotChangePitchClassStudy();
         verifyIsolatedOctaveNoiseDoesNotEnterCoherentRegisterEvidence();
         verifyIdenticalBoundariesRejected();
@@ -215,6 +216,39 @@ public final class PitchIntervalStudyServiceRegressionTest {
         check(result.intervalContacts().stream().anyMatch(value ->
                         value.observedHertz() > TONIC_HZ * 4.0),
                 "üst icra registerının fiziksel Hz kanıtı denetim için korunmalı");
+    }
+
+    private static void verifyAdjacentOctavesDoNotCreateOneOccurrence() {
+        List<PitchFrame> frames = new ArrayList<>();
+        addRelativeHcAtOctave(frames, 4.1, 0, 12, 0.95);
+        addRelativeHcAtOctave(frames, 4.1, 1, 22, 0.95);
+        addSilence(frames, 1);
+        addRelativeHcAtOctave(frames, 4.1, -1, 12, 0.95);
+
+        AudioData audio = new AudioData("ardisik-oktavlar.wav", null, 22_050f,
+                new float[22_050], AudioChannelMode.MIX, 1);
+        TonicSelection tonic = new TonicSelection(TONIC_HZ,
+                TonicSelection.Source.GRAPH_REGION, 0.0, 0.14, 0.95, 2.0, 7,
+                "Mono", true);
+        PitchIntervalStudyResult result = new PitchIntervalStudyService().analyze(
+                new PitchIntervalStudyRequest(audio, frames, THEORY, MAKAM,
+                        THEORY.note("rast"), THEORY.note("dik kurdi"), tonic, config(),
+                        "test", MakamProfileComparator.DEFAULT_REFERENCE_SYSTEM));
+
+        check(result.allCanonicalEvents().size() == 3,
+                "aynı perde sınıfındaki üç fiziksel oktav ayrı olaylar olmalı");
+        check(result.measurableIntervalEvents().size() == 3,
+                "üç olay da ölçülebilir kalmalı");
+        for (StudyPitchEvent event : result.measurableIntervalEvents()) {
+            check(Math.abs(event.observedRelativeHc() - 4.1) < 1.0e-6,
+                    "gözlenen derece aynı referans oktavına hizalanmalı");
+            check(Math.abs(event.deviationHc() - 0.1) < 1.0e-4,
+                    "icra sapması oktavdan bağımsız olmalı: " + event);
+            check(Math.abs(event.entryDeviationCent() - event.deviationCent()) < 1.0e-6
+                            && Math.abs(event.settledDeviationCent() - event.deviationCent()) < 1.0e-6
+                            && Math.abs(event.exitDeviationCent() - event.deviationCent()) < 1.0e-6,
+                    "giriş, yerleşik bölüm ve çıkış aynı perde merkezini kullanmalı");
+        }
     }
 
     private static void verifyIsolatedOctaveNoiseDoesNotEnterCoherentRegisterEvidence() {
